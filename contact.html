@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-CN" class="h-full">
+<html lang="en" class="h-full">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -93,30 +93,47 @@
           </span>
         </a>
         <div class="hidden items-center gap-8 text-xs tracking-widest sm:flex">
-          <a href="./projects.html" class="transition-opacity hover:opacity-70">PROJECTS</a>
-          <a href="./index.html#about" class="transition-opacity hover:opacity-70">ABOUT</a>
-          <a href="./index.html#news" class="transition-opacity hover:opacity-70">NEWS</a>
-          <a href="./contact.html" class="transition-opacity hover:opacity-70">CONTACT</a>
+          <a href="./projects.html" class="lang-text transition-opacity hover:opacity-70" data-en="PROJECTS" data-zh="项目">PROJECTS</a>
+          <a href="./index.html#about" class="lang-text transition-opacity hover:opacity-70" data-en="ABOUT" data-zh="关于">ABOUT</a>
+          <a href="./index.html#news" class="lang-text transition-opacity hover:opacity-70" data-en="NEWS" data-zh="动态">NEWS</a>
+          <a href="./contact.html" class="lang-text transition-opacity hover:opacity-70" data-en="CONTACT" data-zh="联系">CONTACT</a>
         </div>
-        <button
-          id="nav-toggle"
-          type="button"
-          class="inline-flex items-center justify-center rounded-full border border-current bg-transparent px-4 py-2 text-xs tracking-widest text-current opacity-80 transition-opacity hover:opacity-100 sm:hidden"
-          aria-expanded="false"
-          aria-controls="mobile-nav"
-        >
-          MENU
-        </button>
+        <div class="flex items-center gap-3">
+          <button
+            id="lang-toggle"
+            type="button"
+            class="inline-flex items-center justify-center rounded-full border border-current bg-transparent px-3 py-2 text-xs tracking-widest text-current opacity-80 transition-opacity hover:opacity-100"
+            aria-label="Language"
+            aria-pressed="false"
+          >
+            <span data-lang-indicator="en" class="transition-opacity">EN</span>
+            <span class="mx-1 opacity-60">/</span>
+            <span data-lang-indicator="zh" class="transition-opacity opacity-50">中</span>
+          </button>
+          <button
+            id="nav-toggle"
+            type="button"
+            class="lang-text inline-flex items-center justify-center rounded-full border border-current bg-transparent px-4 py-2 text-xs tracking-widest text-current opacity-80 transition-opacity hover:opacity-100 sm:hidden"
+            aria-expanded="false"
+            aria-controls="mobile-nav"
+            data-en="MENU"
+            data-zh="菜单"
+          >
+            MENU
+          </button>
+        </div>
       </nav>
       <div id="mobile-nav" class="pointer-events-none fixed inset-0 z-40 opacity-0 transition-opacity duration-300 sm:hidden" aria-hidden="true">
         <div id="mobile-nav-backdrop" class="absolute inset-0 bg-paper"></div>
         <div class="absolute inset-x-0 top-0">
           <div class="mx-auto max-w-6xl px-6 pt-24 pb-10">
             <div class="flex flex-col gap-6 text-sm tracking-widest">
-              <a href="./projects.html" class="text-ink/85 transition hover:text-ink" data-nav-close>PROJECTS</a>
-              <a href="./index.html#about" class="text-ink/85 transition hover:text-ink" data-nav-close>ABOUT</a>
-              <a href="./index.html#news" class="text-ink/85 transition hover:text-ink" data-nav-close>NEWS</a>
-              <a href="./contact.html" class="text-ink/85 transition hover:text-ink" data-nav-close>CONTACT</a>
+              <a href="./projects.html" class="lang-text text-ink/85 transition hover:text-ink" data-nav-close data-en="PROJECTS" data-zh="项目">
+                PROJECTS
+              </a>
+              <a href="./index.html#about" class="lang-text text-ink/85 transition hover:text-ink" data-nav-close data-en="ABOUT" data-zh="关于">ABOUT</a>
+              <a href="./index.html#news" class="lang-text text-ink/85 transition hover:text-ink" data-nav-close data-en="NEWS" data-zh="动态">NEWS</a>
+              <a href="./contact.html" class="lang-text text-ink/85 transition hover:text-ink" data-nav-close data-en="CONTACT" data-zh="联系">CONTACT</a>
             </div>
             <div class="mt-10 h-px w-full bg-ink/10"></div>
             <p class="mt-6 text-xs tracking-widest text-ink/60">TIMEANDJOY.COM</p>
@@ -127,16 +144,17 @@
 
     <main class="pt-28">
       <section class="mx-auto max-w-6xl px-6 pb-20">
-        <p class="text-xs tracking-widest text-ink/60">CONTACT</p>
+        <p class="lang-text text-xs tracking-widest text-ink/60" data-en="CONTACT" data-zh="联系">CONTACT</p>
         <div class="mt-10 grid gap-12 lg:grid-cols-12 lg:items-start">
           <div class="lg:col-span-5">
-            <h1 class="text-3xl font-semibold tracking-widest sm:text-4xl">与我们联系</h1>
-            <p class="mt-6 text-sm leading-relaxed text-ink/75 sm:text-base">
-              欢迎发送需求简述、项目所在地、面积与预算区间。我们会在 1–2 个工作日内回复并安排进一步沟通。
-            </p>
-            <p class="mt-4 text-sm leading-relaxed text-ink/65 sm:text-base">
-              Please include a brief overview of your needs, project location, area, and budget range. We will respond within 1–2 business
-              days and arrange a follow-up discussion.
+            <h1 class="lang-text text-3xl font-semibold tracking-widest sm:text-4xl" data-en="Contact" data-zh="与我们联系">Contact</h1>
+            <p
+              class="lang-text mt-6 text-sm leading-relaxed text-ink/75 sm:text-base"
+              data-en="Please include a brief overview of your needs, project location, area, and budget range. We will respond within 1–2 business days and arrange a follow-up discussion."
+              data-zh="欢迎发送需求简述、项目所在地、面积与预算区间。我们会在 1–2 个工作日内回复并安排进一步沟通。"
+            >
+              Please include a brief overview of your needs, project location, area, and budget range. We will respond within 1–2 business days and
+              arrange a follow-up discussion.
             </p>
             <p class="mt-6 text-xs tracking-widest text-ink/55">TIME &amp; JOY SPACE DESIGN</p>
           </div>
@@ -144,27 +162,27 @@
           <div class="lg:col-span-7">
             <div class="grid gap-6 sm:grid-cols-2">
               <div class="rounded-2xl border border-ink/10 bg-white/50 px-6 py-6">
-                <p class="text-[11px] tracking-widest text-ink/55">EMAIL</p>
+                <p class="lang-text text-[11px] tracking-widest text-ink/55" data-en="EMAIL" data-zh="邮箱">EMAIL</p>
                 <a href="mailto:joanna@timeandjoy.com" class="mt-3 block text-sm tracking-widest text-ink/85 transition-opacity hover:opacity-70">
                   joanna@timeandjoy.com
                 </a>
               </div>
 
               <div class="rounded-2xl border border-ink/10 bg-white/50 px-6 py-6">
-                <p class="text-[11px] tracking-widest text-ink/55">PHONE</p>
+                <p class="lang-text text-[11px] tracking-widest text-ink/55" data-en="PHONE" data-zh="电话">PHONE</p>
                 <a href="tel:+8613350061712" class="mt-3 block text-sm tracking-widest text-ink/85 transition-opacity hover:opacity-70">
                   133 5006 1712
                 </a>
               </div>
 
               <div class="rounded-2xl border border-ink/10 bg-white/50 px-6 py-6">
-                <p class="text-[11px] tracking-widest text-ink/55">WECHAT</p>
+                <p class="lang-text text-[11px] tracking-widest text-ink/55" data-en="WECHAT" data-zh="微信">WECHAT</p>
                 <p class="mt-3 text-sm tracking-widest text-ink/85">Time-Joy-Joanna</p>
               </div>
 
               <div class="rounded-2xl border border-ink/10 bg-white/50 px-6 py-6">
-                <p class="text-[11px] tracking-widest text-ink/55">LOCATION</p>
-                <p class="mt-3 text-sm leading-relaxed text-ink/80">Chengdu · 中国成都</p>
+                <p class="lang-text text-[11px] tracking-widest text-ink/55" data-en="LOCATION" data-zh="城市">LOCATION</p>
+                <p class="lang-text mt-3 text-sm leading-relaxed text-ink/80" data-en="Chengdu · China" data-zh="Chengdu · 中国成都">Chengdu · China</p>
               </div>
             </div>
           </div>
@@ -176,7 +194,13 @@
       <div class="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-12 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <p class="text-xs tracking-widest text-ink/70">© <span id="year"></span> TIME &amp; JOY SPACE DESIGN</p>
-          <p class="mt-3 text-sm leading-relaxed text-ink/70">时悦空间设计公司 · timeandjoy.com</p>
+          <p
+            class="lang-text mt-3 text-sm leading-relaxed text-ink/70"
+            data-en="Time &amp; Joy Space Design · timeandjoy.com"
+            data-zh="时悦空间设计公司 · timeandjoy.com"
+          >
+            Time &amp; Joy Space Design · timeandjoy.com
+          </p>
         </div>
         <div class="flex items-center gap-3">
           <a
@@ -402,6 +426,39 @@
           if (wechatStatus) wechatStatus.textContent = text;
         }
       });
+
+      const LANG_STORAGE_KEY = "siteLang";
+      const langToggle = document.getElementById("lang-toggle");
+      const langIndicatorEn = langToggle?.querySelector?.('[data-lang-indicator="en"]');
+      const langIndicatorZh = langToggle?.querySelector?.('[data-lang-indicator="zh"]');
+      let currentLang = "en";
+
+      function applyLanguage(lang) {
+        currentLang = lang === "zh" ? "zh" : "en";
+        try {
+          localStorage.setItem(LANG_STORAGE_KEY, currentLang);
+        } catch {}
+
+        document.querySelectorAll(".lang-text").forEach((el) => {
+          const value = el.getAttribute(currentLang === "zh" ? "data-zh" : "data-en");
+          if (value == null) return;
+          el.textContent = value;
+        });
+
+        if (langToggle) langToggle.setAttribute("aria-pressed", currentLang === "zh" ? "true" : "false");
+        if (langIndicatorEn && langIndicatorZh) {
+          langIndicatorEn.classList.toggle("opacity-50", currentLang !== "en");
+          langIndicatorZh.classList.toggle("opacity-50", currentLang !== "zh");
+        }
+      }
+
+      try {
+        const stored = localStorage.getItem(LANG_STORAGE_KEY);
+        if (stored === "en" || stored === "zh") currentLang = stored;
+      } catch {}
+
+      applyLanguage(currentLang);
+      langToggle?.addEventListener("click", () => applyLanguage(currentLang === "en" ? "zh" : "en"));
     </script>
   </body>
 </html>
