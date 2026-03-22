@@ -21,7 +21,10 @@
     <meta name="twitter:image" content="https://timeandjoy.com/og-cover.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Noto+Sans+SC:wght@300;400;500&family=Playfair+Display:ital,wght@1,500;1,600&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -33,6 +36,8 @@
             },
             fontFamily: {
               sans: ["Inter", "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Roboto", "Helvetica", "Arial", "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji"],
+              serif: ["Playfair Display", "ui-serif", "Georgia", "serif"],
+              cn: ["PingFang SC", "Noto Sans SC", "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Roboto", "Helvetica", "Arial"],
             },
           },
         },
@@ -42,22 +47,35 @@
       html {
         background: #f9f9f9;
       }
-      body {
-        opacity: 0;
-        transition: opacity 520ms ease;
+      .hero-title {
+        font-size: clamp(1.75rem, 5.2vw, 4.75rem);
+        line-height: 1.05;
       }
-      body.is-ready {
+      .reveal-slide-up {
+        transform: translateY(56px);
+        opacity: 0;
+        transition: transform 900ms cubic-bezier(0.22, 1, 0.36, 1), opacity 900ms ease;
+      }
+      .reveal-slide-up.is-in {
+        transform: translateY(0);
         opacity: 1;
+      }
+      .reveal-slide-up img {
+        transform: scale(1.06);
+        transition: transform 1200ms cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      .reveal-slide-up.is-in img {
+        transform: scale(1);
       }
     </style>
   </head>
   <body class="h-full bg-paper text-ink font-sans antialiased">
-    <header id="site-header" class="fixed inset-x-0 top-0 z-50 transition-all duration-300">
-      <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
-        <a href="./index.html" class="flex items-center pl-4">
+    <header id="site-header" class="fixed inset-x-0 top-0 z-50 bg-transparent">
+      <nav id="site-nav" class="flex w-full items-center justify-between px-8 py-6 text-ink lg:px-12">
+        <a href="./index.html" class="flex items-center">
           <span class="flex items-center">
             <svg
-              class="block h-16 w-auto shrink-0 sm:h-20"
+              class="block h-20 w-auto shrink-0 sm:h-24"
               viewBox="0 0 84100 59400"
               preserveAspectRatio="xMinYMid meet"
               xmlns="http://www.w3.org/2000/svg"
@@ -114,33 +132,30 @@
           </span>
         </a>
         <div class="hidden items-center gap-8 text-xs tracking-widest sm:flex">
-          <a href="./projects.html" class="transition-colors hover:text-ink/70">PROJECTS</a>
-          <a href="#about" class="transition-colors hover:text-ink/70">ABOUT</a>
-          <a href="#news" class="transition-colors hover:text-ink/70">NEWS</a>
-          <a href="#contact" class="transition-colors hover:text-ink/70">CONTACT</a>
+          <a href="./projects.html" class="transition-opacity hover:opacity-70">PROJECTS</a>
+          <a href="#about" class="transition-opacity hover:opacity-70">ABOUT</a>
+          <a href="#news" class="transition-opacity hover:opacity-70">NEWS</a>
+          <a href="./contact.html" class="transition-opacity hover:opacity-70">CONTACT</a>
         </div>
         <button
           id="nav-toggle"
           type="button"
-          class="inline-flex items-center justify-center rounded-full border border-ink/15 bg-white/60 px-4 py-2 text-xs tracking-widest text-ink/80 backdrop-blur-md transition hover:border-ink/25 hover:text-ink sm:hidden"
+          class="inline-flex items-center justify-center rounded-full border border-current bg-transparent px-4 py-2 text-xs tracking-widest text-current opacity-80 transition-opacity hover:opacity-100 sm:hidden"
           aria-expanded="false"
           aria-controls="mobile-nav"
         >
           MENU
         </button>
       </nav>
-      <div id="header-divider" class="mx-auto max-w-6xl px-6">
-        <div class="h-px w-full bg-transparent transition-colors duration-300"></div>
-      </div>
       <div id="mobile-nav" class="pointer-events-none fixed inset-0 z-40 opacity-0 transition-opacity duration-300 sm:hidden" aria-hidden="true">
-        <div id="mobile-nav-backdrop" class="absolute inset-0 bg-white/70 backdrop-blur-md"></div>
+        <div id="mobile-nav-backdrop" class="absolute inset-0 bg-paper"></div>
         <div class="absolute inset-x-0 top-0">
           <div class="mx-auto max-w-6xl px-6 pt-24 pb-10">
             <div class="flex flex-col gap-6 text-sm tracking-widest">
               <a href="./projects.html" class="text-ink/85 transition hover:text-ink" data-nav-close>PROJECTS</a>
               <a href="#about" class="text-ink/85 transition hover:text-ink" data-nav-close>ABOUT</a>
               <a href="#news" class="text-ink/85 transition hover:text-ink" data-nav-close>NEWS</a>
-              <a href="#contact" class="text-ink/85 transition hover:text-ink" data-nav-close>CONTACT</a>
+              <a href="./contact.html" class="text-ink/85 transition hover:text-ink" data-nav-close>CONTACT</a>
             </div>
             <div class="mt-10 h-px w-full bg-ink/10"></div>
             <p class="mt-6 text-xs tracking-widest text-ink/60">TIMEANDJOY.COM</p>
@@ -162,27 +177,39 @@
           <div class="absolute inset-0 bg-white/55 sm:bg-white/45"></div>
         </div>
 
-        <div class="relative flex min-h-screen items-end justify-center text-center sm:items-center">
+        <div class="relative flex min-h-screen items-end justify-center text-center">
           <div class="mx-auto w-full max-w-6xl px-6 pt-24 pb-20 sm:pt-28 sm:pb-16">
-            <div class="mx-auto max-w-3xl">
-              <p class="text-xs tracking-widest text-ink/70">TIMEANDJOY.COM</p>
-              <h1 class="mt-5 text-3xl font-semibold tracking-widest sm:mt-6 sm:text-5xl lg:text-6xl">
-                SPACE, LIGHT,<br class="hidden sm:block" />
-                AND QUIET JOY
+            <div class="mx-auto flex max-w-4xl flex-col items-center">
+              <h1 class="hero-title mt-5 font-semibold tracking-[0.08em] whitespace-nowrap sm:mt-6 sm:tracking-widest">
+                Timeless Space. Endless Joy.
               </h1>
-              <p class="mt-6 mx-auto max-w-2xl text-sm leading-relaxed text-ink/80 sm:mt-8 sm:text-lg">
-                以极简的克制，建立可被时间验证的空间秩序。我们专注于高端住宅与商业空间的室内设计与落地。
+              <p class="mt-8 mx-auto max-w-2xl text-lg leading-relaxed tracking-[0.12em] text-ink/80 sm:mt-10 sm:text-xl">
+                赋岁月以秩序，予空间以愉悦。
               </p>
-              <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
-                <a
-                  href="./projects.html"
-                  class="inline-flex items-center justify-center rounded-full border border-ink/20 bg-white/70 px-6 py-3 text-xs tracking-widest text-ink backdrop-blur-md transition hover:border-ink/30 hover:bg-white"
-                >
-                  VIEW PROJECTS
-                </a>
-                <a href="#contact" class="text-xs tracking-widest text-ink/70 transition hover:text-ink">CONTACT</a>
-              </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="border-t border-ink/10 bg-paper">
+        <div class="mx-auto w-full max-w-5xl px-6 py-20 text-center sm:py-24">
+          <p class="font-serif text-[26px] italic leading-relaxed tracking-wide text-ink/90 sm:text-3xl lg:text-4xl">
+            To craft timeless spaces that inspire profound joy, harmonizing modern restraint with classical sophistication.
+          </p>
+          <p class="mt-10 font-cn text-base leading-relaxed tracking-wide text-ink/70 sm:mt-14 sm:text-lg">
+            雕刻超越时间的空间秩序，唤醒纯粹的居住愉悦。
+          </p>
+        </div>
+
+        <div class="mx-auto max-w-6xl px-6 pb-20 sm:pb-28">
+          <div class="reveal-slide-up overflow-hidden rounded-2xl bg-white/50" data-reveal>
+            <img
+              src="https://images.unsplash.com/photo-1527030280862-64139fba04ca?auto=format&fit=crop&w=3200&q=80"
+              alt="Wide Image"
+              class="h-[clamp(380px,72vh,780px)] w-full object-cover"
+              loading="lazy"
+              decoding="async"
+            />
           </div>
         </div>
       </section>
@@ -196,23 +223,29 @@
         </div>
         <div class="flex items-center gap-3">
           <a
-            href="#"
-            aria-label="Instagram"
-            class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-ink/15 bg-white/60 text-xs tracking-widest text-ink/70 backdrop-blur-md transition hover:border-ink/25 hover:text-ink"
+            href="https://instagram.com/Joanna17qq"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Instagram: Joanna17qq"
+            title="Joanna17qq"
+            class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-ink/15 bg-white/60 text-xs tracking-widest text-ink/70 transition hover:border-ink/25 hover:text-ink"
           >
             IG
           </a>
           <a
-            href="#"
+            href="javascript:void(0)"
             aria-label="Behance"
-            class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-ink/15 bg-white/60 text-xs tracking-widest text-ink/70 backdrop-blur-md transition hover:border-ink/25 hover:text-ink"
+            title="(待补充)"
+            class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-ink/15 bg-white/60 text-xs tracking-widest text-ink/70 transition hover:border-ink/25 hover:text-ink"
           >
             BE
           </a>
           <a
-            href="#"
-            aria-label="WeChat"
-            class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-ink/15 bg-white/60 text-xs tracking-widest text-ink/70 backdrop-blur-md transition hover:border-ink/25 hover:text-ink"
+            href="javascript:void(0)"
+            aria-label="WeChat: Time-Joy-Joanna"
+            title="Time-Joy-Joanna"
+            data-wechat="Time-Joy-Joanna"
+            class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-ink/15 bg-white/60 text-xs tracking-widest text-ink/70 transition hover:border-ink/25 hover:text-ink"
           >
             WX
           </a>
@@ -220,22 +253,43 @@
       </div>
     </footer>
 
+    <div id="wechat-modal" class="fixed inset-0 z-[60] hidden" aria-hidden="true">
+      <div id="wechat-backdrop" class="absolute inset-0 bg-ink/40"></div>
+      <div class="relative mx-auto flex min-h-full max-w-md items-center justify-center px-6">
+        <div role="dialog" aria-modal="true" class="w-full rounded-2xl border border-ink/10 bg-paper p-6 shadow-xl">
+          <div class="flex items-start justify-between gap-6">
+            <div>
+              <p class="text-xs tracking-widest text-ink/60">WECHAT</p>
+              <p id="wechat-value" class="mt-3 text-sm tracking-widest text-ink/85"></p>
+            </div>
+            <button
+              id="wechat-close"
+              type="button"
+              class="inline-flex items-center rounded-full border border-ink/15 bg-white/60 px-4 py-2 text-xs tracking-widest text-ink/70 transition hover:border-ink/25 hover:text-ink"
+            >
+              CLOSE
+            </button>
+          </div>
+          <div class="mt-6 flex items-center gap-3">
+            <button
+              id="wechat-copy"
+              type="button"
+              class="inline-flex items-center rounded-full border border-ink/15 bg-white/60 px-5 py-2 text-xs tracking-widest text-ink/70 transition hover:border-ink/25 hover:text-ink"
+            >
+              COPY
+            </button>
+            <p id="wechat-status" class="text-xs tracking-widest text-ink/55"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script>
       const header = document.getElementById("site-header");
-      const divider = document.getElementById("header-divider")?.firstElementChild;
+      const siteNav = document.getElementById("site-nav");
       const navToggle = document.getElementById("nav-toggle");
       const mobileNav = document.getElementById("mobile-nav");
       const mobileNavBackdrop = document.getElementById("mobile-nav-backdrop");
-
-      function syncHeader() {
-        const scrolled = window.scrollY > 12;
-        header.classList.toggle("bg-white/0", !scrolled);
-        header.classList.toggle("bg-white/70", scrolled);
-        header.classList.toggle("backdrop-blur-md", scrolled);
-        header.classList.toggle("border-b", scrolled);
-        header.classList.toggle("border-ink/10", scrolled);
-        if (divider) divider.classList.toggle("bg-ink/10", scrolled);
-      }
 
       function setMobileNav(open) {
         if (!navToggle || !mobileNav) return;
@@ -256,13 +310,161 @@
       mobileNavBackdrop?.addEventListener("click", () => setMobileNav(false));
       mobileNav?.querySelectorAll("[data-nav-close]")?.forEach((link) => link.addEventListener("click", () => setMobileNav(false)));
       window.addEventListener("keydown", (e) => {
-        if (e.key === "Escape") setMobileNav(false);
+        if (e.key === "Escape") {
+          setMobileNav(false);
+          closeWechatModal();
+        }
       });
 
+      function parseCssColor(value) {
+        if (!value) return null;
+        const m = value.match(/rgba?\(([^)]+)\)/);
+        if (!m) return null;
+        const parts = m[1]
+          .split(",")
+          .map((p) => p.trim())
+          .slice(0, 4);
+        if (parts.length < 3) return null;
+
+        const toByte = (v) => {
+          const n = Number.parseFloat(v);
+          if (Number.isNaN(n)) return 0;
+          return Math.max(0, Math.min(255, n));
+        };
+        const r = toByte(parts[0]);
+        const g = toByte(parts[1]);
+        const b = toByte(parts[2]);
+        const a = parts[3] == null ? 1 : Math.max(0, Math.min(1, Number.parseFloat(parts[3])));
+        return { r, g, b, a };
+      }
+
+      function relativeLuminance({ r, g, b }) {
+        const toLinear = (c) => {
+          const v = c / 255;
+          return v <= 0.04045 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4);
+        };
+        const R = toLinear(r);
+        const G = toLinear(g);
+        const B = toLinear(b);
+        return 0.2126 * R + 0.7152 * G + 0.0722 * B;
+      }
+
+      function findSolidBackgroundColor(el) {
+        let node = el;
+        while (node && node !== document.documentElement) {
+          const bg = parseCssColor(window.getComputedStyle(node).backgroundColor);
+          if (bg && bg.a >= 0.95) return bg;
+          node = node.parentElement;
+        }
+        const bodyBg = parseCssColor(window.getComputedStyle(document.body).backgroundColor);
+        if (bodyBg) return { r: bodyBg.r, g: bodyBg.g, b: bodyBg.b, a: 1 };
+        return { r: 249, g: 249, b: 249, a: 1 };
+      }
+
+      function updateNavContrast() {
+        if (!header || !siteNav) return;
+        const rect = header.getBoundingClientRect();
+        const x = Math.min(window.innerWidth - 24, Math.max(24, rect.left + rect.width * 0.5));
+        const y = rect.top + rect.height * 0.5;
+
+        const prevPointerEvents = header.style.pointerEvents;
+        header.style.pointerEvents = "none";
+        const hit = document.elementFromPoint(x, y);
+        header.style.pointerEvents = prevPointerEvents;
+
+        let useLight = false;
+        if (hit) {
+          const img = hit.tagName === "IMG" ? hit : hit.closest?.("img");
+          if (img) {
+            useLight = true;
+          } else {
+            const bg = findSolidBackgroundColor(hit);
+            useLight = relativeLuminance(bg) < 0.55;
+          }
+        }
+
+        siteNav.classList.toggle("text-white", useLight);
+        siteNav.classList.toggle("text-ink", !useLight);
+      }
+
+      let raf = 0;
+      function scheduleNavContrast() {
+        if (raf) return;
+        raf = requestAnimationFrame(() => {
+          raf = 0;
+          updateNavContrast();
+        });
+      }
+
+      window.addEventListener("scroll", scheduleNavContrast, { passive: true });
+      window.addEventListener("resize", scheduleNavContrast);
+      window.addEventListener("load", scheduleNavContrast);
+
       document.getElementById("year").textContent = String(new Date().getFullYear());
-      window.addEventListener("scroll", syncHeader, { passive: true });
-      syncHeader();
-      window.addEventListener("DOMContentLoaded", () => document.body.classList.add("is-ready"));
+      scheduleNavContrast();
+
+      const revealEls = Array.from(document.querySelectorAll("[data-reveal]"));
+      if (revealEls.length) {
+        if ("IntersectionObserver" in window) {
+          const io = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add("is-in");
+                  io.unobserve(entry.target);
+                }
+              });
+            },
+            { threshold: 0.18 }
+          );
+          revealEls.forEach((el) => io.observe(el));
+        } else {
+          revealEls.forEach((el) => el.classList.add("is-in"));
+        }
+      }
+
+      const wechatModal = document.getElementById("wechat-modal");
+      const wechatBackdrop = document.getElementById("wechat-backdrop");
+      const wechatValue = document.getElementById("wechat-value");
+      const wechatCopy = document.getElementById("wechat-copy");
+      const wechatClose = document.getElementById("wechat-close");
+      const wechatStatus = document.getElementById("wechat-status");
+
+      function openWechatModal(value) {
+        if (!wechatModal || !wechatValue) return;
+        wechatValue.textContent = value || "";
+        if (wechatStatus) wechatStatus.textContent = "";
+        wechatModal.classList.remove("hidden");
+        wechatModal.setAttribute("aria-hidden", "false");
+        document.body.classList.add("overflow-hidden");
+      }
+
+      function closeWechatModal() {
+        if (!wechatModal) return;
+        wechatModal.classList.add("hidden");
+        wechatModal.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("overflow-hidden");
+      }
+
+      document.querySelectorAll("[data-wechat]")?.forEach((el) => {
+        el.addEventListener("click", (e) => {
+          e.preventDefault();
+          openWechatModal(el.getAttribute("data-wechat"));
+        });
+      });
+
+      wechatBackdrop?.addEventListener("click", () => closeWechatModal());
+      wechatClose?.addEventListener("click", () => closeWechatModal());
+      wechatCopy?.addEventListener("click", async () => {
+        const text = wechatValue?.textContent?.trim() || "";
+        if (!text) return;
+        try {
+          await navigator.clipboard.writeText(text);
+          if (wechatStatus) wechatStatus.textContent = "COPIED";
+        } catch {
+          if (wechatStatus) wechatStatus.textContent = text;
+        }
+      });
     </script>
   </body>
 </html>
