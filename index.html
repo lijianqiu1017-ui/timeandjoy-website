@@ -67,7 +67,7 @@
         z-index: 1;
       }
       .hero-title {
-        font-size: clamp(1.75rem, 5.2vw, 4.75rem);
+        font-size: clamp(1.35rem, 4.8vw, 4.75rem);
         line-height: 1.05;
       }
       .reveal-slide-up {
@@ -207,30 +207,35 @@
     </header>
 
     <main class="min-h-screen">
-      <section class="relative min-h-screen">
+      <section class="relative min-h-screen" data-hero>
         <div class="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=2400&q=80"
-            alt="极简室内空间"
+            src="./assets/hero-2752x1536.jpg"
+            width="2752"
+            height="1536"
+            alt="Hero Image"
             class="h-full w-full object-cover object-center"
             loading="eager"
             decoding="async"
+            onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1527030280862-64139fba04ca?auto=format&amp;fit=crop&amp;w=2400&amp;q=80';"
           />
-          <div class="absolute inset-0 bg-white/55 sm:bg-white/45"></div>
+          <div class="absolute inset-0 bg-ink/55 sm:bg-ink/45"></div>
         </div>
 
         <div class="relative flex min-h-screen items-end justify-center text-center">
           <div class="mx-auto w-full max-w-6xl px-6 pt-24 pb-20 sm:pt-28 sm:pb-16">
             <div class="mx-auto w-full">
               <h1
-                class="lang-text hero-title mt-5 inline-block font-semibold tracking-[0.08em] whitespace-nowrap sm:mt-6 sm:tracking-widest"
+                class="lang-text hero-title mt-5 block font-semibold tracking-[0.04em] text-white drop-shadow-[0_10px_30px_rgba(0,0,0,0.35)] sm:mt-6 sm:inline-block sm:tracking-[0.08em] sm:whitespace-nowrap"
                 data-en="Timeless Space｜ Endless Joy"
                 data-zh="恒久之境｜无尽之悦"
               >
                 Timeless Space｜ Endless Joy
               </h1>
-              <p class="mt-8 mx-auto max-w-2xl text-lg leading-relaxed tracking-[0.12em] text-ink/80 sm:mt-10 sm:text-xl">
-                赋岁月以秩序，予空间以愉悦。
+              <p
+                class="mt-8 mx-auto max-w-2xl text-lg leading-relaxed tracking-[0.12em] text-white/85 drop-shadow-[0_8px_22px_rgba(0,0,0,0.35)] sm:mt-10 sm:text-xl"
+              >
+                赋岁月以秩序&nbsp;&nbsp;予空间以愉悦
               </p>
             </div>
           </div>
@@ -254,7 +259,7 @@
         <div class="mx-auto max-w-6xl px-6 pb-20 sm:pb-28">
           <div class="reveal-slide-up overflow-hidden rounded-2xl bg-white/50" data-reveal>
             <img
-              src="https://images.unsplash.com/photo-1527030280862-64139fba04ca?auto=format&fit=crop&w=3200&q=80"
+              src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=2400&q=80"
               alt="Wide Image"
               class="h-[clamp(380px,72vh,780px)] w-full object-cover"
               loading="lazy"
@@ -441,7 +446,7 @@
         let node = el;
         while (node && node !== document.documentElement) {
           const bg = parseCssColor(window.getComputedStyle(node).backgroundColor);
-          if (bg && bg.a >= 0.95) return bg;
+          if (bg && bg.a >= 0.2) return { r: bg.r, g: bg.g, b: bg.b, a: 1 };
           node = node.parentElement;
         }
         const bodyBg = parseCssColor(window.getComputedStyle(document.body).backgroundColor);
@@ -449,8 +454,21 @@
         return { r: 249, g: 249, b: 249, a: 1 };
       }
 
+      function isHeaderOverHero() {
+        if (!header) return false;
+        const hero = document.querySelector("[data-hero]");
+        if (!hero) return false;
+        const r = hero.getBoundingClientRect();
+        const y = header.getBoundingClientRect().height;
+        return r.top <= y && r.bottom >= y;
+      }
+
       function updateNavContrast() {
         if (!header || !siteNav) return;
+        if (isHeaderOverHero()) {
+          siteNav.style.color = "#ffffff";
+          return;
+        }
         const rect = header.getBoundingClientRect();
         const x = Math.min(window.innerWidth - 24, Math.max(24, rect.left + rect.width * 0.5));
         const y = rect.top + rect.height * 0.5;
@@ -471,8 +489,7 @@
           }
         }
 
-        siteNav.classList.toggle("text-white", useLight);
-        siteNav.classList.toggle("text-ink", !useLight);
+        siteNav.style.color = useLight ? "#ffffff" : "#1A1A1A";
       }
 
       function wrapNavLetters() {
@@ -490,6 +507,12 @@
 
       function updateNavLetterContrast() {
         if (!header) return;
+        if (isHeaderOverHero()) {
+          document.querySelectorAll("[data-nav-letter]").forEach((span) => {
+            span.style.color = "#ffffff";
+          });
+          return;
+        }
         const prevPointerEvents = header.style.pointerEvents;
         header.style.pointerEvents = "none";
 
@@ -510,8 +533,7 @@
             }
           }
 
-          span.classList.toggle("text-white", useLight);
-          span.classList.toggle("text-ink", !useLight);
+          span.style.color = useLight ? "#ffffff" : "#1A1A1A";
         });
 
         header.style.pointerEvents = prevPointerEvents;
