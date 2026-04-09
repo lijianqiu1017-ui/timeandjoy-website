@@ -209,16 +209,19 @@
     <main class="min-h-screen">
       <section class="relative min-h-screen" data-hero>
         <div class="absolute inset-0">
-          <img
-            src="./assets/hero-2752x1536.jpg"
-            width="2752"
-            height="1536"
-            alt="Hero Image"
-            class="h-full w-full object-cover object-center"
-            loading="eager"
-            decoding="async"
-            onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1527030280862-64139fba04ca?auto=format&amp;fit=crop&amp;w=2400&amp;q=80';"
-          />
+          <picture>
+            <source srcset="./assets/hero-2752x1536.webp" type="image/webp" />
+            <img
+              src="./assets/hero-2752x1536.jpg"
+              width="2752"
+              height="1536"
+              alt="Hero Image"
+              class="h-full w-full object-cover object-center"
+              loading="eager"
+              decoding="async"
+              onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1527030280862-64139fba04ca?auto=format&amp;fit=crop&amp;w=2400&amp;q=80';"
+            />
+          </picture>
           <div class="absolute inset-0 bg-ink/55 sm:bg-ink/45"></div>
         </div>
 
