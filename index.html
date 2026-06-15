@@ -3,6 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Tag Manager -->
+    <script>
+      (function(w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        const f = d.getElementsByTagName(s)[0];
+        const j = d.createElement(s);
+        const dl = l !== 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-TSQKH6PQ');
+    </script>
+    <!-- End Google Tag Manager -->
     <title>时悦空间 | Time &amp; Joy Space Design</title>
     <meta name="description" content="A design studio blending modern minimalism with classical aesthetics, delivering sophisticated spatial storytelling." />
     <link rel="canonical" href="https://timeandjoy.com/" />
@@ -89,6 +103,11 @@
     </style>
   </head>
   <body class="ccd-texture h-full bg-paper text-ink font-sans antialiased">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TSQKH6PQ" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <header id="site-header" class="fixed inset-x-0 top-0 z-50 bg-transparent">
       <nav id="site-nav" class="flex w-full items-center justify-between px-8 py-6 text-ink lg:px-12">
         <a href="./index.html" class="flex items-center">
@@ -379,6 +398,80 @@
         </div>
       </div>
     </div>
+
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function trackEvent(eventName, payload = {}) {
+        window.dataLayer.push({
+          event: eventName,
+          page_path: window.location.pathname,
+          page_title: document.title,
+          ...payload,
+        });
+      }
+
+      window.trackEvent = trackEvent;
+
+      function getTextContent(el) {
+        return (el?.getAttribute('aria-label') || el?.getAttribute('title') || el?.textContent || '').replace(/\s+/g, ' ').trim();
+      }
+
+      document.addEventListener('click', (event) => {
+        const langButton = event.target.closest('#lang-toggle');
+        if (langButton) {
+          const nextLang = langButton.getAttribute('aria-pressed') === 'true' ? 'en' : 'zh';
+          trackEvent('lang_switch', { language: nextLang });
+          return;
+        }
+
+        const wechatTrigger = event.target.closest('[data-wechat]');
+        if (wechatTrigger) {
+          trackEvent('wechat_click', {
+            wechat_id: wechatTrigger.getAttribute('data-wechat') || '',
+            trigger_text: getTextContent(wechatTrigger),
+          });
+          return;
+        }
+
+        const link = event.target.closest('a[href]');
+        if (!link) return;
+
+        const href = link.getAttribute('href') || '';
+        if (href.includes('project-detail.html')) {
+          trackEvent('project_click', {
+            destination: href,
+            project_name: getTextContent(link),
+          });
+          return;
+        }
+
+        if (href.startsWith('mailto:')) {
+          trackEvent('email_click', {
+            destination: href.replace('mailto:', ''),
+            trigger_text: getTextContent(link),
+          });
+          return;
+        }
+
+        if (href.startsWith('tel:')) {
+          trackEvent('phone_click', {
+            destination: href.replace('tel:', ''),
+            trigger_text: getTextContent(link),
+          });
+        }
+      });
+
+      document.addEventListener('submit', (event) => {
+        const form = event.target;
+        if (!(form instanceof HTMLFormElement)) return;
+        const formName = form.getAttribute('name') || form.getAttribute('id') || form.getAttribute('data-form-name') || 'unnamed_form';
+        trackEvent('contact_submit', {
+          form_name: formName,
+          form_action: form.getAttribute('action') || window.location.pathname,
+        });
+      });
+    </script>
 
     <script>
       const header = document.getElementById("site-header");
