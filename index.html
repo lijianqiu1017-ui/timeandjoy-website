@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="h-full"> 
+<html lang="en" class="h-full">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,10 +18,16 @@
     </script>
     <!-- End Google Tag Manager -->
     <title>时悦空间 | Time &amp; Joy Space Design</title>
-    <meta name="description" content="A design studio blending modern minimalism with classical aesthetics, delivering sophisticated spatial storytelling." />
+    <meta
+      name="description"
+      content="A design studio shaping commercial and residential interiors through clarity, order, light, and material restraint."
+    />
     <link rel="canonical" href="https://timeandjoy.com/" />
     <meta property="og:title" content="时悦空间 | Time &amp; Joy Space Design" />
-    <meta property="og:description" content="A design studio blending modern minimalism with classical aesthetics, delivering sophisticated spatial storytelling." />
+    <meta
+      property="og:description"
+      content="A design studio shaping commercial and residential interiors through clarity, order, light, and material restraint."
+    />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://timeandjoy.com/" />
     <meta property="og:site_name" content="时悦空间 · Time &amp; Joy" />
@@ -31,12 +37,15 @@
     <meta property="og:image:alt" content="Time &amp; Joy Space Design" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="时悦空间 | Time &amp; Joy Space Design" />
-    <meta name="twitter:description" content="A design studio blending modern minimalism with classical aesthetics, delivering sophisticated spatial storytelling." />
+    <meta
+      name="twitter:description"
+      content="A design studio shaping commercial and residential interiors through clarity, order, light, and material restraint."
+    />
     <meta name="twitter:image" content="https://timeandjoy.com/og-cover.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Noto+Sans+SC:wght@300;400;500&family=Playfair+Display:ital,wght@1,500;1,600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Noto+Sans+SC:wght@300;400;500&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap"
       rel="stylesheet"
     />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -49,7 +58,7 @@
               paper: "#F9F9F9",
             },
             fontFamily: {
-              sans: ["Inter", "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Roboto", "Helvetica", "Arial", "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji"],
+              sans: ["Inter", "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Roboto", "Helvetica", "Arial"],
               serif: ["Playfair Display", "ui-serif", "Georgia", "serif"],
               cn: ["PingFang SC", "Noto Sans SC", "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Roboto", "Helvetica", "Arial"],
             },
@@ -81,24 +90,15 @@
         z-index: 1;
       }
       .hero-title {
-        font-size: clamp(1.35rem, 4.8vw, 4.75rem);
-        line-height: 1.05;
+        font-size: clamp(1.45rem, 4.4vw, 4.75rem);
+        line-height: 1.04;
       }
-      .reveal-slide-up {
-        transform: translateY(56px);
-        opacity: 0;
-        transition: transform 900ms cubic-bezier(0.22, 1, 0.36, 1), opacity 900ms ease;
+      .hero-summary {
+        font-size: clamp(0.95rem, 1.35vw, 1.125rem);
       }
-      .reveal-slide-up.is-in {
-        transform: translateY(0);
-        opacity: 1;
-      }
-      .reveal-slide-up img {
-        transform: scale(1.06);
-        transition: transform 1200ms cubic-bezier(0.22, 1, 0.36, 1);
-      }
-      .reveal-slide-up.is-in img {
-        transform: scale(1);
+      .selected-work-card:hover .selected-work-image,
+      .selected-work-card:focus-visible .selected-work-image {
+        transform: scale(1.035);
       }
     </style>
   </head>
@@ -109,7 +109,7 @@
     </noscript>
     <!-- End Google Tag Manager (noscript) -->
     <header id="site-header" class="fixed inset-x-0 top-0 z-50 bg-transparent">
-      <nav id="site-nav" class="flex w-full items-center justify-between px-8 py-6 text-ink lg:px-12">
+      <nav id="site-nav" class="flex w-full items-center justify-between px-6 py-6 text-ink lg:px-12">
         <a href="./index.html" class="flex items-center">
           <span class="flex items-center">
             <svg
@@ -120,60 +120,27 @@
               aria-hidden="true"
             >
               <g id="圖層_x0020_1">
-                <path
-                  fill="currentColor"
-                  d="M67292.36 22791.84c6777.84,-855.28 9389.92,8910.55 3671.35,11994.91 -565.12,304.59 -1260.92,461.21 -1884.81,588.45 -1514.7,157.4 -2952.98,-114.44 -4211.14,-1006.98 -3649.91,-2589.08 -3528.29,-9206.58 747.07,-11112.74 562.17,-250.67 1074.73,-367.61 1677.53,-463.64zm1220.3 12394.67c567.97,-75.89 971.88,-151.61 1507.95,-375.99 4993.47,-2090.19 3624.33,-12293.12 -2242.74,-11845.72 -5404.64,643.42 -5835.78,8462.98 -2248.61,11272.91 846.2,668.23 1906.76,1005.5 2983.4,948.8z"
-                />
-                <path
-                  fill="currentColor"
-                  d="M27277.15 22770.4c971.45,-7.09 2038.67,-33.45 3003.81,22.48 -211.34,117.98 -497.35,266.82 -689.75,402.27 -91.03,277.45 -177.72,582.92 -187.4,875.93 -89.11,2690.4 -10.46,5390.9 -66.47,8083.71 -16.16,774.29 13.22,1547.88 85.49,2318.11 210.21,312.55 402.53,511.09 707.73,736.6 -1117.44,96.9 -2752.1,49.27 -3893.75,45.03 279.28,-120.4 877.93,-359.48 908.18,-665.63 249.2,-2522.28 65.78,-5377.59 119.02,-7917.41 21.87,-1044.57 57.4,-1952.92 33.11,-2827.48 -1547.72,3215.75 -2774.58,7125.06 -4355.22,10215.38 -594.24,-1097.29 -1406.31,-3138.73 -1909.54,-4366.46 -636.51,-1552.64 -1559.38,-3430.01 -2132.36,-4954.48 -59.98,-140.54 -198.54,-545.23 -301.31,-588.11l-10.29 257.49c-22.82,1872.2 -22.73,3744.56 0.26,5616.75 7.78,1319.01 -202.95,3557.17 601.42,4681.78 125.5,175.38 632.1,425.35 846.03,534.78 -1047.86,25.93 -2096.14,30.51 -3144.18,13.57 531.84,-302.35 996.95,-597.88 1172.67,-1225.4 238.83,-853.03 256.45,-10306.56 32.24,-10677.37 -152.47,-252.22 -606.95,-403.22 -844.82,-569.96 1043.71,-21.69 2087.77,-25.67 3131.65,-12.1 1217.7,2670.34 2260.97,5496.95 3486.37,8194.34 355.51,-681.88 653.28,-1427.31 939.29,-2142.73 809.47,-2025.01 1698.2,-4009.74 2467.82,-6051.09z"
-                />
-                <path
-                  fill="currentColor"
-                  d="M47076.84 19726.14c320.24,-21.43 641.87,-7.08 959,42.62 1691.63,281.61 2768.79,1724.47 2452.95,3426.99 -334.85,1804.86 -1850.06,2785.04 -3246.43,3746.46 -167.42,-356.46 -332,-714.22 -493.8,-1073.18 1316.76,-1078.54 2277.31,-2021.82 2240.92,-3912.93 -19.79,-1031.61 -703.32,-2048.96 -1834.68,-1968.57 -478.42,30.6 -924.68,251.7 -1238.97,613.77 -475.73,555.61 -658.8,1436.47 -581.36,2134.88 429.93,3877.4 3997.12,9217.9 6861.33,11681.31 987.27,923.74 2640.61,1939.61 4016.83,1985.34 1247.18,41.49 1848.51,-311.08 2717.54,-1091.5 -1923.37,3207.62 -4309.42,3346.6 -7345.72,1468.96 -3533.31,-2185.09 -12644.39,-15907.84 -4507.61,-17054.15z"
-                />
-                <path
-                  fill="currentColor"
-                  d="M30814.26 22781.64c2582.79,-100.78 5714.08,-13.75 8348.29,-11.33 -1.73,187.05 8.73,361.39 31.89,546.88 116.78,934.37 181.78,1837.7 191.2,2780.63 -238.56,-909.73 -430.36,-1658.96 -1191.43,-2314.57 -989.95,-852.77 -3271.06,-797.79 -4514.09,-663.04 -1.47,1832.17 10.63,3664.34 36.13,5496.43 2098.91,2.5 2929.3,163.1 3536.85,-2098.65 25.33,497 93.1,3841.01 -33.71,4171.72 -384.38,-101.39 -133.72,-774.29 -587.58,-1183.22 -735.66,-662.78 -2017.93,-558.46 -2945.46,-546.88l-7.01 493.55c-8.82,1817.05 -3.8,3634.1 14.87,5451.05 2086.12,29.04 4904.08,315.23 5717.27,-2150.6 93.18,-282.47 126.2,-572.72 260.52,-838.77l81.76 -14.52c220.5,424.31 -167.76,2767.06 -268.38,3344.36 -2978.91,42.61 -6007.69,-17.54 -8996.63,11.76 1036.62,-457.94 1113.81,-546.1 1101.1,-1726.81 -35.78,-3323.1 210.82,-6873.78 -24.11,-10178.82 -197.16,-170.96 -534,-406.59 -751.48,-569.17z"
-                />
-                <path
-                  fill="currentColor"
-                  d="M2440.01 22773.95l9719.58 -0.7c131.04,1044.31 292.67,2237.04 252.3,3275.73 -328.71,-780.51 -434.51,-1479.6 -1104.12,-2123.88 -900.4,-866.35 -1849.46,-829.01 -2985.31,-818.98l-6.82 10744.18c108.99,867.82 333.89,1029.71 1092.63,1413.57 -1487.91,33.45 -2780.03,65.52 -4257.65,-15.91 591.91,-225.16 986.49,-332.94 1028.93,-1054.85 73.73,-1254.18 44.69,-2538.7 44.95,-3795.21l-0.78 -7284.44c-2725.48,-49.61 -3189.21,664.09 -4059.27,3039.16 -28.26,-1041.63 135.62,-2336.78 275.56,-3378.67z"
-                />
-                <path
-                  fill="currentColor"
-                  d="M12867.76 22787.77c1258.67,-65 2802.75,-19.27 4079.32,-8.46 -715.78,259.13 -1077.59,318.85 -1117.01,1182.43 -149.79,3280.74 -97.06,6596.15 -38.54,9880.27 14.52,813.27 226.97,912.15 799.35,1407.6 -1285.73,104.93 -2619,5.19 -3915.44,10.89 382.47,-153.77 519.47,-230.61 824.16,-506.6 287.57,-747.06 200.01,-2986 213.5,-3907.66 36.82,-1671.06 42.52,-3342.63 17.02,-5013.86 -10.45,-688.72 -8.46,-1880.49 -135.96,-2521.06 -244.79,-194.66 -469.61,-348.16 -726.4,-523.55z"
-                />
-                <path
-                  fill="currentColor"
-                  d="M44172.17 27642.43l88.09 27.74c193.35,262.51 314.27,595.54 441.07,898.76l-96.38 104.5c-3828.91,4181.4 456.91,9257.14 3705.67,5580.44l316.09 424.4c-360,461.31 -658.63,735.57 -1113.2,1091.42 -2957.04,2178 -7304.75,-250.83 -6419.73,-4069.29 497.08,-2144.38 1366.98,-2872.69 3078.39,-4057.97z"
-                />
-                <path
-                  fill="currentColor"
-                  d="M74215.41 22970.93c410.57,-2.85 820.27,-2.16 1230.85,1.99 -159.91,136.05 -419.22,326.47 -462.44,542.81 -87.29,433.3 2893,5168.67 3275.91,5771.9 611.96,-1056.32 1210.09,-2121.12 1792.67,-3193.96 341.42,-623.37 713.09,-1262.21 993.14,-1916.96 332.78,-780.86 171.15,-900.57 -561.83,-1177 832.37,-25.06 1665.61,-26.01 2498.85,-2.67 -699.26,202.69 -1033.77,396.91 -1451.25,1015.7 -807.31,1195.66 -1453.85,2513.03 -2117.67,3791.67 -280.91,507.11 -979.31,1607.6 -968.94,2184.3 28.53,1539.07 -90.76,3283.6 291.29,4779.19 49.26,193.18 563.56,357.16 749.39,427.69 -932.64,48.06 -1882.56,30.85 -2821.25,48.31 211.77,-76.23 853.98,-286.44 885.97,-516.62 206.57,-1460.33 21.6,-3127.58 -47.54,-4603.73 -19.88,-419.81 -519.48,-1242.59 -735.57,-1589.98 -1063.16,-1713.23 -1941.34,-3576.18 -3174.77,-5169.1 -120.15,-155.06 -548.01,-294.65 -741.62,-365.27 422.67,-27.06 936.09,-21.79 1364.81,-28.27z"
-                />
-                <path
-                  fill="currentColor"
-                  d="M61121.82 22859.26l52.38 3.97 46.85 58.78c-248.5,172.01 -501.07,403.39 -550.33,710.15 -129.31,804.81 -70.28,1829.49 -38.81,2632.31 36.47,1072.75 62.14,2145.84 76.92,3219.11 61.38,3374.01 278.42,6794.78 -3425.95,8307.14 162.41,-156.53 396.22,-342.54 573.24,-491.64 759.68,-658.73 1326.61,-1544.43 1651.18,-2492.63 189.63,-553.96 263.97,-1174.48 300.62,-1757.66 77.7,-1237.5 74.59,-9130.18 -255.25,-9713.45 -148.58,-262.67 -581.36,-361.03 -851.3,-448.77l2420.45 -27.31z"
-                />
-                <path
-                  fill="currentColor"
-                  d="M54568.38 27331.95c944.12,-36.57 1415.02,236.4 2140.66,774.98 -414.72,600.9 -822.1,1206.81 -1222.03,1817.65 -1471.05,-1218.91 -2664.46,-791.75 -3981.22,406.42 -462.6,543.24 -694.59,908.26 -1054.08,1522.73l-392.42 -450.15c891.85,-2020.26 2147.06,-3813.8 4509.09,-4071.63z"
-                />
-                <path
-                  fill="currentColor"
-                  d="M18588.4 24407.83l10.29 -257.49c102.77,42.88 241.33,447.57 301.31,588.11 -98.36,114.61 -39.42,87.65 -171.4,104.42 -62.15,-155.76 -95.43,-275.73 -140.2,-435.04z"
-                />
+                <path fill="currentColor" d="M67292.36 22791.84c6777.84,-855.28 9389.92,8910.55 3671.35,11994.91 -565.12,304.59 -1260.92,461.21 -1884.81,588.45 -1514.7,157.4 -2952.98,-114.44 -4211.14,-1006.98 -3649.91,-2589.08 -3528.29,-9206.58 747.07,-11112.74 562.17,-250.67 1074.73,-367.61 1677.53,-463.64zm1220.3 12394.67c567.97,-75.89 971.88,-151.61 1507.95,-375.99 4993.47,-2090.19 3624.33,-12293.12 -2242.74,-11845.72 -5404.64,643.42 -5835.78,8462.98 -2248.61,11272.91 846.2,668.23 1906.76,1005.5 2983.4,948.8z" />
+                <path fill="currentColor" d="M27277.15 22770.4c971.45,-7.09 2038.67,-33.45 3003.81,22.48 -211.34,117.98 -497.35,266.82 -689.75,402.27 -91.03,277.45 -177.72,582.92 -187.4,875.93 -89.11,2690.4 -10.46,5390.9 -66.47,8083.71 -16.16,774.29 13.22,1547.88 85.49,2318.11 210.21,312.55 402.53,511.09 707.73,736.6 -1117.44,96.9 -2752.1,49.27 -3893.75,45.03 279.28,-120.4 877.93,-359.48 908.18,-665.63 249.2,-2522.28 65.78,-5377.59 119.02,-7917.41 21.87,-1044.57 57.4,-1952.92 33.11,-2827.48 -1547.72,3215.75 -2774.58,7125.06 -4355.22,10215.38 -594.24,-1097.29 -1406.31,-3138.73 -1909.54,-4366.46 -636.51,-1552.64 -1559.38,-3430.01 -2132.36,-4954.48 -59.98,-140.54 -198.54,-545.23 -301.31,-588.11l-10.29 257.49c-22.82,1872.2 -22.73,3744.56 0.26,5616.75 7.78,1319.01 -202.95,3557.17 601.42,4681.78 125.5,175.38 632.1,425.35 846.03,534.78 -1047.86,25.93 -2096.14,30.51 -3144.18,13.57 531.84,-302.35 996.95,-597.88 1172.67,-1225.4 238.83,-853.03 256.45,-10306.56 32.24,-10677.37 -152.47,-252.22 -606.95,-403.22 -844.82,-569.96 1043.71,-21.69 2087.77,-25.67 3131.65,-12.1 1217.7,2670.34 2260.97,5496.95 3486.37,8194.34 355.51,-681.88 653.28,-1427.31 939.29,-2142.73 809.47,-2025.01 1698.2,-4009.74 2467.82,-6051.09z" />
+                <path fill="currentColor" d="M47076.84 19726.14c320.24,-21.43 641.87,-7.08 959,42.62 1691.63,281.61 2768.79,1724.47 2452.95,3426.99 -334.85,1804.86 -1850.06,2785.04 -3246.43,3746.46 -167.42,-356.46 -332,-714.22 -493.8,-1073.18 1316.76,-1078.54 2277.31,-2021.82 2240.92,-3912.93 -19.79,-1031.61 -703.32,-2048.96 -1834.68,-1968.57 -478.42,30.6 -924.68,251.7 -1238.97,613.77 -475.73,555.61 -658.8,1436.47 -581.36,2134.88 429.93,3877.4 3997.12,9217.9 6861.33,11681.31 987.27,923.74 2640.61,1939.61 4016.83,1985.34 1247.18,41.49 1848.51,-311.08 2717.54,-1091.5 -1923.37,3207.62 -4309.42,3346.6 -7345.72,1468.96 -3533.31,-2185.09 -12644.39,-15907.84 -4507.61,-17054.15z" />
+                <path fill="currentColor" d="M30814.26 22781.64c2582.79,-100.78 5714.08,-13.75 8348.29,-11.33 -1.73,187.05 8.73,361.39 31.89,546.88 116.78,934.37 181.78,1837.7 191.2,2780.63 -238.56,-909.73 -430.36,-1658.96 -1191.43,-2314.57 -989.95,-852.77 -3271.06,-797.79 -4514.09,-663.04 -1.47,1832.17 10.63,3664.34 36.13,5496.43 2098.91,2.5 2929.3,163.1 3536.85,-2098.65 25.33,497 93.1,3841.01 -33.71,4171.72 -384.38,-101.39 -133.72,-774.29 -587.58,-1183.22 -735.66,-662.78 -2017.93,-558.46 -2945.46,-546.88l-7.01 493.55c-8.82,1817.05 -3.8,3634.1 14.87,5451.05 2086.12,29.04 4904.08,315.23 5717.27,-2150.6 93.18,-282.47 126.2,-572.72 260.52,-838.77l81.76 -14.52c220.5,424.31 -167.76,2767.06 -268.38,3344.36 -2978.91,42.61 -6007.69,-17.54 -8996.63,11.76 1036.62,-457.94 1113.81,-546.1 1101.1,-1726.81 -35.78,-3323.1 210.82,-6873.78 -24.11,-10178.82 -197.16,-170.96 -534,-406.59 -751.48,-569.17z" />
+                <path fill="currentColor" d="M2440.01 22773.95l9719.58 -0.7c131.04,1044.31 292.67,2237.04 252.3,3275.73 -328.71,-780.51 -434.51,-1479.6 -1104.12,-2123.88 -900.4,-866.35 -1849.46,-829.01 -2985.31,-818.98l-6.82 10744.18c108.99,867.82 333.89,1029.71 1092.63,1413.57 -1487.91,33.45 -2780.03,65.52 -4257.65,-15.91 591.91,-225.16 986.49,-332.94 1028.93,-1054.85 73.73,-1254.18 44.69,-2538.7 44.95,-3795.21l-0.78 -7284.44c-2725.48,-49.61 -3189.21,664.09 -4059.27,3039.16 -28.26,-1041.63 135.62,-2336.78 275.56,-3378.67z" />
+                <path fill="currentColor" d="M12867.76 22787.77c1258.67,-65 2802.75,-19.27 4079.32,-8.46 -715.78,259.13 -1077.59,318.85 -1117.01,1182.43 -149.79,3280.74 -97.06,6596.15 -38.54,9880.27 14.52,813.27 226.97,912.15 799.35,1407.6 -1285.73,104.93 -2619,5.19 -3915.44,10.89 382.47,-153.77 519.47,-230.61 824.16,-506.6 287.57,-747.06 200.01,-2986 213.5,-3907.66 36.82,-1671.06 42.52,-3342.63 17.02,-5013.86 -10.45,-688.72 -8.46,-1880.49 -135.96,-2521.06 -244.79,-194.66 -469.61,-348.16 -726.4,-523.55z" />
+                <path fill="currentColor" d="M44172.17 27642.43l88.09 27.74c193.35,262.51 314.27,595.54 441.07,898.76l-96.38 104.5c-3828.91,4181.4 456.91,9257.14 3705.67,5580.44l316.09 424.4c-360,461.31 -658.63,735.57 -1113.2,1091.42 -2957.04,2178 -7304.75,-250.83 -6419.73,-4069.29 497.08,-2144.38 1366.98,-2872.69 3078.39,-4057.97z" />
+                <path fill="currentColor" d="M74215.41 22970.93c410.57,-2.85 820.27,-2.16 1230.85,1.99 -159.91,136.05 -419.22,326.47 -462.44,542.81 -87.29,433.3 2893,5168.67 3275.91,5771.9 611.96,-1056.32 1210.09,-2121.12 1792.67,-3193.96 341.42,-623.37 713.09,-1262.21 993.14,-1916.96 332.78,-780.86 171.15,-900.57 -561.83,-1177 832.37,-25.06 1665.61,-26.01 2498.85,-2.67 -699.26,202.69 -1033.77,396.91 -1451.25,1015.7 -807.31,1195.66 -1453.85,2513.03 -2117.67,3791.67 -280.91,507.11 -979.31,1607.6 -968.94,2184.3 28.53,1539.07 -90.76,3283.6 291.29,4779.19 49.26,193.18 563.56,357.16 749.39,427.69 -932.64,48.06 -1882.56,30.85 -2821.25,48.31 211.77,-76.23 853.98,-286.44 885.97,-516.62 206.57,-1460.33 21.6,-3127.58 -47.54,-4603.73 -19.88,-419.81 -519.48,-1242.59 -735.57,-1589.98 -1063.16,-1713.23 -1941.34,-3576.18 -3174.77,-5169.1 -120.15,-155.06 -548.01,-294.65 -741.62,-365.27 422.67,-27.06 936.09,-21.79 1364.81,-28.27z" />
+                <path fill="currentColor" d="M61121.82 22859.26l52.38 3.97 46.85 58.78c-248.5,172.01 -501.07,403.39 -550.33,710.15 -129.31,804.81 -70.28,1829.49 -38.81,2632.31 36.47,1072.75 62.14,2145.84 76.92,3219.11 61.38,3374.01 278.42,6794.78 -3425.95,8307.14 162.41,-156.53 396.22,-342.54 573.24,-491.64 759.68,-658.73 1326.61,-1544.43 1651.18,-2492.63 189.63,-553.96 263.97,-1174.48 300.62,-1757.66 77.7,-1237.5 74.59,-9130.18 -255.25,-9713.45 -148.58,-262.67 -581.36,-361.03 -851.3,-448.77l2420.45 -27.31z" />
+                <path fill="currentColor" d="M54568.38 27331.95c944.12,-36.57 1415.02,236.4 2140.66,774.98 -414.72,600.9 -822.1,1206.81 -1222.03,1817.65 -1471.05,-1218.91 -2664.46,-791.75 -3981.22,406.42 -462.6,543.24 -694.59,908.26 -1054.08,1522.73l-392.42 -450.15c891.85,-2020.26 2147.06,-3813.8 4509.09,-4071.63z" />
+                <path fill="currentColor" d="M18588.4 24407.83l10.29 -257.49c102.77,42.88 241.33,447.57 301.31,588.11 -98.36,114.61 -39.42,87.65 -171.4,104.42 -62.15,-155.76 -95.43,-275.73 -140.2,-435.04z" />
               </g>
             </svg>
             <span class="sr-only">Time &amp; Joy</span>
           </span>
         </a>
-        <div class="flex items-center gap-4 mr-8 lg:mr-16">
-          <div class="hidden items-center gap-8 text-xs tracking-widest sm:flex">
+        <div class="flex items-center gap-4">
+          <div class="hidden items-center gap-8 text-xs tracking-[0.26em] sm:flex">
             <a href="./projects.html" class="lang-text transition-opacity hover:opacity-70" data-nav-split data-en="PROJECTS" data-zh="项目">PROJECTS</a>
-            <a href="#about" class="lang-text transition-opacity hover:opacity-70" data-nav-split data-en="ABOUT" data-zh="关于">ABOUT</a>
-            <a href="#news" class="lang-text transition-opacity hover:opacity-70" data-nav-split data-en="NEWS" data-zh="动态">NEWS</a>
+            <a href="./studio.html" class="lang-text transition-opacity hover:opacity-70" data-nav-split data-en="STUDIO" data-zh="工作室">STUDIO</a>
+            <a href="./journal.html" class="lang-text transition-opacity hover:opacity-70" data-nav-split data-en="JOURNAL" data-zh="期刊">JOURNAL</a>
             <a href="./contact.html" class="lang-text transition-opacity hover:opacity-70" data-nav-split data-en="CONTACT" data-zh="联系">CONTACT</a>
           </div>
           <button
@@ -203,19 +170,11 @@
       <div id="mobile-nav" class="pointer-events-none fixed inset-0 z-40 opacity-0 transition-opacity duration-300 sm:hidden" aria-hidden="true">
         <div id="mobile-nav-backdrop" class="absolute inset-0 bg-paper"></div>
         <div class="absolute inset-x-0 top-0">
-          <div class="mx-auto max-w-6xl px-6 pt-24 pb-10">
+          <div class="mx-auto max-w-6xl px-6 pb-10 pt-24">
             <div class="flex flex-col gap-6 text-sm tracking-widest">
-              <a
-                href="./projects.html"
-                class="lang-text text-ink/85 transition hover:text-ink"
-                data-nav-close
-                data-en="PROJECTS"
-                data-zh="项目"
-              >
-                PROJECTS
-              </a>
-              <a href="#about" class="lang-text text-ink/85 transition hover:text-ink" data-nav-close data-en="ABOUT" data-zh="关于">ABOUT</a>
-              <a href="#news" class="lang-text text-ink/85 transition hover:text-ink" data-nav-close data-en="NEWS" data-zh="动态">NEWS</a>
+              <a href="./projects.html" class="lang-text text-ink/85 transition hover:text-ink" data-nav-close data-en="PROJECTS" data-zh="项目">PROJECTS</a>
+              <a href="./studio.html" class="lang-text text-ink/85 transition hover:text-ink" data-nav-close data-en="STUDIO" data-zh="工作室">STUDIO</a>
+              <a href="./journal.html" class="lang-text text-ink/85 transition hover:text-ink" data-nav-close data-en="JOURNAL" data-zh="期刊">JOURNAL</a>
               <a href="./contact.html" class="lang-text text-ink/85 transition hover:text-ink" data-nav-close data-en="CONTACT" data-zh="联系">CONTACT</a>
             </div>
             <div class="mt-10 h-px w-full bg-ink/10"></div>
@@ -244,126 +203,335 @@
           <div class="absolute inset-0 bg-ink/55 sm:bg-ink/45"></div>
         </div>
 
-        <div class="relative flex min-h-screen items-end justify-center text-center">
-          <div class="mx-auto w-full max-w-6xl px-6 pt-24 pb-20 sm:pt-28 sm:pb-16">
-            <div class="mx-auto w-full">
+        <div class="relative flex min-h-screen items-end justify-center">
+          <div class="mx-auto w-full max-w-6xl px-6 pb-16 pt-28 sm:pb-18">
+            <div class="max-w-4xl text-center sm:max-w-3xl sm:text-left">
               <h1
-                class="lang-text hero-title mt-5 block font-semibold tracking-[0.04em] text-white drop-shadow-[0_10px_30px_rgba(0,0,0,0.35)] sm:mt-6 sm:inline-block sm:tracking-[0.08em] sm:whitespace-nowrap"
+                class="lang-text hero-title font-semibold tracking-[0.08em] text-white drop-shadow-[0_12px_30px_rgba(0,0,0,0.35)]"
                 data-en="Timeless Space｜ Endless Joy"
                 data-zh="恒久之境｜无尽之悦"
               >
                 Timeless Space｜ Endless Joy
               </h1>
-              <p
-                class="mt-8 mx-auto max-w-2xl text-lg leading-relaxed tracking-[0.12em] text-white/85 drop-shadow-[0_8px_22px_rgba(0,0,0,0.35)] sm:mt-10 sm:text-xl"
-              >
+              <p class="mt-8 text-lg leading-relaxed tracking-[0.14em] text-white drop-shadow-[0_8px_22px_rgba(0,0,0,0.35)] sm:text-xl">
                 赋岁月以秩序&nbsp;&nbsp;予空间以愉悦
               </p>
+              <p
+                class="lang-text hero-summary mx-auto mt-8 max-w-2xl leading-relaxed text-white/75 sm:mx-0"
+                data-en="Commercial interiors lead the narrative, while residential work reflects a measured command of proportion, light, and long-term calm."
+                data-zh="以商业空间为主叙事，住宅项目作为审美与设计控制力的背书，在秩序、光线与材料的克制中建立持续可读的空间气质。"
+              >
+                Commercial interiors lead the narrative, while residential work reflects a measured command of proportion, light, and long-term calm.
+              </p>
+              <div class="mt-10 flex justify-center sm:justify-start">
+                <a
+                  href="#selected-works"
+                  class="lang-text inline-flex items-center gap-3 rounded-full border border-white/30 bg-white/10 px-6 py-3 text-xs tracking-[0.26em] text-white backdrop-blur-sm transition hover:bg-white/15"
+                  data-en="VIEW SELECTED WORKS"
+                  data-zh="查看精选作品"
+                >
+                  VIEW SELECTED WORKS
+                  <span aria-hidden="true">↓</span>
+                </a>
+              </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="selected-works" class="border-t border-ink/10 bg-paper">
+        <div class="mx-auto max-w-6xl px-6 py-20 sm:py-24">
+          <div class="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+            <div class="max-w-2xl">
+              <p class="lang-text text-xs tracking-[0.32em] text-ink/50" data-en="SELECTED WORKS" data-zh="精选作品">SELECTED WORKS</p>
+              <h2
+                class="lang-text mt-4 text-3xl font-semibold tracking-[0.18em] text-ink sm:text-4xl"
+                data-en="A Fast Entry Into The Work"
+                data-zh="更快进入作品阅读"
+              >
+                A Fast Entry Into The Work
+              </h2>
+            </div>
+            <p
+              class="lang-text max-w-xl text-sm leading-relaxed text-ink/68"
+              data-en="A concise selection of commercial and residential interiors, arranged to show range, strategy, and atmosphere at a glance."
+              data-zh="以更清晰的项目目录方式进入网站内容：优先呈现商业空间，再以住宅项目补足审美判断与细节控制。"
+            >
+              A concise selection of commercial and residential interiors, arranged to show range, strategy, and atmosphere at a glance.
+            </p>
+          </div>
+
+          <div class="mt-12 grid gap-6 lg:grid-cols-2">
+            <a
+              href="./project-detail.html?project=mingzhu-hotel"
+              class="selected-work-card group overflow-hidden rounded-[28px] border border-ink/10 bg-white/70"
+              aria-label="Mingzhu Hotel Renovation, Chengdu, Commercial"
+            >
+              <div class="overflow-hidden">
+                <img
+                  src="./Projects/明珠酒店/大厅1.jpg"
+                  alt="Mingzhu Hotel Renovation"
+                  class="selected-work-image h-[19rem] w-full object-cover transition-transform duration-700 ease-out sm:h-[23rem]"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="grid gap-3 px-6 py-6 sm:grid-cols-[1fr_auto] sm:items-end">
+                <div>
+                  <p class="text-xs tracking-[0.28em] text-ink/45">COMMERCIAL</p>
+                  <h3 class="mt-3 text-xl font-medium tracking-[0.12em] text-ink">MINGZHU HOTEL RENOVATION</h3>
+                  <p class="mt-2 text-sm leading-relaxed text-ink/62">Chengdu · Hospitality Renovation</p>
+                </div>
+                <div class="text-xs tracking-[0.24em] text-ink/45">2024 · 3200 m²</div>
+              </div>
+            </a>
+
+            <a
+              href="./project-detail.html?project=riverfront-office"
+              class="selected-work-card group overflow-hidden rounded-[28px] border border-ink/10 bg-white/70"
+              aria-label="Riverfront Office, Shanghai, Commercial"
+            >
+              <div class="overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=2200&q=80"
+                  alt="Riverfront Office"
+                  class="selected-work-image h-[19rem] w-full object-cover transition-transform duration-700 ease-out sm:h-[23rem]"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="grid gap-3 px-6 py-6 sm:grid-cols-[1fr_auto] sm:items-end">
+                <div>
+                  <p class="text-xs tracking-[0.28em] text-ink/45">COMMERCIAL</p>
+                  <h3 class="mt-3 text-xl font-medium tracking-[0.12em] text-ink">RIVERFRONT OFFICE</h3>
+                  <p class="mt-2 text-sm leading-relaxed text-ink/62">Shanghai · Workplace</p>
+                </div>
+                <div class="text-xs tracking-[0.24em] text-ink/45">2025 · 1800 m²</div>
+              </div>
+            </a>
+
+            <a
+              href="./project-detail.html?project=terrace-cafe"
+              class="selected-work-card group overflow-hidden rounded-[28px] border border-ink/10 bg-white/70"
+              aria-label="Terrace Cafe, Chongqing, Commercial"
+            >
+              <div class="overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?auto=format&fit=crop&w=2200&q=80"
+                  alt="Terrace Cafe"
+                  class="selected-work-image h-[19rem] w-full object-cover transition-transform duration-700 ease-out sm:h-[23rem]"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="grid gap-3 px-6 py-6 sm:grid-cols-[1fr_auto] sm:items-end">
+                <div>
+                  <p class="text-xs tracking-[0.28em] text-ink/45">COMMERCIAL</p>
+                  <h3 class="mt-3 text-xl font-medium tracking-[0.12em] text-ink">TERRACE CAFE</h3>
+                  <p class="mt-2 text-sm leading-relaxed text-ink/62">Chongqing · Hospitality</p>
+                </div>
+                <div class="text-xs tracking-[0.24em] text-ink/45">2024 · 640 m²</div>
+              </div>
+            </a>
+
+            <a
+              href="./project-detail.html?project=quiet-residence"
+              class="selected-work-card group overflow-hidden rounded-[28px] border border-ink/10 bg-white/70"
+              aria-label="Quiet Residence, Shenzhen, Residential"
+            >
+              <div class="overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&w=2200&q=80"
+                  alt="Quiet Residence"
+                  class="selected-work-image h-[19rem] w-full object-cover transition-transform duration-700 ease-out sm:h-[23rem]"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="grid gap-3 px-6 py-6 sm:grid-cols-[1fr_auto] sm:items-end">
+                <div>
+                  <p class="text-xs tracking-[0.28em] text-ink/45">RESIDENTIAL</p>
+                  <h3 class="mt-3 text-xl font-medium tracking-[0.12em] text-ink">QUIET RESIDENCE</h3>
+                  <p class="mt-2 text-sm leading-relaxed text-ink/62">Shenzhen · Private Apartment</p>
+                </div>
+                <div class="text-xs tracking-[0.24em] text-ink/45">2025 · 260 m²</div>
+              </div>
+            </a>
+          </div>
+
+          <div class="mt-10 flex justify-end">
+            <a
+              href="./projects.html"
+              class="lang-text inline-flex items-center gap-3 text-xs tracking-[0.28em] text-ink/62 transition hover:text-ink"
+              data-en="VIEW FULL DIRECTORY"
+              data-zh="查看完整目录"
+            >
+              VIEW FULL DIRECTORY
+              <span aria-hidden="true">→</span>
+            </a>
           </div>
         </div>
       </section>
 
       <section class="border-t border-ink/10 bg-paper">
-        <div class="mx-auto w-full max-w-5xl px-6 py-20 text-center sm:py-24">
-          <p
-            class="lang-text font-serif text-[24px] italic leading-[1.6] tracking-wide text-ink/90 sm:text-[28px] lg:text-[34px]"
-            data-en="To craft timeless spaces that inspire profound joy, harmonizing modern restraint with classical sophistication."
-            data-zh="以现代的克制与古典的精致相融，雕刻超越时间的空间秩序，唤醒深刻而纯粹的居住愉悦。"
-          >
-            To craft timeless spaces that inspire profound joy, harmonizing modern restraint with classical sophistication.
-          </p>
-          <p class="mt-10 font-cn text-base leading-relaxed tracking-wide text-ink/70 sm:mt-14 sm:text-lg">
-            雕刻超越时间的空间秩序，唤醒纯粹的居住愉悦。
-          </p>
-        </div>
-
-        <div class="mx-auto max-w-6xl px-6 pb-20 sm:pb-28">
-          <div class="reveal-slide-up overflow-hidden rounded-2xl bg-white/50" data-reveal>
-            <img
-              src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=2400&q=80"
-              alt="Wide Image"
-              class="h-[clamp(380px,72vh,780px)] w-full object-cover"
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
-        </div>
-
-        <section class="border-t border-ink/10">
-          <div class="mx-auto max-w-6xl px-6 py-20 sm:py-24">
-            <div class="grid gap-10 lg:grid-cols-12 lg:gap-12">
-              <div class="lg:col-span-3">
-                <p
-                  class="lang-text inline-block border-b border-ink/25 pb-3 text-3xl font-semibold tracking-widest text-ink sm:text-4xl"
-                  data-en="OUR STORY"
-                  data-zh="我们的故事"
-                >
-                  OUR STORY
-                </p>
-              </div>
-              <div class="lg:col-span-5 lg:col-start-8">
-                <p class="text-[13px] leading-relaxed text-ink/60 sm:text-sm sm:leading-relaxed">
-                  <span class="lang-text font-semibold text-ink/75" data-en="Time &amp; Joy" data-zh="时悦空间">Time &amp; Joy</span>
-                  <span
-                    class="lang-text"
-                    data-en=" Space Design was founded upon a singular, resolute philosophy: that true luxury is not found in fleeing trends, but in spatial integrity that endures for generations. We articulate the quiet strength of modern minimalism while honoring the balanced proportions of classical heritage. For us, a sketch is a blueprint for an emotional sanctuary, where every ray of light, every shadow, and every crafted texture is meticulously curated to foster profound human joy. We do not merely design interiors; we compose the timeless backdrop for your life’s most cherished moments."
-                    data-zh="设计的诞生，源于一个纯粹而坚定的哲学：真正的奢华，不在于追逐转瞬即逝的潮流，而在那份足以承载世代传承的空间秩序。我们追求现代极简的克制美学，同时致敬古典主义的优雅比例。"
+        <div class="mx-auto max-w-6xl px-6 py-20 sm:py-24">
+          <div class="grid gap-12 lg:grid-cols-12 lg:items-start">
+            <div class="lg:col-span-4">
+              <p class="lang-text text-xs tracking-[0.32em] text-ink/50" data-en="DESIGN PERSPECTIVE" data-zh="设计立场">DESIGN PERSPECTIVE</p>
+              <h2
+                class="lang-text mt-4 text-3xl font-semibold tracking-[0.18em] text-ink sm:text-4xl"
+                data-en="Quiet, Legible, Long-Lasting"
+                data-zh="安静、清晰、可被时间验证"
+              >
+                Quiet, Legible, Long-Lasting
+              </h2>
+            </div>
+            <div class="space-y-8 lg:col-span-8">
+              <p
+                class="lang-text max-w-3xl text-base leading-relaxed text-ink/72 sm:text-lg"
+                data-en="Time &amp; Joy approaches interiors as a sequence of measured spatial decisions. We work through circulation, light entry, material restraint, and proportion so that each project can be read calmly, inhabited naturally, and endure beyond temporary trends."
+                data-zh="时悦空间将室内设计理解为一连串经过判断的空间动作。我们通过动线组织、光线进入、材料控制与比例关系，建立安静、清晰且可被长期使用的空间秩序，而不是制造短暂的视觉刺激。"
+              >
+                Time &amp; Joy approaches interiors as a sequence of measured spatial decisions. We work through circulation, light entry, material restraint, and proportion so that each project can be read calmly, inhabited naturally, and endure beyond temporary trends.
+              </p>
+              <div class="grid gap-6 sm:grid-cols-3">
+                <div class="rounded-2xl border border-ink/10 bg-white/55 px-5 py-5">
+                  <p class="lang-text text-[11px] tracking-[0.28em] text-ink/45" data-en="ORDER" data-zh="秩序">ORDER</p>
+                  <p
+                    class="lang-text mt-3 text-sm leading-relaxed text-ink/65"
+                    data-en="Movement is edited into calm and legible spatial sequences."
+                    data-zh="让日常动线在清晰而克制的结构中自然展开。"
                   >
-                    Space Design was founded upon a singular, resolute philosophy: that true luxury is not found in fleeing trends, but in spatial
-                    integrity that endures for generations. We articulate the quiet strength of modern minimalism while honoring the balanced
-                    proportions of classical heritage. For us, a sketch is a blueprint for an emotional sanctuary, where every ray of light, every
-                    shadow, and every crafted texture is meticulously curated to foster profound human joy. We do not merely design interiors; we
-                    compose the timeless backdrop for your life’s most cherished moments.
-                  </span>
-                </p>
+                    Movement is edited into calm and legible spatial sequences.
+                  </p>
+                </div>
+                <div class="rounded-2xl border border-ink/10 bg-white/55 px-5 py-5">
+                  <p class="lang-text text-[11px] tracking-[0.28em] text-ink/45" data-en="LIGHT" data-zh="光线">LIGHT</p>
+                  <p
+                    class="lang-text mt-3 text-sm leading-relaxed text-ink/65"
+                    data-en="Light is treated as structure, not decoration."
+                    data-zh="把光线当作空间结构的一部分，而非单纯氛围装饰。"
+                  >
+                    Light is treated as structure, not decoration.
+                  </p>
+                </div>
+                <div class="rounded-2xl border border-ink/10 bg-white/55 px-5 py-5">
+                  <p class="lang-text text-[11px] tracking-[0.28em] text-ink/45" data-en="MATERIAL" data-zh="材料">MATERIAL</p>
+                  <p
+                    class="lang-text mt-3 text-sm leading-relaxed text-ink/65"
+                    data-en="Material palettes are reduced so texture and proportion can speak precisely."
+                    data-zh="通过材料克制，让质地、尺度与留白被更准确地感知。"
+                  >
+                    Material palettes are reduced so texture and proportion can speak precisely.
+                  </p>
+                </div>
+              </div>
+              <div class="border-t border-ink/10 pt-10 sm:pt-12">
+                <div class="grid gap-10 lg:grid-cols-[0.3fr_1fr] lg:items-start">
+                  <div class="space-y-4">
+                    <p class="lang-text text-xs tracking-[0.34em] text-ink/45" data-en="OUR STORY" data-zh="我们的故事">OUR STORY</p>
+                    <h3
+                      class="lang-text max-w-xs text-2xl font-semibold tracking-[0.14em] text-ink sm:text-3xl"
+                      data-en="A Studio Introduction Rooted In Time, Restraint, And Joy"
+                      data-zh="一段关于时间、克制与愉悦的工作室介绍"
+                    >
+                      A Studio Introduction Rooted In Time, Restraint, And Joy
+                    </h3>
+                    <p
+                      class="lang-text max-w-xs text-sm leading-relaxed text-ink/56"
+                      data-en="A slower note on why the practice values spatial integrity above changing taste."
+                      data-zh="用更完整的一段话，解释工作室为何始终把空间秩序置于风格变化之前。"
+                    >
+                      A slower note on why the practice values spatial integrity above changing taste.
+                    </p>
+                  </div>
+                  <div class="grid gap-6 sm:grid-cols-2 sm:gap-8">
+                    <p
+                      class="lang-text text-sm leading-relaxed text-ink/66 sm:text-base"
+                      data-en="Time &amp; Joy Space Design was founded upon a singular, resolute philosophy: that true luxury is not found in fleeing trends, but in spatial integrity that endures for generations. We articulate the quiet strength of modern minimalism while honoring the balanced proportions of classical heritage."
+                      data-zh="时悦空间设计的诞生，源于一个纯粹而坚定的哲学：真正的奢华，并不在于追逐转瞬即逝的潮流，而在于能够历经时间考验、并承载世代记忆的空间秩序。我们表达现代极简主义安静而内在的力量，同时尊重古典传统中均衡而持久的比例之美。"
+                    >
+                      Time &amp; Joy Space Design was founded upon a singular, resolute philosophy: that true luxury is not found in fleeing trends, but in spatial integrity that endures for generations. We articulate the quiet strength of modern minimalism while honoring the balanced proportions of classical heritage.
+                    </p>
+                    <p
+                      class="lang-text text-sm leading-relaxed text-ink/66 sm:text-base"
+                      data-en="For us, a sketch is a blueprint for an emotional sanctuary, where every ray of light, every shadow, and every crafted texture is meticulously curated to foster profound human joy. We do not merely design interiors; we compose the timeless backdrop for your life's most cherished moments."
+                      data-zh="对我们而言，一张草图不仅是设计的起点，更是情感居所的蓝图；在那里，每一道光、每一处阴影、每一种被细致雕琢的材质，都被谨慎安排，只为唤起更深层的人之愉悦。我们不只是设计室内空间，更是在为你生命中最值得珍藏的时刻，编织恒久而从容的背景。"
+                    >
+                      For us, a sketch is a blueprint for an emotional sanctuary, where every ray of light, every shadow, and every crafted texture is meticulously curated to foster profound human joy. We do not merely design interiors; we compose the timeless backdrop for your life's most cherished moments.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </section>
+        </div>
       </section>
     </main>
 
     <footer class="border-t border-ink/10 bg-paper">
-      <div class="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-12 sm:flex-row sm:items-center sm:justify-between">
-        <div>
-          <p class="text-xs tracking-widest text-ink/70">© <span id="year"></span> TIME &amp; JOY SPACE DESIGN</p>
-          <p
-            class="lang-text mt-3 text-sm leading-relaxed text-ink/70"
-            data-en="Time &amp; Joy Space Design · timeandjoy.com"
-            data-zh="时悦空间设计公司 · timeandjoy.com"
+      <div class="mx-auto max-w-6xl px-6 py-16">
+        <div class="flex flex-col gap-8 border-b border-ink/10 pb-12 lg:flex-row lg:items-end lg:justify-between">
+          <div class="max-w-2xl">
+            <p class="lang-text text-xs tracking-[0.32em] text-ink/50" data-en="SOFT CONTACT" data-zh="联系">SOFT CONTACT</p>
+            <p
+              class="lang-text mt-4 text-xl leading-relaxed text-ink/78 sm:text-2xl"
+              data-en="For selected commissions and collaborations, please get in touch."
+              data-zh="如有合适的委托与合作，欢迎与我们联系。"
+            >
+              For selected commissions and collaborations, please get in touch.
+            </p>
+          </div>
+          <a
+            href="./contact.html"
+            class="lang-text inline-flex items-center gap-3 text-xs tracking-[0.28em] text-ink/62 transition hover:text-ink"
+            data-en="OPEN CONTACT"
+            data-zh="查看联系信息"
           >
-            Time &amp; Joy Space Design · timeandjoy.com
-          </p>
+            OPEN CONTACT
+            <span aria-hidden="true">→</span>
+          </a>
         </div>
-        <div class="flex items-center gap-3">
-          <a
-            href="https://instagram.com/Joanna17qq"
-            target="_blank"
-            rel="noreferrer"
-            aria-label="Instagram: Joanna17qq"
-            title="Joanna17qq"
-            class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-ink/15 bg-white/60 text-xs tracking-widest text-ink/70 transition hover:border-ink/25 hover:text-ink"
-          >
-            IG
-          </a>
-          <a
-            href="javascript:void(0)"
-            aria-label="Behance"
-            title="(待补充)"
-            class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-ink/15 bg-white/60 text-xs tracking-widest text-ink/70 transition hover:border-ink/25 hover:text-ink"
-          >
-            BE
-          </a>
-          <a
-            href="javascript:void(0)"
-            aria-label="WeChat: Time-Joy-Joanna"
-            title="Time-Joy-Joanna"
-            data-wechat="Time-Joy-Joanna"
-            class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-ink/15 bg-white/60 text-xs tracking-widest text-ink/70 transition hover:border-ink/25 hover:text-ink"
-          >
-            WX
-          </a>
+        <div class="mt-8 flex flex-col gap-8 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <p class="text-xs tracking-widest text-ink/70">© <span id="year"></span> TIME &amp; JOY SPACE DESIGN</p>
+            <p
+              class="lang-text mt-3 text-sm leading-relaxed text-ink/70"
+              data-en="Time &amp; Joy Space Design · timeandjoy.com"
+              data-zh="时悦空间设计公司 · timeandjoy.com"
+            >
+              Time &amp; Joy Space Design · timeandjoy.com
+            </p>
+          </div>
+          <div class="flex items-center gap-3">
+            <a
+              href="https://instagram.com/Joanna17qq"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Instagram: Joanna17qq"
+              title="Joanna17qq"
+              class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-ink/15 bg-white/60 text-xs tracking-widest text-ink/70 transition hover:border-ink/25 hover:text-ink"
+            >
+              IG
+            </a>
+            <a
+              href="javascript:void(0)"
+              aria-label="Behance"
+              title="(待补充)"
+              class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-ink/15 bg-white/60 text-xs tracking-widest text-ink/70 transition hover:border-ink/25 hover:text-ink"
+            >
+              BE
+            </a>
+            <a
+              href="javascript:void(0)"
+              aria-label="WeChat: Time-Joy-Joanna"
+              title="Time-Joy-Joanna"
+              data-wechat="Time-Joy-Joanna"
+              class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-ink/15 bg-white/60 text-xs tracking-widest text-ink/70 transition hover:border-ink/25 hover:text-ink"
+            >
+              WX
+            </a>
+          </div>
         </div>
       </div>
     </footer>
@@ -461,16 +629,6 @@
           });
         }
       });
-
-      document.addEventListener('submit', (event) => {
-        const form = event.target;
-        if (!(form instanceof HTMLFormElement)) return;
-        const formName = form.getAttribute('name') || form.getAttribute('id') || form.getAttribute('data-form-name') || 'unnamed_form';
-        trackEvent('contact_submit', {
-          form_name: formName,
-          form_action: form.getAttribute('action') || window.location.pathname,
-        });
-      });
     </script>
 
     <script>
@@ -498,33 +656,19 @@
 
       mobileNavBackdrop?.addEventListener("click", () => setMobileNav(false));
       mobileNav?.querySelectorAll("[data-nav-close]")?.forEach((link) => link.addEventListener("click", () => setMobileNav(false)));
-      window.addEventListener("keydown", (e) => {
-        if (e.key === "Escape") {
-          setMobileNav(false);
-          closeWechatModal();
-        }
-      });
 
       function parseCssColor(value) {
         if (!value) return null;
         const m = value.match(/rgba?\(([^)]+)\)/);
         if (!m) return null;
-        const parts = m[1]
-          .split(",")
-          .map((p) => p.trim())
-          .slice(0, 4);
+        const parts = m[1].split(",").map((p) => p.trim()).slice(0, 4);
         if (parts.length < 3) return null;
-
-        const toByte = (v) => {
-          const n = Number.parseFloat(v);
-          if (Number.isNaN(n)) return 0;
-          return Math.max(0, Math.min(255, n));
+        return {
+          r: Number.parseFloat(parts[0]),
+          g: Number.parseFloat(parts[1]),
+          b: Number.parseFloat(parts[2]),
+          a: parts[3] == null ? 1 : Number.parseFloat(parts[3]),
         };
-        const r = toByte(parts[0]);
-        const g = toByte(parts[1]);
-        const b = toByte(parts[2]);
-        const a = parts[3] == null ? 1 : Math.max(0, Math.min(1, Number.parseFloat(parts[3])));
-        return { r, g, b, a };
       }
 
       function relativeLuminance({ r, g, b }) {
@@ -545,47 +689,15 @@
           if (bg && bg.a >= 0.2) return { r: bg.r, g: bg.g, b: bg.b, a: 1 };
           node = node.parentElement;
         }
-        const bodyBg = parseCssColor(window.getComputedStyle(document.body).backgroundColor);
-        if (bodyBg) return { r: bodyBg.r, g: bodyBg.g, b: bodyBg.b, a: 1 };
         return { r: 249, g: 249, b: 249, a: 1 };
       }
 
       function isHeaderOverHero() {
-        if (!header) return false;
         const hero = document.querySelector("[data-hero]");
-        if (!hero) return false;
-        const r = hero.getBoundingClientRect();
+        if (!hero || !header) return false;
+        const heroRect = hero.getBoundingClientRect();
         const y = header.getBoundingClientRect().height;
-        return r.top <= y && r.bottom >= y;
-      }
-
-      function updateNavContrast() {
-        if (!header || !siteNav) return;
-        if (isHeaderOverHero()) {
-          siteNav.style.color = "#ffffff";
-          return;
-        }
-        const rect = header.getBoundingClientRect();
-        const x = Math.min(window.innerWidth - 24, Math.max(24, rect.left + rect.width * 0.5));
-        const y = rect.top + rect.height * 0.5;
-
-        const prevPointerEvents = header.style.pointerEvents;
-        header.style.pointerEvents = "none";
-        const hit = document.elementFromPoint(x, y);
-        header.style.pointerEvents = prevPointerEvents;
-
-        let useLight = false;
-        if (hit) {
-          const img = hit.tagName === "IMG" ? hit : hit.closest?.("img");
-          if (img) {
-            useLight = true;
-          } else {
-            const bg = findSolidBackgroundColor(hit);
-            useLight = relativeLuminance(bg) < 0.55;
-          }
-        }
-
-        siteNav.style.color = useLight ? "#ffffff" : "#1A1A1A";
+        return heroRect.top <= y && heroRect.bottom >= y;
       }
 
       function wrapNavLetters() {
@@ -601,75 +713,39 @@
         });
       }
 
-      function updateNavLetterContrast() {
-        if (!header) return;
+      function updateNavContrast() {
+        if (!header || !siteNav) return;
         if (isHeaderOverHero()) {
+          siteNav.style.color = "#ffffff";
           document.querySelectorAll("[data-nav-letter]").forEach((span) => {
             span.style.color = "#ffffff";
           });
           return;
         }
-        const prevPointerEvents = header.style.pointerEvents;
+
+        const rect = header.getBoundingClientRect();
+        const x = Math.min(window.innerWidth - 24, Math.max(24, rect.left + rect.width * 0.5));
+        const y = rect.top + rect.height * 0.5;
+        const previous = header.style.pointerEvents;
         header.style.pointerEvents = "none";
+        const hit = document.elementFromPoint(x, y);
+        header.style.pointerEvents = previous;
 
-        document.querySelectorAll("[data-nav-letter]").forEach((span) => {
-          const r = span.getBoundingClientRect();
-          const x = r.left + r.width * 0.5;
-          const y = r.top + r.height * 0.5;
-          const hit = document.elementFromPoint(x, y);
-
-          let useLight = false;
-          if (hit) {
-            const img = hit.tagName === "IMG" ? hit : hit.closest?.("img");
-            if (img) {
-              useLight = true;
-            } else {
-              const bg = findSolidBackgroundColor(hit);
-              useLight = relativeLuminance(bg) < 0.55;
-            }
+        let useLight = false;
+        if (hit) {
+          const img = hit.tagName === "IMG" ? hit : hit.closest?.("img");
+          if (img) {
+            useLight = true;
+          } else {
+            useLight = relativeLuminance(findSolidBackgroundColor(hit)) < 0.55;
           }
-
-          span.style.color = useLight ? "#ffffff" : "#1A1A1A";
-        });
-
-        header.style.pointerEvents = prevPointerEvents;
-      }
-
-      let raf = 0;
-      function scheduleNavContrast() {
-        if (raf) return;
-        raf = requestAnimationFrame(() => {
-          raf = 0;
-          updateNavContrast();
-          updateNavLetterContrast();
-        });
-      }
-
-      window.addEventListener("scroll", scheduleNavContrast, { passive: true });
-      window.addEventListener("resize", scheduleNavContrast);
-      window.addEventListener("load", scheduleNavContrast);
-
-      document.getElementById("year").textContent = String(new Date().getFullYear());
-      scheduleNavContrast();
-
-      const revealEls = Array.from(document.querySelectorAll("[data-reveal]"));
-      if (revealEls.length) {
-        if ("IntersectionObserver" in window) {
-          const io = new IntersectionObserver(
-            (entries) => {
-              entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                  entry.target.classList.add("is-in");
-                  io.unobserve(entry.target);
-                }
-              });
-            },
-            { threshold: 0.18 }
-          );
-          revealEls.forEach((el) => io.observe(el));
-        } else {
-          revealEls.forEach((el) => el.classList.add("is-in"));
         }
+
+        const color = useLight ? "#ffffff" : "#1A1A1A";
+        siteNav.style.color = color;
+        document.querySelectorAll("[data-nav-letter]").forEach((span) => {
+          span.style.color = color;
+        });
       }
 
       const wechatModal = document.getElementById("wechat-modal");
@@ -695,15 +771,15 @@
         document.body.classList.remove("overflow-hidden");
       }
 
-      document.querySelectorAll("[data-wechat]")?.forEach((el) => {
+      document.querySelectorAll("[data-wechat]").forEach((el) => {
         el.addEventListener("click", (e) => {
           e.preventDefault();
           openWechatModal(el.getAttribute("data-wechat"));
         });
       });
 
-      wechatBackdrop?.addEventListener("click", () => closeWechatModal());
-      wechatClose?.addEventListener("click", () => closeWechatModal());
+      wechatBackdrop?.addEventListener("click", closeWechatModal);
+      wechatClose?.addEventListener("click", closeWechatModal);
       wechatCopy?.addEventListener("click", async () => {
         const text = wechatValue?.textContent?.trim() || "";
         if (!text) return;
@@ -712,6 +788,13 @@
           if (wechatStatus) wechatStatus.textContent = "COPIED";
         } catch {
           if (wechatStatus) wechatStatus.textContent = text;
+        }
+      });
+
+      window.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          setMobileNav(false);
+          closeWechatModal();
         }
       });
 
@@ -729,8 +812,7 @@
 
         document.querySelectorAll(".lang-text").forEach((el) => {
           const value = el.getAttribute(currentLang === "zh" ? "data-zh" : "data-en");
-          if (value == null) return;
-          el.textContent = value;
+          if (value != null) el.textContent = value;
         });
 
         if (langToggle) langToggle.setAttribute("aria-pressed", currentLang === "zh" ? "true" : "false");
@@ -740,7 +822,7 @@
         }
 
         wrapNavLetters();
-        scheduleNavContrast();
+        updateNavContrast();
       }
 
       try {
@@ -748,8 +830,12 @@
         if (stored === "en" || stored === "zh") currentLang = stored;
       } catch {}
 
+      document.getElementById("year").textContent = String(new Date().getFullYear());
       applyLanguage(currentLang);
       langToggle?.addEventListener("click", () => applyLanguage(currentLang === "en" ? "zh" : "en"));
+      window.addEventListener("scroll", updateNavContrast, { passive: true });
+      window.addEventListener("resize", updateNavContrast);
+      window.addEventListener("load", updateNavContrast);
     </script>
   </body>
 </html>
