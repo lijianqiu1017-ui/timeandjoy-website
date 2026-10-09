@@ -17,6 +17,7 @@
       })(window, document, 'script', 'dataLayer', 'GTM-TSQKH6PQ');
     </script>
     <!-- End Google Tag Manager -->
+    <script src="./assets/seo-utils.js"></script>
     <title>Contact · 时悦空间设计公司 Time &amp; Joy</title>
     <meta name="description" content="Contact · 时悦空间设计公司（timeandjoy.com）" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -114,8 +115,8 @@
         <div class="flex items-center gap-4">
           <div class="hidden items-center gap-8 text-xs tracking-widest sm:flex">
             <a href="./projects.html" class="lang-text transition-opacity hover:opacity-70" data-en="PROJECTS" data-zh="项目">PROJECTS</a>
-            <a href="./index.html#about" class="lang-text transition-opacity hover:opacity-70" data-en="ABOUT" data-zh="关于">ABOUT</a>
-            <a href="./index.html#news" class="lang-text transition-opacity hover:opacity-70" data-en="NEWS" data-zh="动态">NEWS</a>
+            <a href="./studio.html" class="lang-text transition-opacity hover:opacity-70" data-en="STUDIO" data-zh="工作室">STUDIO</a>
+            <a href="./journal.html" class="lang-text transition-opacity hover:opacity-70" data-en="JOURNAL" data-zh="期刊">JOURNAL</a>
             <a href="./contact.html" class="lang-text transition-opacity hover:opacity-70" data-en="CONTACT" data-zh="联系">CONTACT</a>
           </div>
           <button
@@ -150,8 +151,8 @@
               <a href="./projects.html" class="lang-text text-ink/85 transition hover:text-ink" data-nav-close data-en="PROJECTS" data-zh="项目">
                 PROJECTS
               </a>
-              <a href="./index.html#about" class="lang-text text-ink/85 transition hover:text-ink" data-nav-close data-en="ABOUT" data-zh="关于">ABOUT</a>
-              <a href="./index.html#news" class="lang-text text-ink/85 transition hover:text-ink" data-nav-close data-en="NEWS" data-zh="动态">NEWS</a>
+              <a href="./studio.html" class="lang-text text-ink/85 transition hover:text-ink" data-nav-close data-en="STUDIO" data-zh="工作室">STUDIO</a>
+              <a href="./journal.html" class="lang-text text-ink/85 transition hover:text-ink" data-nav-close data-en="JOURNAL" data-zh="期刊">JOURNAL</a>
               <a href="./contact.html" class="lang-text text-ink/85 transition hover:text-ink" data-nav-close data-en="CONTACT" data-zh="联系">CONTACT</a>
             </div>
             <div class="mt-10 h-px w-full bg-ink/10"></div>
@@ -552,6 +553,19 @@
 
       applyLanguage(currentLang);
       langToggle?.addEventListener("click", () => applyLanguage(currentLang === "en" ? "zh" : "en"));
+    </script>
+    <script>
+      (function () {
+        if (!window.SeoUtils) return;
+        var U = window.SeoUtils;
+        U.injectSitewide();
+        U.injectProfessionalService();
+        U.injectBreadcrumb([
+          { name: "Home", url: "index.html" },
+          { name: "Contact" },
+        ]);
+        U.injectContactPage();
+      })();
     </script>
   </body>
 </html>

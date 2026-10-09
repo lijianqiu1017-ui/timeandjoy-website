@@ -17,11 +17,18 @@
       })(window, document, 'script', 'dataLayer', 'GTM-TSQKH6PQ');
     </script>
     <!-- End Google Tag Manager -->
+    <script src="./assets/seo-utils.js"></script>
     <title>Project Detail · 时悦空间设计公司 Time &amp; Joy</title>
-    <meta name="description" content="Project Detail · 时悦空间设计公司（timeandjoy.com）" />
+    <meta
+      name="description"
+      content="Readable project detail pages by Time &amp; Joy Space Design, combining concept, spatial narrative, and paced gallery reading."
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Noto+Sans+SC:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -32,7 +39,8 @@
               paper: "#F9F9F9",
             },
             fontFamily: {
-              sans: ["Inter", "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Roboto", "Helvetica", "Arial", "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji"],
+              sans: ["Inter", "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Roboto", "Helvetica", "Arial"],
+              cn: ["PingFang SC", "Noto Sans SC", "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Roboto", "Helvetica", "Arial"],
             },
           },
         },
@@ -42,6 +50,65 @@
       html {
         background: #f9f9f9;
       }
+      .related-card:hover .related-card-image,
+      .related-card:focus-visible .related-card-image {
+        transform: scale(1.03);
+      }
+      .gallery-wide-image,
+      .gallery-half-image {
+        transform: scale(1);
+        transform-origin: center;
+        transition: transform 700ms ease-out;
+        will-change: transform;
+      }
+      figure:hover .gallery-wide-image,
+      figure:focus-within .gallery-wide-image,
+      figure:hover .gallery-half-image,
+      figure:focus-within .gallery-half-image {
+        transform: scale(1.03);
+      }
+      #back-to-top {
+        pointer-events: none;
+        opacity: 0;
+        transform: translateY(8px);
+        transition: opacity 300ms ease-out, transform 300ms ease-out, background-color 200ms ease-out, border-color 200ms ease-out;
+      }
+      #back-to-top.is-visible {
+        pointer-events: auto;
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .narrative-strip-label,
+      .narrative-strip-body,
+      #project-narrative p,
+      #project-concept p {
+        font-family: "PingFang SC", "Noto Sans SC", "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", "Roboto", "Helvetica", "Arial";
+      }
+      @media screen and (min-width: 1024px) {
+        [data-narrative-layout="narrow-label"] > div {
+          grid-template-columns: 0.28fr 1fr !important;
+        }
+        [data-narrative-layout="narrow-label"] h2 {
+          font-size: clamp(1.9rem, 2.1vw, 2.4rem);
+          letter-spacing: 0.12em;
+        }
+      }
+      #narrative-block {
+        --h2-fluid-min: 1.65rem;
+        --h2-fluid-viewport: 100;
+      }
+      @media screen and (min-width: 360px) and (max-width: 1440px) {
+        #narrative-block h2.lang-text {
+          font-size: clamp(var(--h2-fluid-min), calc(var(--h2-fluid-min) + 0.8vw), calc(var(--h2-fluid-min) + 18px));
+          letter-spacing: clamp(0.08em, 0.1em + 0.15vw, 0.15em);
+        }
+      }
+      @media screen and (max-width: 767px) {
+        #narrative-block h2.lang-text {
+          white-space: normal !important;
+          line-height: 1.25;
+        }
+      }
     </style>
   </head>
   <body class="h-full bg-paper text-ink font-sans antialiased">
@@ -50,9 +117,9 @@
       <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TSQKH6PQ" height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <header id="site-header" class="fixed inset-x-0 top-0 z-50 bg-transparent">
-      <nav id="site-nav" class="flex w-full items-center justify-between px-8 py-6 text-ink lg:px-12">
-        <a href="./index.html" class="flex items-center">
+    <header class="sticky inset-x-0 top-0 z-50 border-b border-ink/10 bg-paper/85 backdrop-blur-md">
+      <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-12">
+        <a href="./index.html" class="flex items-center text-ink">
           <span class="flex items-center">
             <svg
               class="block h-20 w-auto shrink-0 sm:h-24"
@@ -62,60 +129,27 @@
               aria-hidden="true"
             >
               <g id="圖層_x0020_1">
-                <path
-                  fill="currentColor"
-                  d="M67292.36 22791.84c6777.84,-855.28 9389.92,8910.55 3671.35,11994.91 -565.12,304.59 -1260.92,461.21 -1884.81,588.45 -1514.7,157.4 -2952.98,-114.44 -4211.14,-1006.98 -3649.91,-2589.08 -3528.29,-9206.58 747.07,-11112.74 562.17,-250.67 1074.73,-367.61 1677.53,-463.64zm1220.3 12394.67c567.97,-75.89 971.88,-151.61 1507.95,-375.99 4993.47,-2090.19 3624.33,-12293.12 -2242.74,-11845.72 -5404.64,643.42 -5835.78,8462.98 -2248.61,11272.91 846.2,668.23 1906.76,1005.5 2983.4,948.8z"
-                />
-                <path
-                  fill="currentColor"
-                  d="M27277.15 22770.4c971.45,-7.09 2038.67,-33.45 3003.81,22.48 -211.34,117.98 -497.35,266.82 -689.75,402.27 -91.03,277.45 -177.72,582.92 -187.4,875.93 -89.11,2690.4 -10.46,5390.9 -66.47,8083.71 -16.16,774.29 13.22,1547.88 85.49,2318.11 210.21,312.55 402.53,511.09 707.73,736.6 -1117.44,96.9 -2752.1,49.27 -3893.75,45.03 279.28,-120.4 877.93,-359.48 908.18,-665.63 249.2,-2522.28 65.78,-5377.59 119.02,-7917.41 21.87,-1044.57 57.4,-1952.92 33.11,-2827.48 -1547.72,3215.75 -2774.58,7125.06 -4355.22,10215.38 -594.24,-1097.29 -1406.31,-3138.73 -1909.54,-4366.46 -636.51,-1552.64 -1559.38,-3430.01 -2132.36,-4954.48 -59.98,-140.54 -198.54,-545.23 -301.31,-588.11l-10.29 257.49c-22.82,1872.2 -22.73,3744.56 0.26,5616.75 7.78,1319.01 -202.95,3557.17 601.42,4681.78 125.5,175.38 632.1,425.35 846.03,534.78 -1047.86,25.93 -2096.14,30.51 -3144.18,13.57 531.84,-302.35 996.95,-597.88 1172.67,-1225.4 238.83,-853.03 256.45,-10306.56 32.24,-10677.37 -152.47,-252.22 -606.95,-403.22 -844.82,-569.96 1043.71,-21.69 2087.77,-25.67 3131.65,-12.1 1217.7,2670.34 2260.97,5496.95 3486.37,8194.34 355.51,-681.88 653.28,-1427.31 939.29,-2142.73 809.47,-2025.01 1698.2,-4009.74 2467.82,-6051.09z"
-                />
-                <path
-                  fill="currentColor"
-                  d="M47076.84 19726.14c320.24,-21.43 641.87,-7.08 959,42.62 1691.63,281.61 2768.79,1724.47 2452.95,3426.99 -334.85,1804.86 -1850.06,2785.04 -3246.43,3746.46 -167.42,-356.46 -332,-714.22 -493.8,-1073.18 1316.76,-1078.54 2277.31,-2021.82 2240.92,-3912.93 -19.79,-1031.61 -703.32,-2048.96 -1834.68,-1968.57 -478.42,30.6 -924.68,251.7 -1238.97,613.77 -475.73,555.61 -658.8,1436.47 -581.36,2134.88 429.93,3877.4 3997.12,9217.9 6861.33,11681.31 987.27,923.74 2640.61,1939.61 4016.83,1985.34 1247.18,41.49 1848.51,-311.08 2717.54,-1091.5 -1923.37,3207.62 -4309.42,3346.6 -7345.72,1468.96 -3533.31,-2185.09 -12644.39,-15907.84 -4507.61,-17054.15z"
-                />
-                <path
-                  fill="currentColor"
-                  d="M30814.26 22781.64c2582.79,-100.78 5714.08,-13.75 8348.29,-11.33 -1.73,187.05 8.73,361.39 31.89,546.88 116.78,934.37 181.78,1837.7 191.2,2780.63 -238.56,-909.73 -430.36,-1658.96 -1191.43,-2314.57 -989.95,-852.77 -3271.06,-797.79 -4514.09,-663.04 -1.47,1832.17 10.63,3664.34 36.13,5496.43 2098.91,2.5 2929.3,163.1 3536.85,-2098.65 25.33,497 93.1,3841.01 -33.71,4171.72 -384.38,-101.39 -133.72,-774.29 -587.58,-1183.22 -735.66,-662.78 -2017.93,-558.46 -2945.46,-546.88l-7.01 493.55c-8.82,1817.05 -3.8,3634.1 14.87,5451.05 2086.12,29.04 4904.08,315.23 5717.27,-2150.6 93.18,-282.47 126.2,-572.72 260.52,-838.77l81.76 -14.52c220.5,424.31 -167.76,2767.06 -268.38,3344.36 -2978.91,42.61 -6007.69,-17.54 -8996.63,11.76 1036.62,-457.94 1113.81,-546.1 1101.1,-1726.81 -35.78,-3323.1 210.82,-6873.78 -24.11,-10178.82 -197.16,-170.96 -534,-406.59 -751.48,-569.17z"
-                />
-                <path
-                  fill="currentColor"
-                  d="M2440.01 22773.95l9719.58 -0.7c131.04,1044.31 292.67,2237.04 252.3,3275.73 -328.71,-780.51 -434.51,-1479.6 -1104.12,-2123.88 -900.4,-866.35 -1849.46,-829.01 -2985.31,-818.98l-6.82 10744.18c108.99,867.82 333.89,1029.71 1092.63,1413.57 -1487.91,33.45 -2780.03,65.52 -4257.65,-15.91 591.91,-225.16 986.49,-332.94 1028.93,-1054.85 73.73,-1254.18 44.69,-2538.7 44.95,-3795.21l-0.78 -7284.44c-2725.48,-49.61 -3189.21,664.09 -4059.27,3039.16 -28.26,-1041.63 135.62,-2336.78 275.56,-3378.67z"
-                />
-                <path
-                  fill="currentColor"
-                  d="M12867.76 22787.77c1258.67,-65 2802.75,-19.27 4079.32,-8.46 -715.78,259.13 -1077.59,318.85 -1117.01,1182.43 -149.79,3280.74 -97.06,6596.15 -38.54,9880.27 14.52,813.27 226.97,912.15 799.35,1407.6 -1285.73,104.93 -2619,5.19 -3915.44,10.89 382.47,-153.77 519.47,-230.61 824.16,-506.6 287.57,-747.06 200.01,-2986 213.5,-3907.66 36.82,-1671.06 42.52,-3342.63 17.02,-5013.86 -10.45,-688.72 -8.46,-1880.49 -135.96,-2521.06 -244.79,-194.66 -469.61,-348.16 -726.4,-523.55z"
-                />
-                <path
-                  fill="currentColor"
-                  d="M44172.17 27642.43l88.09 27.74c193.35,262.51 314.27,595.54 441.07,898.76l-96.38 104.5c-3828.91,4181.4 456.91,9257.14 3705.67,5580.44l316.09 424.4c-360,461.31 -658.63,735.57 -1113.2,1091.42 -2957.04,2178 -7304.75,-250.83 -6419.73,-4069.29 497.08,-2144.38 1366.98,-2872.69 3078.39,-4057.97z"
-                />
-                <path
-                  fill="currentColor"
-                  d="M74215.41 22970.93c410.57,-2.85 820.27,-2.16 1230.85,1.99 -159.91,136.05 -419.22,326.47 -462.44,542.81 -87.29,433.3 2893,5168.67 3275.91,5771.9 611.96,-1056.32 1210.09,-2121.12 1792.67,-3193.96 341.42,-623.37 713.09,-1262.21 993.14,-1916.96 332.78,-780.86 171.15,-900.57 -561.83,-1177 832.37,-25.06 1665.61,-26.01 2498.85,-2.67 -699.26,202.69 -1033.77,396.91 -1451.25,1015.7 -807.31,1195.66 -1453.85,2513.03 -2117.67,3791.67 -280.91,507.11 -979.31,1607.6 -968.94,2184.3 28.53,1539.07 -90.76,3283.6 291.29,4779.19 49.26,193.18 563.56,357.16 749.39,427.69 -932.64,48.06 -1882.56,30.85 -2821.25,48.31 211.77,-76.23 853.98,-286.44 885.97,-516.62 206.57,-1460.33 21.6,-3127.58 -47.54,-4603.73 -19.88,-419.81 -519.48,-1242.59 -735.57,-1589.98 -1063.16,-1713.23 -1941.34,-3576.18 -3174.77,-5169.1 -120.15,-155.06 -548.01,-294.65 -741.62,-365.27 422.67,-27.06 936.09,-21.79 1364.81,-28.27z"
-                />
-                <path
-                  fill="currentColor"
-                  d="M61121.82 22859.26l52.38 3.97 46.85 58.78c-248.5,172.01 -501.07,403.39 -550.33,710.15 -129.31,804.81 -70.28,1829.49 -38.81,2632.31 36.47,1072.75 62.14,2145.84 76.92,3219.11 61.38,3374.01 278.42,6794.78 -3425.95,8307.14 162.41,-156.53 396.22,-342.54 573.24,-491.64 759.68,-658.73 1326.61,-1544.43 1651.18,-2492.63 189.63,-553.96 263.97,-1174.48 300.62,-1757.66 77.7,-1237.5 74.59,-9130.18 -255.25,-9713.45 -148.58,-262.67 -581.36,-361.03 -851.3,-448.77l2420.45 -27.31z"
-                />
-                <path
-                  fill="currentColor"
-                  d="M54568.38 27331.95c944.12,-36.57 1415.02,236.4 2140.66,774.98 -414.72,600.9 -822.1,1206.81 -1222.03,1817.65 -1471.05,-1218.91 -2664.46,-791.75 -3981.22,406.42 -462.6,543.24 -694.59,908.26 -1054.08,1522.73l-392.42 -450.15c891.85,-2020.26 2147.06,-3813.8 4509.09,-4071.63z"
-                />
-                <path
-                  fill="currentColor"
-                  d="M18588.4 24407.83l10.29 -257.49c102.77,42.88 241.33,447.57 301.31,588.11 -98.36,114.61 -39.42,87.65 -171.4,104.42 -62.15,-155.76 -95.43,-275.73 -140.2,-435.04z"
-                />
+                <path fill="currentColor" d="M67292.36 22791.84c6777.84,-855.28 9389.92,8910.55 3671.35,11994.91 -565.12,304.59 -1260.92,461.21 -1884.81,588.45 -1514.7,157.4 -2952.98,-114.44 -4211.14,-1006.98 -3649.91,-2589.08 -3528.29,-9206.58 747.07,-11112.74 562.17,-250.67 1074.73,-367.61 1677.53,-463.64zm1220.3 12394.67c567.97,-75.89 971.88,-151.61 1507.95,-375.99 4993.47,-2090.19 3624.33,-12293.12 -2242.74,-11845.72 -5404.64,643.42 -5835.78,8462.98 -2248.61,11272.91 846.2,668.23 1906.76,1005.5 2983.4,948.8z" />
+                <path fill="currentColor" d="M27277.15 22770.4c971.45,-7.09 2038.67,-33.45 3003.81,22.48 -211.34,117.98 -497.35,266.82 -689.75,402.27 -91.03,277.45 -177.72,582.92 -187.4,875.93 -89.11,2690.4 -10.46,5390.9 -66.47,8083.71 -16.16,774.29 13.22,1547.88 85.49,2318.11 210.21,312.55 402.53,511.09 707.73,736.6 -1117.44,96.9 -2752.1,49.27 -3893.75,45.03 279.28,-120.4 877.93,-359.48 908.18,-665.63 249.2,-2522.28 65.78,-5377.59 119.02,-7917.41 21.87,-1044.57 57.4,-1952.92 33.11,-2827.48 -1547.72,3215.75 -2774.58,7125.06 -4355.22,10215.38 -594.24,-1097.29 -1406.31,-3138.73 -1909.54,-4366.46 -636.51,-1552.64 -1559.38,-3430.01 -2132.36,-4954.48 -59.98,-140.54 -198.54,-545.23 -301.31,-588.11l-10.29 257.49c-22.82,1872.2 -22.73,3744.56 0.26,5616.75 7.78,1319.01 -202.95,3557.17 601.42,4681.78 125.5,175.38 632.1,425.35 846.03,534.78 -1047.86,25.93 -2096.14,30.51 -3144.18,13.57 531.84,-302.35 996.95,-597.88 1172.67,-1225.4 238.83,-853.03 256.45,-10306.56 32.24,-10677.37 -152.47,-252.22 -606.95,-403.22 -844.82,-569.96 1043.71,-21.69 2087.77,-25.67 3131.65,-12.1 1217.7,2670.34 2260.97,5496.95 3486.37,8194.34 355.51,-681.88 653.28,-1427.31 939.29,-2142.73 809.47,-2025.01 1698.2,-4009.74 2467.82,-6051.09z" />
+                <path fill="currentColor" d="M47076.84 19726.14c320.24,-21.43 641.87,-7.08 959,42.62 1691.63,281.61 2768.79,1724.47 2452.95,3426.99 -334.85,1804.86 -1850.06,2785.04 -3246.43,3746.46 -167.42,-356.46 -332,-714.22 -493.8,-1073.18 1316.76,-1078.54 2277.31,-2021.82 2240.92,-3912.93 -19.79,-1031.61 -703.32,-2048.96 -1834.68,-1968.57 -478.42,30.6 -924.68,251.7 -1238.97,613.77 -475.73,555.61 -658.8,1436.47 -581.36,2134.88 429.93,3877.4 3997.12,9217.9 6861.33,11681.31 987.27,923.74 2640.61,1939.61 4016.83,1985.34 1247.18,41.49 1848.51,-311.08 2717.54,-1091.5 -1923.37,3207.62 -4309.42,3346.6 -7345.72,1468.96 -3533.31,-2185.09 -12644.39,-15907.84 -4507.61,-17054.15z" />
+                <path fill="currentColor" d="M30814.26 22781.64c2582.79,-100.78 5714.08,-13.75 8348.29,-11.33 -1.73,187.05 8.73,361.39 31.89,546.88 116.78,934.37 181.78,1837.7 191.2,2780.63 -238.56,-909.73 -430.36,-1658.96 -1191.43,-2314.57 -989.95,-852.77 -3271.06,-797.79 -4514.09,-663.04 -1.47,1832.17 10.63,3664.34 36.13,5496.43 2098.91,2.5 2929.3,163.1 3536.85,-2098.65 25.33,497 93.1,3841.01 -33.71,4171.72 -384.38,-101.39 -133.72,-774.29 -587.58,-1183.22 -735.66,-662.78 -2017.93,-558.46 -2945.46,-546.88l-7.01 493.55c-8.82,1817.05 -3.8,3634.1 14.87,5451.05 2086.12,29.04 4904.08,315.23 5717.27,-2150.6 93.18,-282.47 126.2,-572.72 260.52,-838.77l81.76 -14.52c220.5,424.31 -167.76,2767.06 -268.38,3344.36 -2978.91,42.61 -6007.69,-17.54 -8996.63,11.76 1036.62,-457.94 1113.81,-546.1 1101.1,-1726.81 -35.78,-3323.1 210.82,-6873.78 -24.11,-10178.82 -197.16,-170.96 -534,-406.59 -751.48,-569.17z" />
+                <path fill="currentColor" d="M2440.01 22773.95l9719.58 -0.7c131.04,1044.31 292.67,2237.04 252.3,3275.73 -328.71,-780.51 -434.51,-1479.6 -1104.12,-2123.88 -900.4,-866.35 -1849.46,-829.01 -2985.31,-818.98l-6.82 10744.18c108.99,867.82 333.89,1029.71 1092.63,1413.57 -1487.91,33.45 -2780.03,65.52 -4257.65,-15.91 591.91,-225.16 986.49,-332.94 1028.93,-1054.85 73.73,-1254.18 44.69,-2538.7 44.95,-3795.21l-0.78 -7284.44c-2725.48,-49.61 -3189.21,664.09 -4059.27,3039.16 -28.26,-1041.63 135.62,-2336.78 275.56,-3378.67z" />
+                <path fill="currentColor" d="M12867.76 22787.77c1258.67,-65 2802.75,-19.27 4079.32,-8.46 -715.78,259.13 -1077.59,318.85 -1117.01,1182.43 -149.79,3280.74 -97.06,6596.15 -38.54,9880.27 14.52,813.27 226.97,912.15 799.35,1407.6 -1285.73,104.93 -2619,5.19 -3915.44,10.89 382.47,-153.77 519.47,-230.61 824.16,-506.6 287.57,-747.06 200.01,-2986 213.5,-3907.66 36.82,-1671.06 42.52,-3342.63 17.02,-5013.86 -10.45,-688.72 -8.46,-1880.49 -135.96,-2521.06 -244.79,-194.66 -469.61,-348.16 -726.4,-523.55z" />
+                <path fill="currentColor" d="M44172.17 27642.43l88.09 27.74c193.35,262.51 314.27,595.54 441.07,898.76l-96.38 104.5c-3828.91,4181.4 456.91,9257.14 3705.67,5580.44l316.09 424.4c-360,461.31 -658.63,735.57 -1113.2,1091.42 -2957.04,2178 -7304.75,-250.83 -6419.73,-4069.29 497.08,-2144.38 1366.98,-2872.69 3078.39,-4057.97z" />
+                <path fill="currentColor" d="M74215.41 22970.93c410.57,-2.85 820.27,-2.16 1230.85,1.99 -159.91,136.05 -419.22,326.47 -462.44,542.81 -87.29,433.3 2893,5168.67 3275.91,5771.9 611.96,-1056.32 1210.09,-2121.12 1792.67,-3193.96 341.42,-623.37 713.09,-1262.21 993.14,-1916.96 332.78,-780.86 171.15,-900.57 -561.83,-1177 832.37,-25.06 1665.61,-26.01 2498.85,-2.67 -699.26,202.69 -1033.77,396.91 -1451.25,1015.7 -807.31,1195.66 -1453.85,2513.03 -2117.67,3791.67 -280.91,507.11 -979.31,1607.6 -968.94,2184.3 28.53,1539.07 -90.76,3283.6 291.29,4779.19 49.26,193.18 563.56,357.16 749.39,427.69 -932.64,48.06 -1882.56,30.85 -2821.25,48.31 211.77,-76.23 853.98,-286.44 885.97,-516.62 206.57,-1460.33 21.6,-3127.58 -47.54,-4603.73 -19.88,-419.81 -519.48,-1242.59 -735.57,-1589.98 -1063.16,-1713.23 -1941.34,-3576.18 -3174.77,-5169.1 -120.15,-155.06 -548.01,-294.65 -741.62,-365.27 422.67,-27.06 936.09,-21.79 1364.81,-28.27z" />
+                <path fill="currentColor" d="M61121.82 22859.26l52.38 3.97 46.85 58.78c-248.5,172.01 -501.07,403.39 -550.33,710.15 -129.31,804.81 -70.28,1829.49 -38.81,2632.31 36.47,1072.75 62.14,2145.84 76.92,3219.11 61.38,3374.01 278.42,6794.78 -3425.95,8307.14 162.41,-156.53 396.22,-342.54 573.24,-491.64 759.68,-658.73 1326.61,-1544.43 1651.18,-2492.63 189.63,-553.96 263.97,-1174.48 300.62,-1757.66 77.7,-1237.5 74.59,-9130.18 -255.25,-9713.45 -148.58,-262.67 -581.36,-361.03 -851.3,-448.77l2420.45 -27.31z" />
+                <path fill="currentColor" d="M54568.38 27331.95c944.12,-36.57 1415.02,236.4 2140.66,774.98 -414.72,600.9 -822.1,1206.81 -1222.03,1817.65 -1471.05,-1218.91 -2664.46,-791.75 -3981.22,406.42 -462.6,543.24 -694.59,908.26 -1054.08,1522.73l-392.42 -450.15c891.85,-2020.26 2147.06,-3813.8 4509.09,-4071.63z" />
+                <path fill="currentColor" d="M18588.4 24407.83l10.29 -257.49c102.77,42.88 241.33,447.57 301.31,588.11 -98.36,114.61 -39.42,87.65 -171.4,104.42 -62.15,-155.76 -95.43,-275.73 -140.2,-435.04z" />
               </g>
             </svg>
             <span class="sr-only">Time &amp; Joy</span>
           </span>
         </a>
-        <div class="flex items-center gap-4 mr-8 lg:mr-16">
-          <div class="hidden items-center gap-8 text-xs tracking-widest sm:flex">
+        <div class="flex items-center gap-4">
+          <div class="hidden items-center gap-8 text-xs tracking-[0.26em] sm:flex">
             <a href="./projects.html" class="lang-text transition-opacity hover:opacity-70" data-en="PROJECTS" data-zh="项目">PROJECTS</a>
-            <a href="./index.html#about" class="lang-text transition-opacity hover:opacity-70" data-en="ABOUT" data-zh="关于">ABOUT</a>
-            <a href="./index.html#news" class="lang-text transition-opacity hover:opacity-70" data-en="NEWS" data-zh="动态">NEWS</a>
+            <a href="./studio.html" class="lang-text transition-opacity hover:opacity-70" data-en="STUDIO" data-zh="工作室">STUDIO</a>
+            <a href="./journal.html" class="lang-text transition-opacity hover:opacity-70" data-en="JOURNAL" data-zh="期刊">JOURNAL</a>
             <a href="./contact.html" class="lang-text transition-opacity hover:opacity-70" data-en="CONTACT" data-zh="联系">CONTACT</a>
           </div>
           <button
@@ -145,13 +179,11 @@
       <div id="mobile-nav" class="pointer-events-none fixed inset-0 z-40 opacity-0 transition-opacity duration-300 sm:hidden" aria-hidden="true">
         <div id="mobile-nav-backdrop" class="absolute inset-0 bg-paper"></div>
         <div class="absolute inset-x-0 top-0">
-          <div class="mx-auto max-w-6xl px-6 pt-24 pb-10">
+          <div class="mx-auto max-w-6xl px-6 pb-10 pt-24">
             <div class="flex flex-col gap-6 text-sm tracking-widest">
-              <a href="./projects.html" class="lang-text text-ink/85 transition hover:text-ink" data-nav-close data-en="PROJECTS" data-zh="项目">
-                PROJECTS
-              </a>
-              <a href="./index.html#about" class="lang-text text-ink/85 transition hover:text-ink" data-nav-close data-en="ABOUT" data-zh="关于">ABOUT</a>
-              <a href="./index.html#news" class="lang-text text-ink/85 transition hover:text-ink" data-nav-close data-en="NEWS" data-zh="动态">NEWS</a>
+              <a href="./projects.html" class="lang-text text-ink/85 transition hover:text-ink" data-nav-close data-en="PROJECTS" data-zh="项目">PROJECTS</a>
+              <a href="./studio.html" class="lang-text text-ink/85 transition hover:text-ink" data-nav-close data-en="STUDIO" data-zh="工作室">STUDIO</a>
+              <a href="./journal.html" class="lang-text text-ink/85 transition hover:text-ink" data-nav-close data-en="JOURNAL" data-zh="期刊">JOURNAL</a>
               <a href="./contact.html" class="lang-text text-ink/85 transition hover:text-ink" data-nav-close data-en="CONTACT" data-zh="联系">CONTACT</a>
             </div>
             <div class="mt-10 h-px w-full bg-ink/10"></div>
@@ -161,176 +193,120 @@
       </div>
     </header>
 
-    <main class="pt-28">
-      <section class="mx-auto max-w-6xl px-6">
-        <a href="./projects.html" class="inline-flex items-center gap-2 text-xs tracking-widest text-ink/60 transition hover:text-ink">
-          <span class="text-base leading-none">←</span>
-          <span class="lang-text" data-en="BACK TO PROJECTS" data-zh="返回项目">BACK TO PROJECTS</span>
+    <main class="pb-20 pt-12">
+      <section class="mx-auto max-w-7xl px-6 lg:px-12">
+        <a href="./projects.html" class="inline-flex items-center gap-2 text-xs tracking-[0.26em] text-ink/55 transition hover:text-ink">
+          <span aria-hidden="true">←</span>
+          <span class="lang-text" data-en="BACK TO PROJECTS" data-zh="返回项目目录">BACK TO PROJECTS</span>
         </a>
-        <div class="mt-6 flex flex-col gap-3 sm:flex-row sm:items-baseline sm:justify-between">
+      </section>
+
+      <section class="mx-auto mt-8 max-w-7xl px-6 lg:px-12">
+        <div class="grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-end">
+          <div class="max-w-4xl">
+            <p id="project-city" class="text-xs tracking-[0.32em] text-ink/45"></p>
+            <h1 id="project-name" class="mt-4 text-3xl font-semibold tracking-[0.16em] text-ink sm:text-4xl"></h1>
+            <p id="project-summary" class="mt-6 max-w-3xl text-base leading-relaxed text-ink/72 sm:text-lg"></p>
+          </div>
+          <div class="space-y-3 lg:justify-self-end lg:text-right">
+            <p id="project-type" class="text-xs tracking-[0.28em] text-ink/48"></p>
+            <p id="project-meta" class="text-sm leading-relaxed text-ink/58"></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="mx-auto mt-10 max-w-7xl px-6 lg:px-12">
+        <div id="project-hero-wrap" class="overflow-hidden rounded-[32px] border border-ink/10 bg-white/55">
+          <img id="project-hero-image" src="" alt="" class="aspect-[16/9] w-full object-cover" loading="eager" decoding="async" />
+        </div>
+      </section>
+
+      <section class="mx-auto mt-14 max-w-7xl px-6 lg:px-12">
+        <div class="grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
           <div>
-            <p class="text-xs tracking-widest text-ink/60">CHENGDU</p>
-            <h1 class="mt-3 text-3xl font-semibold tracking-widest sm:text-4xl">SHIYUE SPACE</h1>
+            <p class="lang-text text-xs tracking-[0.3em] text-ink/48" data-en="CONCEPT" data-zh="设计概念">CONCEPT</p>
+            <div id="project-concept" class="mt-6 space-y-5 text-sm leading-relaxed text-ink/76 sm:text-base"></div>
           </div>
-          <div class="text-xs tracking-widest text-ink/60">HIGH-END RESIDENTIAL</div>
-        </div>
-      </section>
-
-      <section class="mt-10">
-        <div class="mx-auto max-w-6xl px-6">
-          <div class="overflow-hidden rounded-2xl bg-white/60">
-            <div class="aspect-[16/9] w-full">
-              <img
-                src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=2600&q=80"
-                alt="项目主视觉"
-                class="h-full w-full object-cover"
-                loading="eager"
-                decoding="async"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="mx-auto mt-12 max-w-6xl px-6">
-        <div class="grid gap-10 lg:grid-cols-12 lg:items-start">
-          <div class="lg:col-span-7">
-            <h2 class="lang-text text-xs font-semibold tracking-widest text-ink/70" data-en="CONCEPT" data-zh="设计说明">CONCEPT</h2>
-            <div class="mt-6 space-y-6 text-sm leading-relaxed text-ink/80 sm:text-base">
-              <p
-                class="lang-text"
-                data-en="The project treats negative space as structure. By reducing material noise and calibrating light gradients, the interior becomes a measured sequence—quiet, precise, and timeless."
-                data-zh="本案以“留白”作为空间叙事的主语：通过体块的退让、材质的克制与光的层次，建立安静而有秩序的居住体验。动线与视线被精确控制，让日常在不被打扰的前提下自然展开。"
-              >
-                The project treats negative space as structure. By reducing material noise and calibrating light gradients, the interior becomes a
-                measured sequence—quiet, precise, and timeless.
-              </p>
-            </div>
-          </div>
-
-          <div class="lg:col-span-5">
-            <div class="rounded-2xl border border-ink/10 bg-white/60 backdrop-blur-md">
-              <div class="px-6 py-5">
-                <h2 class="lang-text text-xs font-semibold tracking-widest text-ink/70" data-en="PROJECT DATA" data-zh="项目信息">PROJECT DATA</h2>
+          <div data-project-data-card class="rounded-[28px] border border-ink/10 bg-white/55">
+              <div class="border-b border-ink/10 px-6 py-5">
+                <p class="lang-text text-xs tracking-[0.3em] text-ink/48" data-en="PROJECT DATA" data-zh="项目信息">PROJECT DATA</p>
               </div>
-              <div class="h-px w-full bg-ink/10"></div>
-              <dl class="grid grid-cols-2 gap-x-6 gap-y-6 px-6 py-6 text-sm">
-                <div class="space-y-2">
-                  <dt class="text-[11px] tracking-widest text-ink/55">LOCATION</dt>
-                  <dd class="lang-text leading-relaxed text-ink/80" data-en="Chengdu · China" data-zh="Chengdu · 中国成都">Chengdu · China</dd>
-                </div>
-                <div class="space-y-2">
-                  <dt class="text-[11px] tracking-widest text-ink/55">AREA</dt>
-                  <dd class="leading-relaxed text-ink/80">320 m²</dd>
-                </div>
-                <div class="space-y-2">
-                  <dt class="text-[11px] tracking-widest text-ink/55">DESIGN TEAM</dt>
-                  <dd class="leading-relaxed text-ink/80">Time &amp; Joy Studio</dd>
-                </div>
-                <div class="space-y-2">
-                  <dt class="text-[11px] tracking-widest text-ink/55">YEAR</dt>
-                  <dd class="leading-relaxed text-ink/80">2026</dd>
-                </div>
-              </dl>
+              <dl id="project-data" class="grid gap-6 px-6 py-6 text-sm"></dl>
             </div>
-          </div>
         </div>
       </section>
 
-      <section class="mx-auto mt-16 max-w-6xl px-6 pb-20">
-        <div class="flex items-end justify-between">
-          <h2 class="text-xs font-semibold tracking-widest text-ink/70">GALLERY / 实景图集</h2>
-          <div class="text-xs tracking-widest text-ink/50">SCROLL</div>
+      <section id="narrative-block" class="mx-auto mt-16 max-w-7xl px-6 lg:px-12" data-narrative-layout="auto">
+        <div class="grid gap-12 lg:grid-cols-[0.42fr_1fr]">
+          <div>
+            <p class="lang-text text-xs tracking-[0.3em] text-ink/48" data-en="SPATIAL NARRATIVE" data-zh="空间叙事">SPATIAL NARRATIVE</p>
+            <h2
+              class="lang-text mt-4 text-3xl font-semibold tracking-[0.16em] text-ink"
+              data-en="How The Project Organizes Experience"
+              data-zh="空间如何被组织与感知"
+            >
+              How The Project Organizes Experience
+            </h2>
+          </div>
+          <div id="project-narrative" class="grid gap-6 sm:grid-cols-2"></div>
         </div>
+      </section>
 
-        <div class="mt-10 columns-1 gap-8 sm:columns-2 lg:columns-3">
-          <div class="[break-inside:avoid] mb-8 overflow-hidden rounded-2xl bg-white/50">
-            <img
-              src="https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&w=2000&q=80"
-              alt="项目图片 1"
-              class="w-full"
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
-          <div class="[break-inside:avoid] mb-8 overflow-hidden rounded-2xl bg-white/50">
-            <img
-              src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=2000&q=80"
-              alt="项目图片 2"
-              class="w-full"
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
-          <div class="[break-inside:avoid] mb-8 overflow-hidden rounded-2xl bg-white/50">
-            <img
-              src="https://images.unsplash.com/photo-1527030280862-64139fba04ca?auto=format&fit=crop&w=2000&q=80"
-              alt="项目图片 3"
-              class="w-full"
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
-          <div class="[break-inside:avoid] mb-8 overflow-hidden rounded-2xl bg-white/50">
-            <img
-              src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=2000&q=80"
-              alt="项目图片 4"
-              class="w-full"
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
-          <div class="[break-inside:avoid] mb-8 overflow-hidden rounded-2xl bg-white/50">
-            <img
-              src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=2000&q=80"
-              alt="项目图片 5"
-              class="w-full"
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
-          <div class="[break-inside:avoid] mb-8 overflow-hidden rounded-2xl bg-white/50">
-            <img
-              src="https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?auto=format&fit=crop&w=2000&q=80"
-              alt="项目图片 6"
-              class="w-full"
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
-          <div class="[break-inside:avoid] mb-8 overflow-hidden rounded-2xl bg-white/50">
-            <img
-              src="https://images.unsplash.com/photo-1521783593447-5702b9bfd267?auto=format&fit=crop&w=2000&q=80"
-              alt="项目图片 7"
-              class="w-full"
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
-          <div class="[break-inside:avoid] mb-8 overflow-hidden rounded-2xl bg-white/50">
-            <img
-              src="https://images.unsplash.com/photo-1520975693416-35a4e2d9bd1c?auto=format&fit=crop&w=2000&q=80"
-              alt="项目图片 8"
-              class="w-full"
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
-          <div class="[break-inside:avoid] mb-8 overflow-hidden rounded-2xl bg-white/50">
-            <img
-              src="https://images.unsplash.com/photo-1539922980492-38f667c0a45c?auto=format&fit=crop&w=2000&q=80"
-              alt="项目图片 9"
-              class="w-full"
-              loading="lazy"
-              decoding="async"
-            />
+      <section class="mx-auto mt-16 max-w-7xl px-6 lg:px-12">
+        <div class="flex items-end justify-between">
+          <div>
+            <p class="lang-text text-xs tracking-[0.3em] text-ink/48" data-en="GALLERY" data-zh="图集">GALLERY</p>
+            <h2
+              class="lang-text mt-4 text-3xl font-semibold tracking-[0.16em] text-ink"
+              data-en="A Paced Reading Of The Project"
+              data-zh="以节奏阅读项目"
+            >
+              A Paced Reading Of The Project
+            </h2>
           </div>
         </div>
+        <div id="project-gallery" class="mt-10 space-y-8"></div>
+      </section>
+
+      <section class="mx-auto mt-20 max-w-7xl border-t border-ink/10 px-6 pt-16 lg:px-12">
+        <div class="flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
+          <div>
+            <p class="lang-text text-xs tracking-[0.3em] text-ink/48" data-en="RELATED PROJECTS" data-zh="相关项目">RELATED PROJECTS</p>
+            <h2
+              class="lang-text mt-4 text-3xl font-semibold tracking-[0.16em] text-ink"
+              data-en="Continue Reading"
+              data-zh="继续浏览"
+            >
+              Continue Reading
+            </h2>
+          </div>
+          <p
+            class="lang-text max-w-xl text-sm leading-relaxed text-ink/62"
+            data-en="For selected commissions and collaborations, please get in touch."
+            data-zh="如有合适的委托与合作，欢迎与我们联系。"
+          >
+            For selected commissions and collaborations, please get in touch.
+          </p>
+        </div>
+        <div id="related-projects" class="mt-10 grid gap-6 md:grid-cols-2"></div>
       </section>
     </main>
 
+    <button
+      id="back-to-top"
+      type="button"
+      class="fixed bottom-6 right-6 z-50 inline-flex h-12 w-12 items-center justify-center rounded-full border border-ink/15 bg-white/80 text-ink/70 shadow-[0_8px_30px_rgb(0,0,0,0.06)] backdrop-blur-md transition hover:border-ink/25 hover:text-ink sm:bottom-10 sm:right-10 sm:h-14 sm:w-14"
+      aria-label="Back to top"
+      title="Back to top"
+    >
+      <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M12 19V6" />
+        <path d="M5 13l7-7 7 7" />
+      </svg>
+    </button>
+
     <footer class="border-t border-ink/10 bg-paper">
-      <div class="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-12 sm:flex-row sm:items-center sm:justify-between">
+      <div class="mx-auto flex max-w-7xl flex-col gap-8 px-6 py-12 sm:flex-row sm:items-center sm:justify-between lg:px-12">
         <div>
           <p class="text-xs tracking-widest text-ink/70">© <span id="year"></span> TIME &amp; JOY SPACE DESIGN</p>
           <p
@@ -416,8 +392,6 @@
         });
       }
 
-      window.trackEvent = trackEvent;
-
       function getTextContent(el) {
         return (el?.getAttribute('aria-label') || el?.getAttribute('title') || el?.textContent || '').replace(/\s+/g, ' ').trim();
       }
@@ -466,24 +440,316 @@
           });
         }
       });
-
-      document.addEventListener('submit', (event) => {
-        const form = event.target;
-        if (!(form instanceof HTMLFormElement)) return;
-        const formName = form.getAttribute('name') || form.getAttribute('id') || form.getAttribute('data-form-name') || 'unnamed_form';
-        trackEvent('contact_submit', {
-          form_name: formName,
-          form_action: form.getAttribute('action') || window.location.pathname,
-        });
-      });
     </script>
 
     <script>
-      const header = document.getElementById("site-header");
-      const siteNav = document.getElementById("site-nav");
+      const projects = {
+        "mingzhu-hotel": {
+          city: { en: "CHENGDU", zh: "成都" },
+          name: { en: "MINGZHU HOTEL RENOVATION", zh: "明珠酒店改造" },
+          type: { en: "COMMERCIAL · HOSPITALITY", zh: "商业 · 酒店改造" },
+          meta: { en: "2024 · 3200 m²", zh: "2024 · 3200 平方米" },
+          summary: {
+            en: "A hospitality renovation organized around clearer circulation, softened thresholds, and material calm so that reception, meeting, dining, and working zones can read as one coherent experience.",
+            zh: "以更清晰的动线、更柔和的公共界面与克制的材料节奏，重新组织接待、会议、餐饮与办公空间，使整套商业体验更连贯且可被读懂。"
+          },
+          concept: {
+            en: [
+              "The renovation treats the existing hotel structure as a sequence to be clarified rather than overwritten. Reception, corridor, dining, and meeting zones are re-edited through sightlines and thresholds so that the whole interior reads with less visual noise and more directional certainty.",
+              "Material contrast stays restrained: stone, warm timber tones, softened metallic details, and calibrated lighting work together to give the project authority without heaviness. The project is less about gesture than about measured continuity."
+            ],
+            zh: [
+              "本次改造并未试图用新的形式覆盖原有建筑，而是先重新梳理它的使用顺序。接待、走廊、餐饮与会议等空间通过视线控制与界面分层被重新组织，让整体阅读更清晰、动线更稳定。",
+              "材料策略保持克制：石材、暖木、低调金属与分层灯光共同建立商业空间所需的秩序感与信任感，使空间既具品质，也避免沉重与冗余。"
+            ]
+          },
+          data: {
+            en: [
+              ["Location", "Chengdu · China"],
+              ["Type", "Hospitality Renovation"],
+              ["Area", "3200 m²"],
+              ["Year", "2024"],
+              ["Scope", "Interior Design & Soft Furnishing"],
+              ["Photography", "Time & Joy Archive"]
+            ],
+            zh: [
+              ["地点", "中国 · 成都"],
+              ["类型", "酒店改造"],
+              ["面积", "3200 平方米"],
+              ["年份", "2024"],
+              ["范围", "室内设计与软装统筹"],
+              ["摄影", "时悦空间档案"]
+            ]
+          },
+          narrative: {
+            en: [
+              ["Circulation", "Arrival is edited into a legible sequence: lobby, waiting, meeting, dining, and private work zones unfold through calibrated turns rather than abrupt divisions."],
+              ["Light", "Public areas use layered light to soften the scale of the existing shell, while meeting and dining rooms rely on more focused pools of light for intimacy and attention."],
+              ["Material", "Stone and timber are reduced to a calm palette so that texture supports orientation and hierarchy instead of competing for notice."],
+              ["Function & Mood", "Operational clarity remains central, but the project avoids overt corporate severity by introducing quieter transitions and moments of visual pause."]
+            ],
+            zh: [
+              ["动线", "进入路径被重新剪辑为更清晰的序列：从大堂、等候、会议、餐饮到办公，不靠强硬分隔，而通过转折与界面层次自然展开。"],
+              ["光线", "公共区域以分层照明缓解原有体量的压迫感，会议与餐饮空间则使用更集中的光，建立专注与停留的氛围。"],
+              ["材料", "石材与木饰面的对比被压缩到更安静的范围，使材质承担识别与层级作用，而非制造过度装饰。"],
+              ["功能与情绪", "商业运营效率是前提，但空间并不走向冰冷企业感，而是在秩序中留下更缓和的停顿与情绪转换。"]
+            ]
+          },
+          hero: "./Projects/mingzhu-hotel/facade.jpg",
+          heroAlt: { en: "Mingzhu Hotel facade", zh: "明珠酒店门头" },
+          heroImageClass: "aspect-[3/4] w-full object-contain",
+          gallery: [
+            { image: "./Projects/mingzhu-hotel/facade.jpg", caption: { en: "The facade is edited into a quieter first greeting: signage and lighting are held low so the urban interface reads as measured hospitality rather than spectacle.", zh: "门头被处理为更安静的抵达界面：招牌与灯位都保持低姿态，使城市界面更像可被期待的待客前序，而非展示动作。" }, layout: "wide", imageClass: "object-contain", imageStyle: "max-height: 86vh;" },
+            { image: "./Projects/mingzhu-hotel/lobby.jpg", caption: { en: "The renovated lobby translates arrival into a legible sequence: reception, waiting, and vertical circulation are organized by plane and light rather than added elements.", zh: "改造后的大堂把抵达感重新编排为可被读懂的序列：接待、等候与垂直交通，通过界面与光的分层而非额外造型被组织起来。" }, layout: "wide" },
+            { image: "./Projects/mingzhu-hotel/corridor-2.jpg", caption: { en: "Corridor 2 is kept wider to perform as a transitional spine that carries light deeper into the plan.", zh: "走道 2 保持更舒展的宽度，承担过渡性走廊，并把光带向更深处。" }, layout: "wide" },
+            { image: "./Projects/mingzhu-hotel/corridor-1.jpg", caption: { en: "The first corridor stretch is tuned as a directional lead-in, linking the public front to the guest-room wing.", zh: "第一段走道被处理为明确的方向引导，把公共前场自然导向客房翼。" }, layout: "half" },
+            { image: "./Projects/mingzhu-hotel/corridor-3.jpg", caption: { en: "The third corridor section compresses proportion again so the approach to rooms settles down.", zh: "第三段走道再次收束比例，让进入客房前的情绪自然安定。" }, layout: "half" },
+            { image: "./Projects/mingzhu-hotel/corridor-4.jpg", caption: { en: "Corridor 4 uses subtle light shifts to mark the transition between the guest-room wing and the supporting program.", zh: "走道 4 以更细微的光线变化标记客房区与配套功能之间的过渡。" }, layout: "half", aspectClass: "aspect-[4/3]", imageStyle: "object-fit: cover; object-position: center 58%;" },
+            { image: "./Projects/mingzhu-hotel/corridor-6.jpg", caption: { en: "Corridor 6 extends the passage rhythm with another calmer interval, allowing the sequence to continue without visual fatigue.", zh: "走道 6 作为新增的一段，把过道节奏再延长一步，让连续路径里多一个更安静的停顿。" }, layout: "half", aspectClass: "aspect-[4/3]" },
+            { image: "./Projects/mingzhu-hotel/corridor-5.jpg", caption: { en: "The final corridor stretch is composed as a quieter prelude before dining and public amenities.", zh: "走道最后一段被处理为更安静的前奏，引向餐饮与公共配套。" }, layout: "wide" },
+            { image: "./Projects/mingzhu-hotel/king-room-1.jpg", caption: { en: "King rooms use deeper timber and textile tones to balance daytime brightness with an evening sense of rest.", zh: "大床房以更深的木色与布面，平衡日间进入的亮度与夜间需要的休息感。" }, layout: "wide", beforeNarrative: "material" },
+            { image: "./Projects/mingzhu-hotel/king-room-2.jpg", caption: { en: "King room variant uses a slightly lighter palette to accommodate longer stays.", zh: "大床房变体将木色略压浅，适配更久停留的连续使用。" }, layout: "half" },
+            { image: "./Projects/mingzhu-hotel/king-room-3.jpg", caption: { en: "Room sequencing is refined so that sleeping, working, and washing areas read without visual clutter.", zh: "客房内部顺序被重新梳理，让睡眠、工作与洗漱三个区域在视觉上互不干扰。" }, layout: "half" },
+            { image: "./Projects/mingzhu-hotel/restroom.jpg", caption: { en: "Guest-room service areas are finished with measured proportion and quieter joinery so daily use remains calm.", zh: "客房配套的服务性空间通过比例控制与更安静的收束，使日常使用仍保持稳定的视觉安静度。" }, layout: "wide", imageClass: "object-contain", imageStyle: "max-height: 82vh;" },
+            { image: "./Projects/mingzhu-hotel/twin-room-1.jpg", caption: { en: "The first twin-room variant keeps both beds visually equal and lets proportion carry the sense of stay.", zh: "第一种双床房让两张床在视觉上保持对等，以比例与分区间距承担停留感。" }, layout: "wide" },
+            { image: "./Projects/mingzhu-hotel/twin-room-2.jpg", caption: { en: "Twin room 2 uses softer light layering so the room can shift easily between daytime work and evening rest.", zh: "双床房 2 通过更柔的光层，让空间在日间工作与夜间休息之间自然切换。" }, layout: "half", aspectClass: "aspect-[4/3]", imageStyle: "object-fit: cover; object-position: center 55%;" },
+            { image: "./Projects/mingzhu-hotel/twin-room-3.jpg", caption: { en: "Twin room 3 is tuned as the most composed variant, with a clearer desk edge and calmer back wall for longer stays.", zh: "双床房 3 作为更内敛的变体，通过更干净的书桌收边与更安静的后墙，适配久住。" }, layout: "half", aspectClass: "aspect-[4/3]" },
+            { image: "./Projects/mingzhu-hotel/restaurant-1.jpg", caption: { en: "The dining hall is staged as a softer social interval inside the broader hospitality sequence.", zh: "餐厅在整体酒店节奏中承担更柔和的社交停顿。" }, layout: "wide", beforeNarrative: "light" },
+            { image: "./Projects/mingzhu-hotel/restaurant-2.jpg", caption: { en: "Banquet-ready dining zones balance openness with acoustically softer material layers.", zh: "可承载宴客的餐饮空间，在开放感与更柔和的材料层次之间取得平衡。" }, layout: "wide" },
+            { image: "./Projects/mingzhu-hotel/restaurant-3.jpg", caption: { en: "Mealtime light is tuned down from lobby brightness so the experience shifts appropriately.", zh: "餐区的光比大堂略降一度，让使用情绪从抵达自然过渡到停留。" }, layout: "half" },
+            { image: "./Projects/mingzhu-hotel/restaurant-4.jpg", caption: { en: "A secondary dining view: joinery and table placement are tuned so that even full occupancy retains visual calm.", zh: "餐区的另一视角：木作与餐桌布局在满座状态下，仍能维持视觉上的不拥挤感。" }, layout: "half" },
+            { image: "./Projects/mingzhu-hotel/restaurant-5.jpg", caption: { en: "Dining 5 closes the distance between seating groups through lowered light and more tactile joinery.", zh: "餐厅 5 通过更收的光位与更有触感的木作，拉近不同座位组之间的距离感。" }, layout: "wide", beforeNarrative: "function" },
+            { image: "./Projects/mingzhu-hotel/restaurant-7.png", caption: { en: "Dining detail: the edge of woodwork and lighting meet without insisting on themselves.", zh: "餐饮细部：木作收边与灯光相遇，不额外争夺视线。" }, layout: "half" },
+            { image: "./Projects/mingzhu-hotel/restaurant-8.png", caption: { en: "Layering of light and wall surface is kept consistent so that different meal hours read as one calm whole.", zh: "光与墙面的层次保持一致，使不同用餐时段都能落在同一种安静的基调里。" }, layout: "half" },
+            { image: "./Projects/mingzhu-hotel/restaurant-9.png", caption: { en: "A closer look at the dining room's quieter back wall, used for visual pause within the larger room.", zh: "餐饮空间的后墙处理更克制，为大面积空间提供一个可停顿的视觉落点。" }, layout: "wide" },
+            { image: "./Projects/mingzhu-hotel/restaurant-10.png", caption: { en: "Private dining entry: transitions are softened through floor and ceiling changes rather than doors.", zh: "包间入口处通过地与顶的微小变化完成过渡，而非依赖额外门扇。" }, layout: "half" },
+            { image: "./Projects/mingzhu-hotel/restaurant-11.png", caption: { en: "The second private dining room uses a slightly warmer palette to accommodate more formal entertaining.", zh: "第二间包间把木色再压深一度，适配更正式的招待场景。" }, layout: "half" }
+          ],
+          narrativePlacement: {
+            mode: "hybrid",
+            layoutPreset: "narrow-label",
+            inSection: ["circulation"]
+          },
+          related: ["riverfront-office", "quiet-residence"]
+        },
+        "vistar-office": {
+          city: { en: "CHENGDU", zh: "成都" },
+          name: { en: "VISTAR OFFICE", zh: "辰显光电·办公楼" },
+          type: { en: "COMMERCIAL · OFFICE", zh: "商业 · 办公楼" },
+          meta: { en: "2024 · 20000 m²", zh: "2024 · 20000 平方米" },
+          summary: {
+            en: "The VISTAR office translates the underlying logic of Micro-LED technology—self-illumination, seamless tiling, and extreme transparency—into a tangible spatial order, balancing a high-end brand showcase with efficient collaborative work within the language of contemporary tech-minimalism.",
+            zh: "成都辰显光电·办公楼，将 Micro-LED 技术的底层语言——「自发光、无缝拼接、极致通透」转化为室内空间的物理秩序，在当代科技极简主义中，平衡品牌展示与高效协同办公的双重需求。"
+          },
+          concept: {
+            en: [
+              "This is the office for VISTAR, a company dedicated to Micro-LED micro-display technology. Rather than relying on surface-level tech tropes, the design first returns to the DNA of the technology itself—the disciplined order of self-illumination, the seamless precision of tiled surfaces, and the visual clarity of extreme transparency—before translating these qualities into the interior through light, plane, and circulation. The overall tone is set by contemporary tech-minimalism, with crisp lines and a pure background establishing a brand-led office identity that is both legibly branded and quietly restrained.",
+              "The space simultaneously performs two roles: a high-end brand window for external visitors and an efficient collaborative workplace for daily users. Reception, meetings, training, open work zones, executive offices, catering, and supporting amenities are reorganized into one continuous spatial sequence, so that both visitors and employees can read the project's order through their own paths—clear and recognizable for the outside, calm, stable, and highly functional for the inside."
+            ],
+            zh: [
+              "本案为 Micro-LED 微显示技术企业辰显光电（VISTAR）的办公空间。设计并未诉诸表面化的科技符号，而是先回到技术本身的基因——自发光的秩序感、无缝拼接的界面感与极致通透的视觉关系，再将它们落实为室内的光、面与动线。",
+              "整体以「当代科技极简主义」为基调，以利落的线条与纯净的底色，建立既具品牌辨识度，又不过度张扬的办公楼气质。",
+              "空间同时承担高端品牌窗口与高效协同办公的双重任务。接待、会议、培训、开放办公、领导办公、餐饮与配套等功能被重新编入一个连续的空间序列，使来访者与日常使用者都能以各自的路径读懂项目的秩序：对外清晰而有辨识度，对内安静、稳定而可被高效使用。"
+            ]
+          },
+          conceptFormat: {
+            indentParagraphs: true,
+            doubleParagraphSpacing: true,
+            reduceRightCardStature: true,
+            forceSingleLineWrap: [
+              { en: ". The overall tone is set by contemporary tech-minimalism,", zh: "。整体以「当代科技极简主义」为基调" },
+              { en: "The space simultaneously performs two roles:", zh: "空间同时承担高端品牌窗口与高效协同办公的双重任务。" }
+            ]
+          },
+          data: {
+            en: [["Location", "Chengdu · China"], ["Type", "Commercial Office"], ["Area", "20000 m²"], ["Year", "2024"], ["Scope", "Interior Design & Soft Furnishing"], ["Photography", "Time & Joy Archive"]],
+            zh: [["地点", "中国 · 成都"], ["类型", "商业 · 办公楼"], ["面积", "20000 平方米"], ["年份", "2024"], ["范围", "室内设计与软装统筹"], ["摄影", "时悦空间档案"]]
+          },
+          narrative: {
+            en: [
+              ["Circulation", "Reception, public amenities, open work zones, and private meeting / executive areas unfold along one primary axis, with the rhythm of the path controlled by the expansion and retraction of planes and light, establishing a dual circulation order—ritual for guests, efficient for staff."],
+              ["Light", "Linear recessed sources and concealed luminous planes run through the project, simulating the soft visual effect of screen backlighting: they carry the tech atmosphere while avoiding direct glare that would interfere with focused work. Natural and artificial light transition gently across the entrance, lobby, and public nodes, building a consistent experience day and night."],
+              ["Material", "High-transmission glass, mirrored metal, and ultra-white marble form the primary vocabulary, echoing the transparent aesthetics of advanced display technology; these high-reflection surfaces are softened by deeper timber tones and textiles, so the space retains human scale and everyday warmth within its brand sharpness."],
+              ["Function & Mood", "Borrowing the logic of modular tiling, open work zones, meeting nodes, and collaboration areas are organized by a flexible matrix array, enabling efficient teamwork and agile reconfiguration. The tight, focused rhythm of daily office life shifts into a more expansive, brand-expressive mood in the reception hall, training rooms, restaurant, and amenities."]
+            ],
+            zh: [
+              ["动线", "「接待—公共配套—开放办公—专属会议/领导区」沿一条主线索展开，通过界面与光的收放控制路径节奏，形成对外礼序、对内高效的双重动线秩序。"],
+              ["光线", "线性暗光源与隐藏式发光面贯穿全局，模拟屏幕背光的柔和视效，既承担科技氛围，也避免直接眩光对专注办公造成干扰。自然光与人工光在入口、大堂与公共节点处相互过渡，建立昼夜连贯的空间体验。"],
+              ["材料", "高透玻璃、镜面金属与超白大理石构成主体语汇，呼应前沿显示技术的通透美学；同时以深木色与织物软化高反射表面，使空间在品牌锋芒中保留人的尺度与日常温度。"],
+              ["功能与情绪", "借鉴模组拼接逻辑，开放办公、会议节点与协作区域以可变化的矩阵阵列组织，实现空间的高效协同与灵活重组；紧张专注的日常办公节奏，在接待厅、培训室、餐厅与配套区被切换为更舒展、更具品牌表达的情绪。"]
+            ]
+          },
+          hero: "./Projects/vistar-office/lobby-1-hero.jpg",
+          heroAlt: { en: "VISTAR Office reception hall", zh: "辰显光电·办公楼大厅主图" },
+          gallery: [
+            { image: "./Projects/vistar-office/lobby-2.jpg", caption: { en: "The lobby extends the reception with a continuous ground plane and layered light edges.", zh: "大堂以连续的地平面与层次化的光边界面，将接待感向深处延展。" }, layout: "wide", afterNarrative: "circulation" },
+            { image: "./Projects/vistar-office/lobby-3.jpg", caption: { en: "Reception detail: material junctions are kept quiet so light can read more clearly.", zh: "接待细节处保持安静的收边，让光的层次更清晰地被感知。" }, layout: "half" },
+            { image: "./Projects/vistar-office/lobby-4.jpg", caption: { en: "Reflective surfaces deepen the sense of entry without over-emphasizing brand display.", zh: "反射界面在不过度用力的前提下，拉长入口空间的抵达感。" }, layout: "half" },
+            { image: "./Projects/vistar-office/elevator-lobby.jpg", caption: { en: "Elevator lobbies are treated as calm thresholds using hidden light and clear geometry.", zh: "电梯厅通过藏光与干净的几何关系，被处理为安静的过渡界面。" }, layout: "half" },
+            { image: "./Projects/vistar-office/reception-room.jpg", caption: { en: "Standard reception rooms pair visual clarity with soft acoustic comfort.", zh: "标准接待室在视觉干净度与听觉柔软度之间取得平衡。" }, layout: "half" },
+            { image: "./Projects/vistar-office/vip.jpg", caption: { en: "VIP reception deepens material warmth while maintaining overall spatial restraint.", zh: "VIP 接待区进一步加强材料温度，但不破坏空间整体的克制感。" }, layout: "wide" },
+            { image: "./Projects/vistar-office/meeting-room.jpg", caption: { en: "The main boardroom is held by controlled contrast, supporting long hours of concentrated discussion.", zh: "主会议室通过受控的对比建立专注，可长时间承载深度讨论。" }, layout: "half" },
+            { image: "./Projects/vistar-office/meeting-room-b.jpg", caption: { en: "Secondary meeting rooms stay flexible, supporting different group sizes and work modes.", zh: "次会议室保持灵活度，适配不同规模的小组协作与沟通模式。" }, layout: "half" },
+            { image: "./Projects/vistar-office/training-room.jpg", caption: { en: "The training room is arranged as a reconfigurable venue for training, presentation, and all-hands use.", zh: "培训室被设计为可重组的多功能场地，适配培训、汇报与全员会议。" }, layout: "wide", beforeNarrative: "material", afterNarrative: "function" },
+            { image: "./Projects/vistar-office/open-office-1.jpg", caption: { en: "Open work zones are organized around long sightlines and evenly distributed soft daylight.", zh: "开放办公空间以长视线与均匀的柔化自然光，建立持续可工作的背景。" }, layout: "wide" },
+            { image: "./Projects/vistar-office/open-office-2.jpg", caption: { en: "Team zones retain individual order while remaining visually connected.", zh: "团队区域既保持个人秩序，也维持视觉上的整体连贯。" }, layout: "half" },
+            { image: "./Projects/vistar-office/open-office-3.jpg", caption: { en: "Informal pause pockets are inserted between work rows to support quick collaboration.", zh: "开放座位行间插入轻量停顿点，支持短会与即时协作。" }, layout: "half" },
+            { image: "./Projects/vistar-office/office-room.jpg", caption: { en: "Mid-level offices balance focus, storage, and a measured sense of identity.", zh: "中层办公室在专注度、收纳量与适度身份感之间取得平衡。" }, layout: "half" },
+            { image: "./Projects/vistar-office/exec-office.jpg", caption: { en: "Executive rooms use deeper tones and a more composed horizon for sustained decision-making use.", zh: "领导办公区以更深的色调与更沉稳的视野，支撑长时间的决策使用。" }, layout: "half" },
+            { image: "./Projects/vistar-office/exec-meeting-room.jpg", caption: { en: "The executive meeting room maintains both ceremonial calm and technical clarity.", zh: "领导会议室在仪式性的安静与技术清晰度之间保持稳定。" }, layout: "wide" },
+            { image: "./Projects/vistar-office/corridor.jpg", caption: { en: "Corridors are treated as directional rhythms rather than purely functional passages.", zh: "走道不只是效率通道，也被处理成方向明确、具节奏感的动线序列。" }, layout: "half" },
+            { image: "./Projects/vistar-office/pantry.jpg", caption: { en: "Pantry areas are staged as daily intervals, with softer light and more tactile joinery.", zh: "茶水间以更柔的光与更有触感的家具细部，承担日常停顿。" }, layout: "half" },
+            { image: "./Projects/vistar-office/dining-hall-1.jpg", caption: { en: "The main dining hall provides a generous, calm interval inside a dense workday.", zh: "主餐厅为高密度工作周期提供一个舒展而安静的停顿空间。" }, layout: "wide" },
+            { image: "./Projects/vistar-office/private-dining-1.jpg", caption: { en: "Private dining rooms are organized as more composed, inward-facing rooms for formal entertaining.", zh: "餐饮包间以更内收、更有序的方式组织，适配正式招待。" }, layout: "half" },
+            { image: "./Projects/vistar-office/private-dining-2.jpg", caption: { en: "The second dining room pairs warm joinery with softer lighting for evening use.", zh: "第二间包间以更暖的木作与更柔的灯光，承担夜间餐饮场景。" }, layout: "half" },
+            { image: "./Projects/vistar-office/dining-hall-2.jpg", caption: { en: "Supporting zones keep visual order without sacrificing daily practicality.", zh: "餐饮配套区域在保持视觉秩序的同时，不损失日常实用性。" }, layout: "half" },
+            { image: "./Projects/vistar-office/dining-hall-3.jpg", caption: { en: "Catering details are tuned to support both quick meals and longer lunch breaks.", zh: "餐饮细部在快餐与更放松的午休之间取得适配。" }, layout: "half" },
+            { image: "./Projects/vistar-office/restroom.jpg", caption: { en: "Public restrooms rely on a continuous mirror plane and soft indirect lighting for visual calm.", zh: "公共卫生间以连续镜面与柔和的间接照明，维持视觉安静。" }, layout: "half" },
+            { image: "./Projects/vistar-office/mens-restroom.jpg", caption: { en: "Material texture and proportion give even service rooms a measured finish.", zh: "即使是服务性空间，也通过材质肌理与比例控制完成克制的收尾。" }, layout: "half" },
+            { image: "./Projects/vistar-office/overall-view.png", caption: { en: "Overall spatial narrative: from the front-of-house sequence to deep work zones, the project moves between brand display, collaborative focus, and daily rest.", zh: "整体空间叙事：从前场序列到深处工作区，项目在品牌展示、协作专注与日常休憩之间有序切换。" }, layout: "wide" }
+          ],
+          narrativePlacement: {
+            mode: "hybrid",
+            layoutPreset: "narrow-label",
+            inSection: ["light"],
+            inGalleryAfter: {
+              "lobby-2.jpg": "circulation"
+            },
+            inGalleryBefore: {
+              "training-room.jpg": "material"
+            },
+            inGalleryAfterWide: {
+              "training-room.jpg": "function"
+            }
+          },
+          related: ["riverfront-office", "quiet-residence"]
+        },
+        "riverfront-office": {
+          city: { en: "SHANGHAI", zh: "上海" },
+          name: { en: "RIVERFRONT OFFICE", zh: "滨水办公空间" },
+          type: { en: "COMMERCIAL · WORKPLACE", zh: "商业 · 办公空间" },
+          meta: { en: "2025 · 1800 m²", zh: "2025 · 1800 平方米" },
+          summary: {
+            en: "A workplace project shaped through long sightlines, softened collaboration zones, and reduced material contrast so daily work can feel continuous rather than fragmented.",
+            zh: "以长视线、协作缓冲区与更低对比的材料处理，建立连续而不过度打扰的办公体验。"
+          },
+          concept: {
+            en: [
+              "The office is organized around continuity instead of hierarchy performed through spectacle. Public-facing zones and team areas are linked by a restrained architectural language so the experience remains coherent across different functions.",
+              "Rather than over-signaling brand character, the project allows proportion, daylight, and soft materials to carry the atmosphere."
+            ],
+            zh: [
+              "项目以连续性而非夸张层级作为办公体验的核心。对外接待与团队协作区域通过统一而克制的界面语言被组织在一起，使不同功能保持整体一致性。",
+              "空间并不依赖强烈品牌姿态，而是让比例、采光与柔和材质共同建立气质。"
+            ]
+          },
+          data: {
+            en: [["Location", "Shanghai · China"], ["Type", "Workplace"], ["Area", "1800 m²"], ["Year", "2025"], ["Scope", "Interior Design"], ["Photography", "Project Archive"]],
+            zh: [["地点", "中国 · 上海"], ["类型", "办公空间"], ["面积", "1800 平方米"], ["年份", "2025"], ["范围", "室内设计"], ["摄影", "项目档案"]]
+          },
+          narrative: {
+            en: [["Circulation", "Movement follows one primary riverfront axis with smaller lateral pockets for meetings and pause."], ["Light", "Light is allowed to travel deep into the plan, reducing the sense of enclosure in work areas."], ["Material", "Fabric, light timber, and pale mineral surfaces soften the office without dissolving professionalism."], ["Function & Mood", "The project balances focus and collaboration through thresholds rather than hard enclosure."]],
+            zh: [["动线", "空间沿一条主要轴线展开，再以若干侧向停顿空间承接会议与休息。"], ["光线", "让自然光更深入地进入平面深处，降低办公区域的封闭感。"], ["材料", "织物、浅木与矿物质感表面共同削弱办公空间的生硬感。"], ["功能与情绪", "通过界面与过渡而非硬隔断，平衡专注与协作。"]]
+          },
+          hero: "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=2400&q=80",
+          heroAlt: { en: "Riverfront office overview", zh: "滨水办公空间概览" },
+          gallery: [
+            { image: "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=2200&q=80", caption: { en: "Reception works as a calm threshold rather than a branding stage.", zh: "前厅更像安静的界面，而非强烈品牌舞台。" }, layout: "wide" },
+            { image: "https://images.unsplash.com/photo-1497366412874-3415097a27e7?auto=format&fit=crop&w=2200&q=80", caption: { en: "Team zones stay open but not visually exposed.", zh: "团队区域保持开放，但不过度暴露。" }, layout: "half" },
+            { image: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=2200&q=80", caption: { en: "Meeting spaces are defined by acoustic softness and visual control.", zh: "会议空间通过声学柔化与视线控制被明确。" }, layout: "half" }
+          ],
+          related: ["terrace-cafe", "gallery-clinic"]
+        },
+        "terrace-cafe": {
+          city: { en: "CHONGQING", zh: "重庆" },
+          name: { en: "TERRACE CAFE", zh: "露台咖啡馆" },
+          type: { en: "COMMERCIAL · HOSPITALITY", zh: "商业 · 餐饮空间" },
+          meta: { en: "2024 · 640 m²", zh: "2024 · 640 平方米" },
+          summary: { en: "A hospitality interior that mediates between indoor calm and outward urban views through layered seating and controlled material warmth.", zh: "通过分层座位、受控的材料温度与对外视野，将室内安静感与城市观看体验整合在一起。" },
+          concept: { en: ["The project seeks a calmer hospitality rhythm by avoiding visual saturation. Seating density, light pools, and material warmth are edited to let the terrace remain part of the reading experience."], zh: ["项目避免把餐饮空间做成过度饱和的视觉场景，而是通过座位密度、灯光落点与材料温度的控制，使露台成为阅读体验的一部分。"] },
+          data: { en: [["Location", "Chongqing · China"], ["Type", "Cafe"], ["Area", "640 m²"], ["Year", "2024"], ["Scope", "Interior Design"], ["Photography", "Project Archive"]], zh: [["地点", "中国 · 重庆"], ["类型", "咖啡馆"], ["面积", "640 平方米"], ["年份", "2024"], ["范围", "室内设计"], ["摄影", "项目档案"]] },
+          narrative: { en: [["Circulation", "Guests move from compressed arrival to more open edge seating."], ["Light", "Interior lighting softens the transition from afternoon glare to evening intimacy."], ["Material", "Textured surfaces and muted tones keep the project tactile without becoming theme-driven."], ["Function & Mood", "Service clarity remains strong while guest seating feels unhurried."]], zh: [["动线", "从较为收束的入口，逐步过渡到更开敞的边缘座位。"], ["光线", "室内灯光承担从白昼炫光到夜间停留的过渡作用。"], ["材料", "质感与低饱和色彩让空间保持触感，而不走向主题化。"], ["功能与情绪", "在维持服务效率的同时，让停留感更放松。"]] },
+          hero: "https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?auto=format&fit=crop&w=2400&q=80",
+          heroAlt: { en: "Terrace cafe interior", zh: "露台咖啡馆" },
+          gallery: [
+            { image: "https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?auto=format&fit=crop&w=2200&q=80", caption: { en: "Terrace seating is staged as a sequence of quieter pauses.", zh: "露台座位被设计为一连串更安静的停顿。" }, layout: "wide" },
+            { image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=2200&q=80", caption: { en: "Material warmth is introduced in measured intervals.", zh: "材料温度通过克制的节奏被引入。"}, layout: "half" },
+            { image: "https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=2200&q=80", caption: { en: "Counter and seating remain visually linked.", zh: "吧台与座位区保持视觉上的连续性。"}, layout: "half" }
+          ],
+          related: ["gallery-clinic", "quiet-residence"]
+        },
+        "gallery-clinic": {
+          city: { en: "HANGZHOU", zh: "杭州" },
+          name: { en: "GALLERY CLINIC", zh: "画廊诊所" },
+          type: { en: "COMMERCIAL · HEALTHCARE", zh: "商业 · 医疗空间" },
+          meta: { en: "2023 · 920 m²", zh: "2023 · 920 平方米" },
+          summary: { en: "A healthcare interior that reduces anxiety through visual calm, controlled thresholds, and a gentler public-to-private progression.", zh: "通过视觉安静感、界面控制与更柔和的公私过渡，降低医疗空间天然的紧张感。" },
+          concept: { en: ["The project reframes the clinic as a sequence of reassurance rather than purely technical efficiency. Public waiting, consultation, and treatment zones are separated by tone, depth, and light instead of abrupt formality."], zh: ["项目试图让诊所从纯效率空间转向更具安定感的体验序列。候诊、咨询与治疗区域通过光线、纵深与色调被区分，而非依赖生硬的形式感。"] },
+          data: { en: [["Location", "Hangzhou · China"], ["Type", "Healthcare"], ["Area", "920 m²"], ["Year", "2023"], ["Scope", "Interior Design"], ["Photography", "Project Archive"]], zh: [["地点", "中国 · 杭州"], ["类型", "医疗空间"], ["面积", "920 平方米"], ["年份", "2023"], ["范围", "室内设计"], ["摄影", "项目档案"]] },
+          narrative: { en: [["Circulation", "Patient movement separates naturally from service routes without obvious institutional cues."], ["Light", "Soft ambient light replaces harder clinical brightness in waiting and transition zones."], ["Material", "Pale mineral textures and warm joinery reduce the coldness of the program."], ["Function & Mood", "The clinic stays operationally clear while becoming emotionally more approachable."]], zh: [["动线", "患者与服务路线自然分离，但不以明显机构化语言呈现。"], ["光线", "等候与过渡区域以更柔和的环境光取代强烈医疗照明。"], ["材料", "浅矿物肌理与暖木细部削弱了医疗类型的冰冷感。"], ["功能与情绪", "在维持功能清晰的同时，让空间更容易被亲近。"]] },
+          hero: "https://images.unsplash.com/photo-1527030280862-64139fba04ca?auto=format&fit=crop&w=2400&q=80",
+          heroAlt: { en: "Gallery clinic interior", zh: "画廊诊所" },
+          gallery: [
+            { image: "https://images.unsplash.com/photo-1527030280862-64139fba04ca?auto=format&fit=crop&w=2200&q=80", caption: { en: "Arrival is composed as a gentle threshold into care.", zh: "入口被组织为更柔和的医疗界面。" }, layout: "wide" },
+            { image: "https://images.unsplash.com/photo-1580281657527-47f249e8f4df?auto=format&fit=crop&w=2200&q=80", caption: { en: "Waiting areas rely on softened light and reduced visual clutter.", zh: "候诊区通过柔和光线与更少视觉噪音建立安定感。" }, layout: "half" },
+            { image: "https://images.unsplash.com/photo-1538108149393-fbbd81895907?auto=format&fit=crop&w=2200&q=80", caption: { en: "Private consultation rooms remain calm but efficient.", zh: "私密咨询空间保持效率，也保持安静。"}, layout: "half" }
+          ],
+          related: ["riverfront-office", "terrace-cafe"]
+        },
+        "quiet-residence": {
+          city: { en: "SHENZHEN", zh: "深圳" },
+          name: { en: "QUIET RESIDENCE", zh: "静居住宅" },
+          type: { en: "RESIDENTIAL · APARTMENT", zh: "住宅 · 公寓" },
+          meta: { en: "2025 · 260 m²", zh: "2025 · 260 平方米" },
+          summary: { en: "A private apartment organized through negative space, low-contrast materials, and a slower transition from public to intimate rooms.", zh: "以留白、低对比材料与更慢的公共到私密过渡组织一套安静的私人住宅。" },
+          concept: { en: ["The apartment uses subtraction as its primary design move. Rather than filling the space with gestures, the project edits partitions, sightlines, and materials until calm becomes the dominant spatial quality."], zh: ["这套住宅以减法作为首要动作。空间不依靠表层姿态来成立，而是通过界面收束、视线控制与材料减量，让安静成为最核心的空间气质。"] },
+          data: { en: [["Location", "Shenzhen · China"], ["Type", "Private Apartment"], ["Area", "260 m²"], ["Year", "2025"], ["Scope", "Interior Design"], ["Photography", "Project Archive"]], zh: [["地点", "中国 · 深圳"], ["类型", "私人公寓"], ["面积", "260 平方米"], ["年份", "2025"], ["范围", "室内设计"], ["摄影", "项目档案"]] },
+          narrative: { en: [["Circulation", "Movement is opened and slowed so public rooms feel connected without becoming exposed."], ["Light", "Natural light is treated as a soft wash that changes the reading of surfaces over the day."], ["Material", "The palette stays close in tone to allow proportion and shadow to take precedence."], ["Function & Mood", "Private retreat and daily use remain balanced through quiet transitions rather than strong zoning."]], zh: [["动线", "通过打开并放缓动线，让公共区域既连贯又不过度暴露。"], ["光线", "自然光被视为一层缓慢变化的表面处理，让空间在一天中呈现不同阅读。"], ["材料", "材料色调被拉近，让比例与阴影关系优先被感知。"], ["功能与情绪", "用更安静的过渡代替强分区，平衡日常使用与私密退场。"]] },
+          hero: "https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&w=2400&q=80",
+          heroAlt: { en: "Quiet residence living area", zh: "静居住宅客厅" },
+          gallery: [
+            { image: "https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&w=2200&q=80", caption: { en: "The living room is held by proportion rather than ornament.", zh: "客厅更多依靠比例而非装饰成立。" }, layout: "wide" },
+            { image: "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=2200&q=80", caption: { en: "Materials stay close in tone so light can become more visible.", zh: "材料保持低对比，让光更容易被感知。" }, layout: "half" },
+            { image: "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=2200&q=80", caption: { en: "Bedrooms retreat through softness instead of isolation.", zh: "卧室通过柔和退入，而非绝对隔离。"}, layout: "half" }
+          ],
+          related: ["layered-house", "terrace-cafe"]
+        },
+        "layered-house": {
+          city: { en: "BEIJING", zh: "北京" },
+          name: { en: "LAYERED HOUSE", zh: "层叠住宅" },
+          type: { en: "RESIDENTIAL · VILLA INTERIOR", zh: "住宅 · 别墅室内" },
+          meta: { en: "2024 · 340 m²", zh: "2024 · 340 平方米" },
+          summary: { en: "A house defined by layered thresholds, tempered daylight, and quiet stone-and-wood contrasts that allow daily life to unfold without visual urgency.", zh: "以层叠界面、被柔化的自然光与安静的石木对比组织一套不急促的居住体验。" },
+          concept: { en: ["This house develops depth through thresholds rather than through overt decorative statements. Each room is allowed to arrive gradually, with proportion, light, and joinery carrying most of the emotional tone."], zh: ["这套住宅通过层层界面建立纵深，而不是依靠过强的装饰姿态。每个房间都以较慢的方式被抵达，使比例、光线与细部成为主要的情绪来源。"] },
+          data: { en: [["Location", "Beijing · China"], ["Type", "Villa Interior"], ["Area", "340 m²"], ["Year", "2024"], ["Scope", "Interior Design"], ["Photography", "Project Archive"]], zh: [["地点", "中国 · 北京"], ["类型", "别墅室内"], ["面积", "340 平方米"], ["年份", "2024"], ["范围", "室内设计"], ["摄影", "项目档案"]] },
+          narrative: { en: [["Circulation", "Thresholds are layered so arrival into each room feels gradual and controlled."], ["Light", "Daylight is filtered and reflected rather than allowed to dominate every surface equally."], ["Material", "Stone and timber remain close in saturation, letting detailing hold the composition."], ["Function & Mood", "Domestic use stays practical while the emotional tone remains measured and quiet."]], zh: [["动线", "通过层层界面控制抵达感，让每个空间的进入更缓和。"], ["光线", "自然光被筛选与反射，而不是平均铺满每一个表面。"], ["材料", "石材与木质的饱和度保持接近，由细部关系承担主要构成。"], ["功能与情绪", "在日常使用保持实用的同时，空间情绪仍然克制而安静。"]] },
+          hero: "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=2400&q=80",
+          heroAlt: { en: "Layered House interior", zh: "层叠住宅" },
+          gallery: [
+            { image: "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=2200&q=80", caption: { en: "Rooms are sequenced through depth rather than overt gesture.", zh: "空间通过纵深顺序而非夸张姿态成立。" }, layout: "wide" },
+            { image: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=2200&q=80", caption: { en: "Materials stay close in tone, making shadow more articulate.", zh: "材料色调接近，让阴影关系更清晰。" }, layout: "half" },
+            { image: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=2200&q=80", caption: { en: "Private rooms are softened through filtered daylight.", zh: "私密空间通过被筛过的自然光变得更柔和。"}, layout: "half" }
+          ],
+          related: ["quiet-residence", "riverfront-office"]
+        }
+      };
+
+      const querySlug = new URLSearchParams(window.location.search).get("project");
+      let currentProjectKey = projects[querySlug] ? querySlug : "vistar-office";
+      let currentLang = "en";
+
       const navToggle = document.getElementById("nav-toggle");
       const mobileNav = document.getElementById("mobile-nav");
       const mobileNavBackdrop = document.getElementById("mobile-nav-backdrop");
+      const wechatModal = document.getElementById("wechat-modal");
+      const wechatBackdrop = document.getElementById("wechat-backdrop");
+      const wechatValue = document.getElementById("wechat-value");
+      const wechatCopy = document.getElementById("wechat-copy");
+      const wechatClose = document.getElementById("wechat-close");
+      const wechatStatus = document.getElementById("wechat-status");
+      const langToggle = document.getElementById("lang-toggle");
+      const langIndicatorEn = langToggle?.querySelector?.('[data-lang-indicator="en"]');
+      const langIndicatorZh = langToggle?.querySelector?.('[data-lang-indicator="zh"]');
 
       function setMobileNav(open) {
         if (!navToggle || !mobileNav) return;
@@ -502,107 +768,7 @@
       });
 
       mobileNavBackdrop?.addEventListener("click", () => setMobileNav(false));
-      mobileNav?.querySelectorAll("[data-nav-close]")?.forEach((link) => link.addEventListener("click", () => setMobileNav(false)));
-      window.addEventListener("keydown", (e) => {
-        if (e.key === "Escape") {
-          setMobileNav(false);
-          closeWechatModal();
-        }
-      });
-
-      function parseCssColor(value) {
-        if (!value) return null;
-        const m = value.match(/rgba?\(([^)]+)\)/);
-        if (!m) return null;
-        const parts = m[1]
-          .split(",")
-          .map((p) => p.trim())
-          .slice(0, 4);
-        if (parts.length < 3) return null;
-
-        const toByte = (v) => {
-          const n = Number.parseFloat(v);
-          if (Number.isNaN(n)) return 0;
-          return Math.max(0, Math.min(255, n));
-        };
-        const r = toByte(parts[0]);
-        const g = toByte(parts[1]);
-        const b = toByte(parts[2]);
-        const a = parts[3] == null ? 1 : Math.max(0, Math.min(1, Number.parseFloat(parts[3])));
-        return { r, g, b, a };
-      }
-
-      function relativeLuminance({ r, g, b }) {
-        const toLinear = (c) => {
-          const v = c / 255;
-          return v <= 0.04045 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4);
-        };
-        const R = toLinear(r);
-        const G = toLinear(g);
-        const B = toLinear(b);
-        return 0.2126 * R + 0.7152 * G + 0.0722 * B;
-      }
-
-      function findSolidBackgroundColor(el) {
-        let node = el;
-        while (node && node !== document.documentElement) {
-          const bg = parseCssColor(window.getComputedStyle(node).backgroundColor);
-          if (bg && bg.a >= 0.95) return bg;
-          node = node.parentElement;
-        }
-        const bodyBg = parseCssColor(window.getComputedStyle(document.body).backgroundColor);
-        if (bodyBg) return { r: bodyBg.r, g: bodyBg.g, b: bodyBg.b, a: 1 };
-        return { r: 249, g: 249, b: 249, a: 1 };
-      }
-
-      function updateNavContrast() {
-        if (!header || !siteNav) return;
-        const rect = header.getBoundingClientRect();
-        const x = Math.min(window.innerWidth - 24, Math.max(24, rect.left + rect.width * 0.5));
-        const y = rect.top + rect.height * 0.5;
-
-        const prevPointerEvents = header.style.pointerEvents;
-        header.style.pointerEvents = "none";
-        const hit = document.elementFromPoint(x, y);
-        header.style.pointerEvents = prevPointerEvents;
-
-        let useLight = false;
-        if (hit) {
-          const img = hit.tagName === "IMG" ? hit : hit.closest?.("img");
-          if (img) {
-            useLight = true;
-          } else {
-            const bg = findSolidBackgroundColor(hit);
-            useLight = relativeLuminance(bg) < 0.55;
-          }
-        }
-
-        siteNav.classList.toggle("text-white", useLight);
-        siteNav.classList.toggle("text-ink", !useLight);
-      }
-
-      let raf = 0;
-      function scheduleNavContrast() {
-        if (raf) return;
-        raf = requestAnimationFrame(() => {
-          raf = 0;
-          updateNavContrast();
-        });
-      }
-
-      window.addEventListener("scroll", scheduleNavContrast, { passive: true });
-      window.addEventListener("resize", scheduleNavContrast);
-      window.addEventListener("load", scheduleNavContrast);
-
-      document.getElementById("year").textContent = String(new Date().getFullYear());
-      scheduleNavContrast();
-
-      const wechatModal = document.getElementById("wechat-modal");
-      const wechatBackdrop = document.getElementById("wechat-backdrop");
-      const wechatValue = document.getElementById("wechat-value");
-      const wechatCopy = document.getElementById("wechat-copy");
-      const wechatClose = document.getElementById("wechat-close");
-      const wechatStatus = document.getElementById("wechat-status");
+      mobileNav?.querySelectorAll("[data-nav-close]").forEach((link) => link.addEventListener("click", () => setMobileNav(false)));
 
       function openWechatModal(value) {
         if (!wechatModal || !wechatValue) return;
@@ -620,15 +786,15 @@
         document.body.classList.remove("overflow-hidden");
       }
 
-      document.querySelectorAll("[data-wechat]")?.forEach((el) => {
+      document.querySelectorAll("[data-wechat]").forEach((el) => {
         el.addEventListener("click", (e) => {
           e.preventDefault();
           openWechatModal(el.getAttribute("data-wechat"));
         });
       });
 
-      wechatBackdrop?.addEventListener("click", () => closeWechatModal());
-      wechatClose?.addEventListener("click", () => closeWechatModal());
+      wechatBackdrop?.addEventListener("click", closeWechatModal);
+      wechatClose?.addEventListener("click", closeWechatModal);
       wechatCopy?.addEventListener("click", async () => {
         const text = wechatValue?.textContent?.trim() || "";
         if (!text) return;
@@ -640,11 +806,219 @@
         }
       });
 
+      window.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          setMobileNav(false);
+          closeWechatModal();
+        }
+      });
+
+      function renderProject(lang) {
+        const project = projects[currentProjectKey];
+        document.title = `${project.name[lang]} · Time & Joy`;
+        document.getElementById("project-city").textContent = project.city[lang];
+        document.getElementById("project-name").textContent = project.name[lang];
+        document.getElementById("project-summary").textContent = project.summary[lang];
+        document.getElementById("project-type").textContent = project.type[lang];
+        document.getElementById("project-meta").textContent = project.meta[lang];
+
+        const heroImage = document.getElementById("project-hero-image");
+        heroImage.src = project.hero;
+        heroImage.alt = project.heroAlt[lang];
+        heroImage.className = project.heroImageClass || "aspect-[16/9] w-full object-cover";
+        heroImage.style.cssText = project.heroStyle || "";
+
+        const concept = document.getElementById("project-concept");
+        const conceptFormat = project.conceptFormat || {};
+        const conceptParagraphClassList = [
+          "leading-[2.2]",
+          conceptFormat.indentParagraphs ? "first-letter:pl-8 [&_p]:text-indent-[2em]" : "",
+          conceptFormat.doubleParagraphSpacing ? "mb-5 sm:mb-7 last:mb-0" : "mb-0 last:mb-0"
+        ]
+          .filter(Boolean)
+          .join(" ");
+        concept.classList.toggle("text-[15px]", Boolean(conceptFormat.doubleParagraphSpacing));
+        concept.classList.toggle("leading-[2.2]", Boolean(conceptFormat.doubleParagraphSpacing));
+        concept.classList.toggle("tracking-[0.015em]", Boolean(conceptFormat.doubleParagraphSpacing));
+        const forcedBreaks = Array.isArray(conceptFormat.forceSingleLineWrap)
+          ? conceptFormat.forceSingleLineWrap.map((entry) => (typeof entry === "string" ? { en: entry, zh: entry } : entry))
+          : [];
+        const applyForcedBr = (text, language) => {
+          if (typeof text !== "string") return text;
+          return forcedBreaks.reduce((output, rule) => {
+            const needle = rule?.[language];
+            if (!needle || !output.includes(needle)) return output;
+            return output.split(needle).map((chunk, idx, arr) => (idx < arr.length - 1 ? `${chunk}${needle}<br/>` : chunk)).join("");
+          }, text);
+        };
+        concept.innerHTML = project.concept[lang]
+          .map((item) => {
+            const indented = applyForcedBr(item, lang);
+            return `<p class="${conceptParagraphClassList}"${conceptFormat.indentParagraphs ? ` style="text-indent: 2em;"` : ""}>${indented}</p>`;
+          })
+          .join("");
+
+        const conceptDataGrid = concept.parentElement.parentElement;
+        const dataCard = conceptDataGrid?.querySelector?.("[data-project-data-card]") || document.querySelector("#project-data")?.parentElement;
+        if (conceptFormat.reduceRightCardStature && dataCard) {
+          dataCard.classList.remove("bg-white/55");
+          dataCard.classList.add("bg-white/30", "backdrop-blur-[1px]");
+          dataCard.classList.remove("border-ink/10");
+          dataCard.classList.add("border-ink/8");
+          if (dataCard.nodeName.toLowerCase() === "div") {
+            dataCard.classList.add("rounded-[24px]");
+          }
+        }
+
+        const dataList = document.getElementById("project-data");
+        dataList.innerHTML = project.data[lang]
+          .map(([label, value]) => `
+            <div class="grid gap-2 border-b border-ink/8 pb-5 last:border-b-0 last:pb-0 sm:grid-cols-[0.42fr_1fr]">
+              <dt class="text-[11px] tracking-[0.28em] text-ink/42">${label}</dt>
+              <dd class="leading-relaxed text-ink/76">${value}</dd>
+            </div>
+          `)
+          .join("");
+
+        const narrativeMap = new Map(project.narrative[lang].map(([title, text]) => [String(title).toLowerCase().replace(/\s+|&/g, ""), { title, text }]));
+        const narrativeByKey = {
+          circulation: narrativeMap.get("动线") || narrativeMap.get("circulation"),
+          light: narrativeMap.get("光线") || narrativeMap.get("light"),
+          material: narrativeMap.get("材料") || narrativeMap.get("material"),
+          function: narrativeMap.get("功能与情绪") || narrativeMap.get("function&mood") || narrativeMap.get("functionmood") || narrativeMap.get("function")
+        };
+        const narrativeBreathing = (entry, variant) => {
+          if (!entry) return "";
+          const wrapBy = variant === "wide-1col"
+            ? `<div class="mx-auto max-w-5xl px-6 sm:px-8 lg:px-0"><p class="narrative-strip-label text-[11px] tracking-[0.30em] text-ink/45">${entry.title}</p><p class="narrative-strip-body mt-5 leading-[2.2] tracking-[0.015em] text-ink/72 sm:text-[15px]">${entry.text}</p></div>`
+            : `<div class="px-6 sm:px-8 lg:px-10"><p class="narrative-strip-label text-[11px] tracking-[0.30em] text-ink/45">${entry.title}</p><p class="narrative-strip-body mt-5 leading-[2.2] tracking-[0.015em] text-ink/72 sm:text-[15px]">${entry.text}</p></div>`;
+          return `<div class="my-14 sm:my-[4.5rem]">${wrapBy}</div>`;
+        };
+        const narrativeBasename = (path) => {
+          const parts = String(path || "").split("/");
+          return parts[parts.length - 1] || "";
+        };
+        const narrativeSectionKeys = Array.isArray(project.narrativePlacement?.inSection) ? project.narrativePlacement.inSection : ["circulation", "light", "material", "function"];
+        const narrativeSectionEntries = narrativeSectionKeys
+          .map((key) => narrativeByKey[key])
+          .filter(Boolean);
+
+        const narrativeBlock = document.getElementById("narrative-block");
+        if (narrativeBlock) {
+          const preset = project.narrativePlacement?.layoutPreset || "auto";
+          narrativeBlock.setAttribute("data-narrative-layout", preset);
+        }
+        const narrative = document.getElementById("project-narrative");
+        if (narrativeSectionEntries.length === 1) {
+          const entry = narrativeSectionEntries[0];
+          narrative.classList.remove("sm:grid-cols-2");
+          narrative.classList.add("sm:grid-cols-1");
+          narrative.innerHTML = `
+            <article class="rounded-[30px] border border-ink/10 bg-white/55 px-6 py-8 sm:px-10 sm:py-10 lg:px-14">
+              <p class="text-[11px] tracking-[0.28em] text-ink/45">${entry.title}</p>
+              <p class="mt-6 leading-[2] text-ink/72 sm:text-[15px]">${entry.text}</p>
+            </article>
+          `;
+        } else if (narrativeSectionEntries.length) {
+          narrative.innerHTML = narrativeSectionEntries
+            .map((entry) => `
+              <article class="rounded-[28px] border border-ink/10 bg-white/55 px-6 py-6">
+                <p class="text-[11px] tracking-[0.28em] text-ink/45">${entry.title}</p>
+                <p class="mt-4 text-sm leading-relaxed text-ink/68">${entry.text}</p>
+              </article>
+            `)
+            .join("");
+        } else {
+          narrative.innerHTML = "";
+        }
+
+        const gallery = document.getElementById("project-gallery");
+        const galleryParts = [];
+        const halfBuffer = [];
+        const flushHalfBuffer = () => {
+          if (!halfBuffer.length) return;
+          galleryParts.push(`
+            <div class="grid gap-8 md:grid-cols-2">
+              ${halfBuffer
+                .map(
+                  (item) => `
+                    <figure class="overflow-hidden rounded-[28px] border border-ink/10 bg-white/55 ${item.frameClass || ""}">
+                      <img src="${item.image}" alt="${project.name[lang]}" class="gallery-half-image ${item.aspectClass || "aspect-[5/6]"} w-full ${item.imageClass || "object-cover"}" loading="lazy" decoding="async" style="${item.imageStyle || ""}" />
+                      <figcaption class="px-5 py-4 text-sm leading-relaxed text-ink/60">${item.caption[lang]}</figcaption>
+                    </figure>
+                  `
+                )
+                .join("")}
+            </div>
+          `);
+          halfBuffer.length = 0;
+        };
+
+        project.gallery.forEach((item) => {
+          const itemBasename = narrativeBasename(item.image);
+          const beforeKey =
+            item.beforeNarrative ||
+            (project.narrativePlacement?.inGalleryBefore && project.narrativePlacement.inGalleryBefore[itemBasename]);
+          const afterKey =
+            item.afterNarrative ||
+            (project.narrativePlacement?.inGalleryAfterWide && item.layout === "wide"
+              ? project.narrativePlacement.inGalleryAfterWide[itemBasename]
+              : undefined) ||
+            (project.narrativePlacement?.inGalleryAfter && project.narrativePlacement.inGalleryAfter[itemBasename]);
+
+          if (beforeKey && narrativeByKey[beforeKey]) {
+            flushHalfBuffer();
+            galleryParts.push(narrativeBreathing(narrativeByKey[beforeKey], item.layout === "wide" ? "wide-1col" : "split-note"));
+          }
+
+          if (item.layout === "wide") {
+            flushHalfBuffer();
+            galleryParts.push(`
+              <figure class="overflow-hidden rounded-[30px] border border-ink/10 bg-white/55 ${item.frameClass || ""}">
+                <img src="${item.image}" alt="${project.name[lang]}" class="gallery-wide-image w-full ${item.imageClass || "object-cover"}" loading="lazy" decoding="async" style="${item.imageStyle || "max-height: 78vh;"}" />
+                <figcaption class="px-6 py-4 text-sm leading-relaxed text-ink/60">${item.caption[lang]}</figcaption>
+              </figure>
+            `);
+          } else {
+            halfBuffer.push(item);
+            if (halfBuffer.length >= 2) flushHalfBuffer();
+          }
+
+          if (afterKey && narrativeByKey[afterKey]) {
+            flushHalfBuffer();
+            galleryParts.push(narrativeBreathing(narrativeByKey[afterKey], item.layout === "wide" ? "wide-1col" : "split-note"));
+          }
+        });
+        flushHalfBuffer();
+
+        gallery.innerHTML = galleryParts.join("");
+
+        const relatedProjects = document.getElementById("related-projects");
+        relatedProjects.innerHTML = project.related
+          .map((key) => {
+            const related = projects[key];
+            const cover = related.gallery[0]?.image || related.hero;
+            return `
+              <a href="./project-detail.html?project=${key}" class="related-card overflow-hidden rounded-[28px] border border-ink/10 bg-white/70" aria-label="${related.name.en}">
+                <div class="overflow-hidden">
+                  <img src="${cover}" alt="${related.name[lang]}" class="related-card-image h-72 w-full object-cover transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
+                </div>
+                <div class="space-y-3 px-6 py-6">
+                  <div class="text-[11px] tracking-[0.28em] text-ink/42">${related.type[lang]}</div>
+                  <h3 class="text-xl font-medium tracking-[0.12em] text-ink">${related.name[lang]}</h3>
+                  <p class="text-sm leading-relaxed text-ink/62">${related.city[lang]} · ${related.meta[lang]}</p>
+                </div>
+              </a>
+            `;
+          })
+          .join("");
+      }
+
       const LANG_STORAGE_KEY = "siteLang";
-      const langToggle = document.getElementById("lang-toggle");
-      const langIndicatorEn = langToggle?.querySelector?.('[data-lang-indicator="en"]');
-      const langIndicatorZh = langToggle?.querySelector?.('[data-lang-indicator="zh"]');
-      let currentLang = "en";
+      try {
+        const stored = localStorage.getItem(LANG_STORAGE_KEY);
+        if (stored === "en" || stored === "zh") currentLang = stored;
+      } catch {}
 
       function applyLanguage(lang) {
         currentLang = lang === "zh" ? "zh" : "en";
@@ -654,8 +1028,7 @@
 
         document.querySelectorAll(".lang-text").forEach((el) => {
           const value = el.getAttribute(currentLang === "zh" ? "data-zh" : "data-en");
-          if (value == null) return;
-          el.textContent = value;
+          if (value != null) el.textContent = value;
         });
 
         if (langToggle) langToggle.setAttribute("aria-pressed", currentLang === "zh" ? "true" : "false");
@@ -663,15 +1036,60 @@
           langIndicatorEn.classList.toggle("opacity-50", currentLang !== "en");
           langIndicatorZh.classList.toggle("opacity-50", currentLang !== "zh");
         }
+
+        renderProject(currentLang);
       }
 
-      try {
-        const stored = localStorage.getItem(LANG_STORAGE_KEY);
-        if (stored === "en" || stored === "zh") currentLang = stored;
-      } catch {}
+      const backToTop = document.getElementById("back-to-top");
+      const updateBackToTopVisibility = () => {
+        if (!backToTop) return;
+        const y = window.scrollY || window.pageYOffset || 0;
+        const threshold = window.innerHeight * 0.75;
+        backToTop.classList.toggle("is-visible", y > threshold);
+      };
+      updateBackToTopVisibility();
+      window.addEventListener("scroll", updateBackToTopVisibility, { passive: true });
+      backToTop?.addEventListener("click", () => {
+        try {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        } catch {
+          window.scrollTo(0, 0);
+        }
+      });
 
+      document.getElementById("year").textContent = String(new Date().getFullYear());
       applyLanguage(currentLang);
       langToggle?.addEventListener("click", () => applyLanguage(currentLang === "en" ? "zh" : "en"));
+    </script>
+    <script>
+      (function () {
+        if (!window.SeoUtils) return;
+        var U = window.SeoUtils;
+        var key = window.currentProjectKey || (new URLSearchParams(location.search).get("project")) || "vistar-office";
+        var allProjects = window.projects || {};
+        var P = allProjects[key] || allProjects["vistar-office"];
+        var lang = window.currentLang || "en";
+        U.injectSitewide();
+        U.injectBreadcrumb([
+          { name: "Home", url: "index.html" },
+          { name: "Projects", url: "projects.html" },
+          { name: (P && P.name && (P.name[lang] || P.name.en)) || "Project" },
+        ]);
+        if (P) {
+          U.injectProjectService({
+            id: key,
+            name: P.name.en,
+            nameZh: P.name.zh,
+            category: (P.type && P.type.en || "").startsWith("RESIDENTIAL") ? "residential" : "commercial",
+            city: P.city && P.city.en,
+            description: P.summary && P.summary.en,
+            descriptionEn: P.summary && P.summary.zh,
+            image: P.hero,
+            meta: P.meta && P.meta.en,
+            price: "0",
+          });
+        }
+      })();
     </script>
   </body>
 </html>
