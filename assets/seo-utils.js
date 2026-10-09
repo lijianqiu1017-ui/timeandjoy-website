@@ -17,16 +17,28 @@
     telephone: "+86-133-5006-1712",
     addressCountry: "CN",
     addressRegion: "Sichuan",
+    addressRegionIso: "SC",
     addressLocality: "Chengdu",
+    addressLocalityZh: "成都",
+    addressRegionZh: "四川",
+    addressCountryZh: "中国",
     latitude: 30.5728,
     longitude: 104.0668,
     sameAs: [
       "https://instagram.com/Joanna17qq",
     ],
+    keywordsZh: "成都室内设计,商业空间设计,酒店设计,办公设计,住宅室内设计,软装定制,成都软装设计,时悦空间设计,Time and Joy Design,Chengdu Interior Design",
     description:
       "时悦空间（Time & Joy）是一间以商业空间为主叙事、住宅项目为审美背书的室内设计工作室，通过秩序、光线、比例与材料克制，建立长期可读的空间气质。",
     descriptionEn:
       "Time & Joy Space Design is a Chengdu-based interior design practice specializing in commercial hospitality, workplace, and private residential interiors, with a commitment to spatial clarity, measured light, and material restraint.",
+    areaServedCities: [
+      { zh: "成都", en: "Chengdu" },
+      { zh: "重庆", en: "Chongqing" },
+      { zh: "深圳", en: "Shenzhen" },
+      { zh: "北京", en: "Beijing" },
+      { zh: "杭州", en: "Hangzhou" },
+    ],
   };
 
   function injectJsonLd(obj, id) {
@@ -69,6 +81,7 @@
       name: BRAND.name,
       alternateName: BRAND.altName,
       url: BRAND.url,
+      image: imageObject(BRAND.logo),
       logo: {
         "@type": "ImageObject",
         url: BRAND.logo,
@@ -137,13 +150,11 @@
       email: BRAND.email,
       priceRange: "$$$",
       description: BRAND.descriptionEn,
-      areaServed: [
-        { "@type": "City", name: "Chengdu" },
-        { "@type": "City", name: "Chongqing" },
-        { "@type": "City", name: "Shenzhen" },
-        { "@type": "City", name: "Beijing" },
-        { "@type": "City", name: "Hangzhou" },
-      ],
+      areaServed: BRAND.areaServedCities.map((c) => ({
+        "@type": "City",
+        name: c.en,
+        alternateName: c.zh,
+      })),
       address: {
         "@type": "PostalAddress",
         addressLocality: BRAND.addressLocality,
@@ -212,18 +223,35 @@
     injectJsonLd(faq, "jsonld-faq");
   }
 
-  /* ---------- 5. Service（项目详情页） ---------- */
+  /* ---------- 5. Service（项目详情页，语义层） ---------- */
   function injectProjectService(project) {
     if (!project) return;
     const service = {
       "@context": "https://schema.org",
       "@type": "Service",
-      "@id": absUrl("project-detail.html?project=" + encodeURIComponent(project.id || "")),
+      "@id": absUrl("project-detail.html?project=" + encodeURIComponent(project.id || "") + "#service"),
       name: project.name,
       alternateName: project.nameZh,
       provider: { "@id": absUrl("#organization") },
       serviceType: project.category === "residential" ? "Residential Interior Design" : "Commercial Interior Design",
       areaServed: project.city || BRAND.addressLocality,
+      description: project.description || project.descriptionEn || BRAND.descriptionEn,
+      image: project.image ? imageObject(project.image, 1600, 900) : imageObject(BRAND.logo),
+      url: absUrl("project-detail.html?project=" + encodeURIComponent(project.id || "")),
+    };
+    injectJsonLd(service, "jsonld-service");
+  }
+
+  /* ---------- 5b. Product（项目详情页，富结果承载：offers + aggregateRating → Review snippets 合法父类型） ---------- */
+  function injectProjectProduct(project) {
+    if (!project) return;
+    const product = {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "@id": absUrl("project-detail.html?project=" + encodeURIComponent(project.id || "")),
+      name: project.name,
+      alternateName: project.nameZh,
+      brand: { "@id": absUrl("#organization") },
       description: project.description || project.descriptionEn || BRAND.descriptionEn,
       image: project.image ? imageObject(project.image, 1600, 900) : imageObject(BRAND.logo),
       url: absUrl("project-detail.html?project=" + encodeURIComponent(project.id || "")),
@@ -242,7 +270,7 @@
         worstRating: "1",
       },
     };
-    injectJsonLd(service, "jsonld-service");
+    injectJsonLd(product, "jsonld-product");
   }
 
   /* ---------- 6. ItemList（项目列表页） ---------- */
@@ -295,9 +323,43 @@
   function injectGeoMeta() {
     if (!BRAND || !BRAND.latitude) return;
     setMeta("geo.position", `${BRAND.latitude};${BRAND.longitude}`);
-    setMeta("geo.region", `${BRAND.addressCountry}-SC`);
-    setMeta("geo.placename", `${BRAND.addressLocality}, Sichuan, ${BRAND.addressCountry}`);
+    setMeta("geo.region", `${BRAND.addressCountry}-${BRAND.addressRegionIso}`);
+    setMeta("geo.placename", `${BRAND.addressLocality}, ${BRAND.addressRegion}, ${BRAND.addressCountry}`);
     setMeta("ICBM", `${BRAND.latitude}, ${BRAND.longitude}`);
+  }
+
+  function setMetaProperty(prop, content) {
+    if (!prop || !content) return;
+    let m = document.querySelector(`meta[property="${prop}"]`);
+    if (!m) {
+      m = document.createElement("meta");
+      m.setAttribute("property", prop);
+      (document.head || document.getElementsByTagName("head")[0]).appendChild(m);
+    }
+    m.setAttribute("content", content);
+  }
+
+  function injectDomesticGeoMeta() {
+    if (!BRAND) return;
+    setMeta("keywords", BRAND.keywordsZh);
+    setMeta(
+      "robots",
+      "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    );
+    setMeta(
+      "description",
+      BRAND.description,
+      "name"
+    );
+    setMetaProperty("og:locale", "zh_CN");
+    setMetaProperty("og:locale:alternate", "en_US");
+    setMetaProperty("og:region", BRAND.addressLocalityZh + ", " + BRAND.addressRegionZh + ", " + BRAND.addressCountryZh);
+    setMetaProperty("business:contact_data:locality", BRAND.addressLocalityZh);
+    setMetaProperty("business:contact_data:region", BRAND.addressRegionZh);
+    setMetaProperty("business:contact_data:country_name", BRAND.addressCountryZh);
+    setMetaProperty("article:publisher", BRAND.url);
+    setMeta("contentLocation", `${BRAND.addressLocalityZh}, ${BRAND.addressRegionZh}, ${BRAND.addressCountryZh}`, "itemprop");
+    document.documentElement.setAttribute("lang", "zh-CN");
   }
 
   global.SeoUtils = {
@@ -308,8 +370,10 @@
     injectBreadcrumb,
     injectFAQ,
     injectProjectService,
+    injectProjectProduct,
     injectItemList,
     injectContactPage,
     injectGeoMeta,
+    injectDomesticGeoMeta,
   };
 })(window);

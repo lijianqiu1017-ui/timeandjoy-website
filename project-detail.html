@@ -1066,6 +1066,7 @@
         if (!window.SeoUtils) return;
         var U = window.SeoUtils;
         U.injectGeoMeta();
+        U.injectDomesticGeoMeta();
         var allProjects = window.projects || (typeof projects !== "undefined" ? projects : {});
         var savedKey = (typeof currentProjectKey !== "undefined" ? currentProjectKey : window.currentProjectKey);
         var key = savedKey || (new URLSearchParams(location.search).get("project")) || "vistar-office";
@@ -1080,7 +1081,7 @@
           { name: (P && P.name && (P.name[lang] || P.name.en)) || "Project" },
         ]);
         if (P) {
-          U.injectProjectService({
+          var payload = {
             id: key,
             name: P.name && (P.name.en || P.name.zh) || key,
             nameZh: P.name && P.name.zh,
@@ -1091,7 +1092,9 @@
             image: P.hero || (P.heroImage),
             meta: P.meta && (P.meta.en || P.meta.zh),
             price: "0",
-          });
+          };
+          U.injectProjectService(payload);
+          U.injectProjectProduct(payload);
         }
       })();
     </script>
