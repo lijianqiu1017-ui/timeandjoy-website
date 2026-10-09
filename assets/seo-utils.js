@@ -43,6 +43,16 @@
     if (head) head.appendChild(script);
   }
 
+  function imageObject(path, w, h) {
+    if (!path) return undefined;
+    return {
+      "@type": "ImageObject",
+      url: absUrl(path),
+      width: w || 1200,
+      height: h || 630,
+    };
+  }
+
   function absUrl(path) {
     if (!path) return SITE_BASE;
     if (/^https?:\/\//i.test(path)) return path;
@@ -121,7 +131,7 @@
       "@type": "ProfessionalService",
       "@id": absUrl("#professionalservice"),
       name: BRAND.name,
-      image: BRAND.logo,
+      image: imageObject(BRAND.logo),
       url: BRAND.url,
       telephone: BRAND.telephone,
       email: BRAND.email,
@@ -215,7 +225,7 @@
       serviceType: project.category === "residential" ? "Residential Interior Design" : "Commercial Interior Design",
       areaServed: project.city || BRAND.addressLocality,
       description: project.description || project.descriptionEn || BRAND.descriptionEn,
-      image: project.image ? absUrl(project.image) : BRAND.logo,
+      image: project.image ? imageObject(project.image, 1600, 900) : imageObject(BRAND.logo),
       url: absUrl("project-detail.html?project=" + encodeURIComponent(project.id || "")),
       offers: {
         "@type": "Offer",
@@ -248,7 +258,7 @@
         position: i + 1,
         url: absUrl(it.url),
         name: it.name,
-        image: it.image ? absUrl(it.image) : undefined,
+        image: it.image ? imageObject(it.image, 1200, 800) : undefined,
       })),
     };
     injectJsonLd(list, "jsonld-itemlist");
@@ -270,6 +280,26 @@
     injectJsonLd(cp, "jsonld-contactpage");
   }
 
+  function setMeta(name, content, attr) {
+    if (!name || !content) return;
+    const attrName = attr || "name";
+    let m = document.querySelector(`meta[${attrName}="${name}"]`);
+    if (!m) {
+      m = document.createElement("meta");
+      m.setAttribute(attrName, name);
+      (document.head || document.getElementsByTagName("head")[0]).appendChild(m);
+    }
+    m.setAttribute("content", content);
+  }
+
+  function injectGeoMeta() {
+    if (!BRAND || !BRAND.latitude) return;
+    setMeta("geo.position", `${BRAND.latitude};${BRAND.longitude}`);
+    setMeta("geo.region", `${BRAND.addressCountry}-${BRAND.addressRegion}`);
+    setMeta("geo.placename", `${BRAND.addressLocality}, ${BRAND.addressRegion}, ${BRAND.addressCountry}`);
+    setMeta("ICBM", `${BRAND.latitude}, ${BRAND.longitude}`);
+  }
+
   global.SeoUtils = {
     BRAND,
     absUrl,
@@ -280,5 +310,6 @@
     injectProjectService,
     injectItemList,
     injectContactPage,
+    injectGeoMeta,
   };
 })(window);

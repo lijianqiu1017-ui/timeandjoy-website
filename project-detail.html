@@ -1065,6 +1065,7 @@
       (function () {
         if (!window.SeoUtils) return;
         var U = window.SeoUtils;
+        U.injectGeoMeta();
         var allProjects = window.projects || (typeof projects !== "undefined" ? projects : {});
         var savedKey = (typeof currentProjectKey !== "undefined" ? currentProjectKey : window.currentProjectKey);
         var key = savedKey || (new URLSearchParams(location.search).get("project")) || "vistar-office";
