@@ -1,0 +1,35 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/((?!$)(?!index\\.html)(?!robots\\.txt)(?!sitemap\\.xml).*)",
+      "has": [{ "type": "host", "value": "timeandjoy.com" }],
+      "destination": "https://www.timeandjoy.com/:path*",
+      "permanent": false
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "timeandjoy.com" }],
+      "destination": "https://www.timeandjoy.com/"
+    },
+    {
+      "source": "/index.html",
+      "has": [{ "type": "host", "value": "timeandjoy.com" }],
+      "destination": "https://www.timeandjoy.com/index.html"
+    },
+    {
+      "source": "/robots.txt",
+      "has": [{ "type": "host", "value": "timeandjoy.com" }],
+      "destination": "https://www.timeandjoy.com/robots.txt"
+    },
+    {
+      "source": "/sitemap.xml",
+      "has": [{ "type": "host", "value": "timeandjoy.com" }],
+      "destination": "https://www.timeandjoy.com/sitemap.xml"
+    }
+  ]
+}
