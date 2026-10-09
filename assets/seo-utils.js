@@ -19,6 +19,8 @@
     addressRegion: "Sichuan",
     addressRegionIso: "SC",
     addressLocality: "Chengdu",
+    streetAddressPlaceholder: "Sino-Ocean Taikoo Li South, Office Tower, Level 10",
+    postalCodePlaceholder: "610000",
     addressLocalityZh: "成都",
     addressRegionZh: "四川",
     addressCountryZh: "中国",
@@ -96,6 +98,8 @@
         addressCountry: BRAND.addressCountry,
         addressRegion: BRAND.addressRegion,
         addressLocality: BRAND.addressLocality,
+        streetAddress: BRAND.streetAddressPlaceholder,
+        postalCode: BRAND.postalCodePlaceholder,
       },
       geo: {
         "@type": "GeoCoordinates",
@@ -160,6 +164,8 @@
         addressLocality: BRAND.addressLocality,
         addressRegion: BRAND.addressRegion,
         addressCountry: BRAND.addressCountry,
+        streetAddress: BRAND.streetAddressPlaceholder,
+        postalCode: BRAND.postalCodePlaceholder,
       },
       geo: {
         "@type": "GeoCoordinates",
