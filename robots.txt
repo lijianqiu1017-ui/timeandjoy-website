@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow:
 
-Sitemap: https://timeandjoy.com/sitemap.xml
+Sitemap: https://www.timeandjoy.com/sitemap.xml
