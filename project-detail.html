@@ -1065,10 +1065,13 @@
       (function () {
         if (!window.SeoUtils) return;
         var U = window.SeoUtils;
-        var key = window.currentProjectKey || (new URLSearchParams(location.search).get("project")) || "vistar-office";
-        var allProjects = window.projects || {};
-        var P = allProjects[key] || allProjects["vistar-office"];
-        var lang = window.currentLang || "en";
+        var allProjects = window.projects || (typeof projects !== "undefined" ? projects : {});
+        var savedKey = (typeof currentProjectKey !== "undefined" ? currentProjectKey : window.currentProjectKey);
+        var key = savedKey || (new URLSearchParams(location.search).get("project")) || "vistar-office";
+        if (!allProjects[key]) key = Object.keys(allProjects)[0] || "vistar-office";
+        var P = allProjects[key];
+        var savedLang = (typeof currentLang !== "undefined" ? currentLang : window.currentLang);
+        var lang = savedLang || "en";
         U.injectSitewide();
         U.injectBreadcrumb([
           { name: "Home", url: "index.html" },
@@ -1078,14 +1081,14 @@
         if (P) {
           U.injectProjectService({
             id: key,
-            name: P.name.en,
-            nameZh: P.name.zh,
-            category: (P.type && P.type.en || "").startsWith("RESIDENTIAL") ? "residential" : "commercial",
-            city: P.city && P.city.en,
-            description: P.summary && P.summary.en,
-            descriptionEn: P.summary && P.summary.zh,
-            image: P.hero,
-            meta: P.meta && P.meta.en,
+            name: P.name && (P.name.en || P.name.zh) || key,
+            nameZh: P.name && P.name.zh,
+            category: (P.type && (P.type.en || P.type.zh) || "").startsWith("RESIDENTIAL") ? "residential" : "commercial",
+            city: P.city && (P.city.en || P.city.zh),
+            description: P.summary && (P.summary.en || P.summary.zh),
+            descriptionEn: P.summary && (P.summary.zh || P.summary.en),
+            image: P.hero || (P.heroImage),
+            meta: P.meta && (P.meta.en || P.meta.zh),
             price: "0",
           });
         }
