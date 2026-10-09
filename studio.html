@@ -524,6 +524,7 @@
       (function () {
         if (!window.SeoUtils) return;
         var U = window.SeoUtils;
+        U.injectGeoMeta();
         U.injectSitewide();
         U.injectBreadcrumb([
           { name: "Home", url: "index.html" },
