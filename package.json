@@ -1,0 +1,9 @@
+{
+  "name": "timeandjoy-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Time & Joy Space Design — static HTML site with Vercel Edge Middleware for apex verification bypass.",
+  "engines": {
+    "node": ">=18"
+  }
+}
