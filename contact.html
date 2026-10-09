@@ -17,6 +17,7 @@
       })(window, document, 'script', 'dataLayer', 'GTM-TSQKH6PQ');
     </script>
     <!-- End Google Tag Manager -->
+    <script src="./assets/seo-utils.js"></script>
     <title>Contact · 时悦空间设计公司 Time &amp; Joy</title>
     <meta name="description" content="Contact · 时悦空间设计公司（timeandjoy.com）" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -552,6 +553,19 @@
 
       applyLanguage(currentLang);
       langToggle?.addEventListener("click", () => applyLanguage(currentLang === "en" ? "zh" : "en"));
+    </script>
+    <script>
+      (function () {
+        if (!window.SeoUtils) return;
+        var U = window.SeoUtils;
+        U.injectSitewide();
+        U.injectProfessionalService();
+        U.injectBreadcrumb([
+          { name: "Home", url: "index.html" },
+          { name: "Contact" },
+        ]);
+        U.injectContactPage();
+      })();
     </script>
   </body>
 </html>

@@ -17,6 +17,7 @@
       })(window, document, 'script', 'dataLayer', 'GTM-TSQKH6PQ');
     </script>
     <!-- End Google Tag Manager -->
+    <script src="./assets/seo-utils.js"></script>
     <title>Studio · 时悦空间设计公司 Time &amp; Joy</title>
     <meta
       name="description"
@@ -518,6 +519,43 @@
       document.getElementById("year").textContent = String(new Date().getFullYear());
       applyLanguage(currentLang);
       langToggle?.addEventListener("click", () => applyLanguage(currentLang === "en" ? "zh" : "en"));
+    </script>
+    <script>
+      (function () {
+        if (!window.SeoUtils) return;
+        var U = window.SeoUtils;
+        U.injectSitewide();
+        U.injectBreadcrumb([
+          { name: "Home", url: "index.html" },
+          { name: "Studio" },
+        ]);
+        U.injectFAQ([
+          {
+            question: "时悦空间的设计立场是什么？",
+            answer: "我们偏好能够被清晰阅读的空间。动线应自然展开，光线应作为结构发挥作用，材料则需要服务于秩序，而非争夺注意力。"
+          },
+          {
+            question: "工作室的服务重点与项目类型？",
+            answer: "当前项目重点包括酒店餐饮、办公、商业零售与私人住宅室内，尤其适合重视空间秩序、长期使用与落地质量的委托。"
+          },
+          {
+            question: "工作室的坐标城市与可以服务的范围？",
+            answer: "工作室常驻成都，在项目条件、时间节奏与协作方式合适的情况下，也会开展其他城市的合作。"
+          },
+          {
+            question: "时悦空间推进项目的流程是怎样的？",
+            answer: "首先厘清需求、现场条件与项目所需承载的长期空间气质；在表层表达之前先解决平面组织、比例关系与动线逻辑；材料与灯光判断保持克制，使每个层级都服务于同一空间立场；最后持续关注细部、协调与完成后的整体阅读效果。"
+          },
+          {
+            question: "什么样的客户更适合与时悦空间合作？",
+            answer: "如果你更重视清晰、克制与可被长期验证的设计逻辑，这会是更合适的合作方式。"
+          },
+          {
+            question: "How does Time & Joy approach a collaboration?",
+            answer: "We begin by clarifying the brief, site logic, and long-term atmosphere. Space planning, proportion, and circulation are resolved before decorative decisions. Material and lighting choices stay controlled, so every layer reinforces the same spatial attitude. Execution matters as much as concept: we remain attentive to detailing, coordination, and the final reading of the completed environment."
+          }
+        ]);
+      })();
     </script>
   </body>
 </html>
