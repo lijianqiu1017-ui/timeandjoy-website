@@ -295,8 +295,8 @@
   function injectGeoMeta() {
     if (!BRAND || !BRAND.latitude) return;
     setMeta("geo.position", `${BRAND.latitude};${BRAND.longitude}`);
-    setMeta("geo.region", `${BRAND.addressCountry}-${BRAND.addressRegion}`);
-    setMeta("geo.placename", `${BRAND.addressLocality}, ${BRAND.addressRegion}, ${BRAND.addressCountry}`);
+    setMeta("geo.region", `${BRAND.addressCountry}-SC`);
+    setMeta("geo.placename", `${BRAND.addressLocality}, Sichuan, ${BRAND.addressCountry}`);
     setMeta("ICBM", `${BRAND.latitude}, ${BRAND.longitude}`);
   }
 
