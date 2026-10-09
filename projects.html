@@ -17,6 +17,7 @@
       })(window, document, 'script', 'dataLayer', 'GTM-TSQKH6PQ');
     </script>
     <!-- End Google Tag Manager -->
+    <script src="./assets/seo-utils.js"></script>
     <title>Projects · 时悦空间设计公司 Time &amp; Joy</title>
     <meta
       name="description"
@@ -270,15 +271,15 @@
           </a>
 
           <a
-            href="./project-detail.html?project=riverfront-office"
+            href="./project-detail.html?project=mingzhu-hotel"
             class="project-card overflow-hidden rounded-[28px] border border-ink/10 bg-white/70"
             data-category="commercial"
-            aria-label="Riverfront Office, Shanghai, Commercial"
+            aria-label="Mingzhu Hotel Renovation, Chengdu, Commercial"
           >
             <div class="overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=2200&q=80"
-                alt="Riverfront Office"
+                src="./Projects/mingzhu-hotel/lobby.jpg"
+                alt="Mingzhu Hotel Renovation"
                 class="project-card-image h-80 w-full object-cover transition-transform duration-700 ease-out"
                 loading="lazy"
                 decoding="async"
@@ -286,15 +287,21 @@
             </div>
             <div class="space-y-4 px-6 py-6">
               <div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-[11px] tracking-[0.28em] text-ink/42">
-                <span>COMMERCIAL</span>
-                <span>2025</span>
-                <span>1800 m²</span>
+                <span class="lang-text" data-en="COMMERCIAL" data-zh="商业">COMMERCIAL</span>
+                <span>2024</span>
+                <span>3200 m²</span>
               </div>
               <div>
-                <h2 class="text-xl font-medium tracking-[0.12em] text-ink">RIVERFRONT OFFICE</h2>
-                <p class="mt-2 text-sm leading-relaxed text-ink/62">Shanghai · Workplace</p>
+                <h2 class="lang-text text-xl font-medium tracking-[0.12em] text-ink" data-en="MINGZHU HOTEL RENOVATION" data-zh="明珠酒店改造">MINGZHU HOTEL RENOVATION</h2>
+                <p class="lang-text mt-2 text-sm leading-relaxed text-ink/62" data-en="Chengdu · Hospitality Renovation" data-zh="成都 · 酒店改造">Chengdu · Hospitality Renovation</p>
               </div>
-              <p class="text-sm leading-relaxed text-ink/60">A workplace defined by long sightlines, softened collaboration zones, and a material palette calibrated for daily calm.</p>
+              <p
+                class="lang-text text-sm leading-relaxed text-ink/60"
+                data-en="A hospitality renovation organized around clearer circulation, softened thresholds, and material calm so that reception, meeting, dining, and working zones read as one coherent experience."
+                data-zh="以更清晰的动线、更柔和的公共界面与克制的材料节奏，重新组织接待、会议、餐饮与办公空间，使整套商业体验更连贯且可被读懂。"
+              >
+                A hospitality renovation organized around clearer circulation, softened thresholds, and material calm so that reception, meeting, dining, and working zones read as one coherent experience.
+              </p>
             </div>
           </a>
 
@@ -679,6 +686,26 @@
       applyLanguage(currentLang);
       langToggle?.addEventListener("click", () => applyLanguage(currentLang === "en" ? "zh" : "en"));
       applyFilter("all");
+    </script>
+    <script>
+      (function () {
+        if (!window.SeoUtils) return;
+        var U = window.SeoUtils;
+        U.injectSitewide();
+        U.injectBreadcrumb([
+          { name: "Home", url: "index.html" },
+          { name: "Projects" },
+        ]);
+        U.injectItemList([
+          { url: "project-detail.html?project=vistar-office", name: "VISTAR Office, Chengdu", image: "./Projects/vistar-office/hero.jpg" },
+          { url: "project-detail.html?project=mingzhu-hotel", name: "Mingzhu Hotel Renovation, Chengdu", image: "./Projects/mingzhu-hotel/hero.jpg" },
+          { url: "project-detail.html?project=riverfront-office", name: "Riverfront Office, Shanghai", image: "./Projects/riverfront-office/hero.jpg" },
+          { url: "project-detail.html?project=terrace-cafe", name: "Terrace Cafe, Chongqing", image: "./Projects/terrace-cafe/hero.jpg" },
+          { url: "project-detail.html?project=gallery-clinic", name: "Gallery Clinic, Hangzhou", image: "./Projects/gallery-clinic/hero.jpg" },
+          { url: "project-detail.html?project=quiet-residence", name: "Quiet Residence, Shenzhen", image: "./Projects/quiet-residence/hero.jpg" },
+          { url: "project-detail.html?project=layered-house", name: "Layered House, Beijing", image: "./Projects/layered-house/hero.jpg" },
+        ]);
+      })();
     </script>
   </body>
 </html>

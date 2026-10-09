@@ -17,6 +17,7 @@
       })(window, document, 'script', 'dataLayer', 'GTM-TSQKH6PQ');
     </script>
     <!-- End Google Tag Manager -->
+    <script src="./assets/seo-utils.js"></script>
     <title>Project Detail · 时悦空间设计公司 Time &amp; Joy</title>
     <meta
       name="description"
@@ -215,7 +216,7 @@
       </section>
 
       <section class="mx-auto mt-10 max-w-7xl px-6 lg:px-12">
-        <div class="overflow-hidden rounded-[32px] border border-ink/10 bg-white/55">
+        <div id="project-hero-wrap" class="overflow-hidden rounded-[32px] border border-ink/10 bg-white/55">
           <img id="project-hero-image" src="" alt="" class="aspect-[16/9] w-full object-cover" loading="eager" decoding="async" />
         </div>
       </section>
@@ -240,7 +241,7 @@
           <div>
             <p class="lang-text text-xs tracking-[0.3em] text-ink/48" data-en="SPATIAL NARRATIVE" data-zh="空间叙事">SPATIAL NARRATIVE</p>
             <h2
-              class="lang-text mt-4 text-3xl font-semibold tracking-[0.16em] text-ink whitespace-nowrap"
+              class="lang-text mt-4 text-3xl font-semibold tracking-[0.16em] text-ink"
               data-en="How The Project Organizes Experience"
               data-zh="空间如何被组织与感知"
             >
@@ -494,29 +495,41 @@
               ["功能与情绪", "商业运营效率是前提，但空间并不走向冰冷企业感，而是在秩序中留下更缓和的停顿与情绪转换。"]
             ]
           },
-          hero: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=2400&q=80",
-          heroAlt: { en: "Mingzhu Hotel entrance placeholder", zh: "明珠酒店入口（占位）" },
+          hero: "./Projects/mingzhu-hotel/facade.jpg",
+          heroAlt: { en: "Mingzhu Hotel facade", zh: "明珠酒店门头" },
+          heroImageClass: "aspect-[3/4] w-full object-contain",
           gallery: [
-            { image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=2200&q=80", caption: { en: "The redesigned lobby is tuned as a quieter arrival: softer timber, lighter stone, and calmer light establish a cleaner first reading.", zh: "改造后的大堂被处理为更安静的抵达面：更柔的木作、更浅的石材与更克制的光，建立更干净的第一阅读节奏。" }, layout: "wide" },
-            { image: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=2200&q=80", caption: { en: "Corridors are treated as directional space rather than leftover circulation.", zh: "走道被当作真正的方向空间来处理，而非剩余交通区域。" }, layout: "half" },
-            { image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=2200&q=80", caption: { en: "Longer walkways gain rhythm through controlled light drops and material transitions.", zh: "更长的通道段通过受控的光位变化与材料转换，建立更稳定的节奏。" }, layout: "half" },
-            { image: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=2200&q=80", caption: { en: "The final stretch of the corridor uses narrower proportions to quiet the approach to guest rooms.", zh: "走道末段通过更收的比例，让进入客房前的情绪自然安静下来。" }, layout: "wide" },
-            { image: "https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=2200&q=80", caption: { en: "Guest rooms use deeper tones to balance daytime brightness with an evening sense of rest.", zh: "客房以更深的木色与布面，平衡日间进入的亮度与夜间需要的休息感。" }, layout: "wide" },
-            { image: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=2200&q=80", caption: { en: "Room sequencing is refined so that sleeping, working, and washing areas read without visual clutter.", zh: "客房内部顺序被重新梳理，让睡眠、工作与洗漱三个区域在视觉上互不干扰。" }, layout: "half" },
-            { image: "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=2200&q=80", caption: { en: "Standard rooms rely on proportion and soft light rather than added motifs.", zh: "标准间不依赖额外图案，主要通过比例与柔光来建立停留感。" }, layout: "half" },
-            { image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=2200&q=80", caption: { en: "Dining becomes a softer social interval inside the broader hospitality sequence.", zh: "餐饮区域在整体酒店节奏中承担更柔和的社交停顿。" }, layout: "wide" },
-            { image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=2200&q=80", caption: { en: "Banquet-ready dining zones balance openness with acoustically softer material layers.", zh: "可承载宴客的餐饮空间，在开放感与更柔和的材料层次之间取得平衡。" }, layout: "wide" },
-            { image: "https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=2200&q=80", caption: { en: "Mealtime light is tuned down from lobby brightness so the experience shifts appropriately.", zh: "餐区的光比大堂略降一度，让使用情绪从抵达自然过渡到停留。" }, layout: "half" },
-            { image: "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=2200&q=80", caption: { en: "A secondary dining view: joinery and table placement are tuned so that even full occupancy retains visual calm.", zh: "餐区的另一视角：木作与餐桌布局在满座状态下，仍能维持视觉上的不拥挤感。" }, layout: "half" },
-            { image: "https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=2200&q=80", caption: { en: "Dining detail: the edge of woodwork and lighting meet without insisting on themselves.", zh: "餐饮细部：木作收边与灯光相遇，不额外争夺视线。" }, layout: "wide" },
-            { image: "https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=2200&q=80", caption: { en: "Layering of light and wall surface is kept consistent so that different meal hours read as one calm whole.", zh: "光与墙面的层次保持一致，使不同用餐时段都能落在同一种安静的基调里。" }, layout: "half" },
-            { image: "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=2200&q=80", caption: { en: "A closer look at the dining room's quieter back wall, used for visual pause within the larger room.", zh: "餐饮空间的后墙处理更克制，为大面积空间提供一个可停顿的视觉落点。" }, layout: "half" },
-            { image: "https://images.unsplash.com/photo-1559329007-40df8a125f95?auto=format&fit=crop&w=2200&q=80", caption: { en: "Private dining entry: transitions are softened through floor and ceiling changes rather than doors.", zh: "包间入口处通过地与顶的微小变化完成过渡，而非依赖额外门扇。" }, layout: "wide" },
-            { image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=2200&q=80", caption: { en: "The second private dining room uses a slightly warmer palette to accommodate more formal entertaining.", zh: "第二间包间把木色再压深一度，适配更正式的招待场景。" }, layout: "half" },
-            { image: "https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=2200&q=80", caption: { en: "Banquet room detail: light pools are kept even so that group tables remain visually balanced across the room.", zh: "宴会空间细部：光池保持均匀的分布密度，让多人桌在空间中视觉对等。" }, layout: "half" },
-            { image: "https://images.unsplash.com/photo-1493397212122-2b85dda8106b?auto=format&fit=crop&w=2200&q=80", caption: { en: "Service rooms are finished with measured proportion so daily use remains calm.", zh: "服务性空间通过比例控制完成收束，使日常使用仍保持稳定的视觉安静度。" }, layout: "wide" },
-            { image: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=2200&q=80", caption: { en: "Project archival record: a quiet detail from the renovation, kept to mark the overall tone of restraint.", zh: "项目档案细节：改造中的一处细部，用以收束整个案例克制与留余的整体语调。" }, layout: "wide" }
+            { image: "./Projects/mingzhu-hotel/facade.jpg", caption: { en: "The facade is edited into a quieter first greeting: signage and lighting are held low so the urban interface reads as measured hospitality rather than spectacle.", zh: "门头被处理为更安静的抵达界面：招牌与灯位都保持低姿态，使城市界面更像可被期待的待客前序，而非展示动作。" }, layout: "wide", imageClass: "object-contain", imageStyle: "max-height: 86vh;" },
+            { image: "./Projects/mingzhu-hotel/lobby.jpg", caption: { en: "The renovated lobby translates arrival into a legible sequence: reception, waiting, and vertical circulation are organized by plane and light rather than added elements.", zh: "改造后的大堂把抵达感重新编排为可被读懂的序列：接待、等候与垂直交通，通过界面与光的分层而非额外造型被组织起来。" }, layout: "wide" },
+            { image: "./Projects/mingzhu-hotel/corridor-2.jpg", caption: { en: "Corridor 2 is kept wider to perform as a transitional spine that carries light deeper into the plan.", zh: "走道 2 保持更舒展的宽度，承担过渡性走廊，并把光带向更深处。" }, layout: "wide" },
+            { image: "./Projects/mingzhu-hotel/corridor-1.jpg", caption: { en: "The first corridor stretch is tuned as a directional lead-in, linking the public front to the guest-room wing.", zh: "第一段走道被处理为明确的方向引导，把公共前场自然导向客房翼。" }, layout: "half" },
+            { image: "./Projects/mingzhu-hotel/corridor-3.jpg", caption: { en: "The third corridor section compresses proportion again so the approach to rooms settles down.", zh: "第三段走道再次收束比例，让进入客房前的情绪自然安定。" }, layout: "half" },
+            { image: "./Projects/mingzhu-hotel/corridor-4.jpg", caption: { en: "Corridor 4 uses subtle light shifts to mark the transition between the guest-room wing and the supporting program.", zh: "走道 4 以更细微的光线变化标记客房区与配套功能之间的过渡。" }, layout: "half", aspectClass: "aspect-[4/3]", imageStyle: "object-fit: cover; object-position: center 58%;" },
+            { image: "./Projects/mingzhu-hotel/corridor-6.jpg", caption: { en: "Corridor 6 extends the passage rhythm with another calmer interval, allowing the sequence to continue without visual fatigue.", zh: "走道 6 作为新增的一段，把过道节奏再延长一步，让连续路径里多一个更安静的停顿。" }, layout: "half", aspectClass: "aspect-[4/3]" },
+            { image: "./Projects/mingzhu-hotel/corridor-5.jpg", caption: { en: "The final corridor stretch is composed as a quieter prelude before dining and public amenities.", zh: "走道最后一段被处理为更安静的前奏，引向餐饮与公共配套。" }, layout: "wide" },
+            { image: "./Projects/mingzhu-hotel/king-room-1.jpg", caption: { en: "King rooms use deeper timber and textile tones to balance daytime brightness with an evening sense of rest.", zh: "大床房以更深的木色与布面，平衡日间进入的亮度与夜间需要的休息感。" }, layout: "wide", beforeNarrative: "material" },
+            { image: "./Projects/mingzhu-hotel/king-room-2.jpg", caption: { en: "King room variant uses a slightly lighter palette to accommodate longer stays.", zh: "大床房变体将木色略压浅，适配更久停留的连续使用。" }, layout: "half" },
+            { image: "./Projects/mingzhu-hotel/king-room-3.jpg", caption: { en: "Room sequencing is refined so that sleeping, working, and washing areas read without visual clutter.", zh: "客房内部顺序被重新梳理，让睡眠、工作与洗漱三个区域在视觉上互不干扰。" }, layout: "half" },
+            { image: "./Projects/mingzhu-hotel/restroom.jpg", caption: { en: "Guest-room service areas are finished with measured proportion and quieter joinery so daily use remains calm.", zh: "客房配套的服务性空间通过比例控制与更安静的收束，使日常使用仍保持稳定的视觉安静度。" }, layout: "wide", imageClass: "object-contain", imageStyle: "max-height: 82vh;" },
+            { image: "./Projects/mingzhu-hotel/twin-room-1.jpg", caption: { en: "The first twin-room variant keeps both beds visually equal and lets proportion carry the sense of stay.", zh: "第一种双床房让两张床在视觉上保持对等，以比例与分区间距承担停留感。" }, layout: "wide" },
+            { image: "./Projects/mingzhu-hotel/twin-room-2.jpg", caption: { en: "Twin room 2 uses softer light layering so the room can shift easily between daytime work and evening rest.", zh: "双床房 2 通过更柔的光层，让空间在日间工作与夜间休息之间自然切换。" }, layout: "half", aspectClass: "aspect-[4/3]", imageStyle: "object-fit: cover; object-position: center 55%;" },
+            { image: "./Projects/mingzhu-hotel/twin-room-3.jpg", caption: { en: "Twin room 3 is tuned as the most composed variant, with a clearer desk edge and calmer back wall for longer stays.", zh: "双床房 3 作为更内敛的变体，通过更干净的书桌收边与更安静的后墙，适配久住。" }, layout: "half", aspectClass: "aspect-[4/3]" },
+            { image: "./Projects/mingzhu-hotel/restaurant-1.jpg", caption: { en: "The dining hall is staged as a softer social interval inside the broader hospitality sequence.", zh: "餐厅在整体酒店节奏中承担更柔和的社交停顿。" }, layout: "wide", beforeNarrative: "light" },
+            { image: "./Projects/mingzhu-hotel/restaurant-2.jpg", caption: { en: "Banquet-ready dining zones balance openness with acoustically softer material layers.", zh: "可承载宴客的餐饮空间，在开放感与更柔和的材料层次之间取得平衡。" }, layout: "wide" },
+            { image: "./Projects/mingzhu-hotel/restaurant-3.jpg", caption: { en: "Mealtime light is tuned down from lobby brightness so the experience shifts appropriately.", zh: "餐区的光比大堂略降一度，让使用情绪从抵达自然过渡到停留。" }, layout: "half" },
+            { image: "./Projects/mingzhu-hotel/restaurant-4.jpg", caption: { en: "A secondary dining view: joinery and table placement are tuned so that even full occupancy retains visual calm.", zh: "餐区的另一视角：木作与餐桌布局在满座状态下，仍能维持视觉上的不拥挤感。" }, layout: "half" },
+            { image: "./Projects/mingzhu-hotel/restaurant-5.jpg", caption: { en: "Dining 5 closes the distance between seating groups through lowered light and more tactile joinery.", zh: "餐厅 5 通过更收的光位与更有触感的木作，拉近不同座位组之间的距离感。" }, layout: "wide", beforeNarrative: "function" },
+            { image: "./Projects/mingzhu-hotel/restaurant-7.png", caption: { en: "Dining detail: the edge of woodwork and lighting meet without insisting on themselves.", zh: "餐饮细部：木作收边与灯光相遇，不额外争夺视线。" }, layout: "half" },
+            { image: "./Projects/mingzhu-hotel/restaurant-8.png", caption: { en: "Layering of light and wall surface is kept consistent so that different meal hours read as one calm whole.", zh: "光与墙面的层次保持一致，使不同用餐时段都能落在同一种安静的基调里。" }, layout: "half" },
+            { image: "./Projects/mingzhu-hotel/restaurant-9.png", caption: { en: "A closer look at the dining room's quieter back wall, used for visual pause within the larger room.", zh: "餐饮空间的后墙处理更克制，为大面积空间提供一个可停顿的视觉落点。" }, layout: "wide" },
+            { image: "./Projects/mingzhu-hotel/restaurant-10.png", caption: { en: "Private dining entry: transitions are softened through floor and ceiling changes rather than doors.", zh: "包间入口处通过地与顶的微小变化完成过渡，而非依赖额外门扇。" }, layout: "half" },
+            { image: "./Projects/mingzhu-hotel/restaurant-11.png", caption: { en: "The second private dining room uses a slightly warmer palette to accommodate more formal entertaining.", zh: "第二间包间把木色再压深一度，适配更正式的招待场景。" }, layout: "half" }
           ],
+          narrativePlacement: {
+            mode: "hybrid",
+            layoutPreset: "narrow-label",
+            inSection: ["circulation"]
+          },
           related: ["riverfront-office", "quiet-residence"]
         },
         "vistar-office": {
@@ -812,6 +825,8 @@
         const heroImage = document.getElementById("project-hero-image");
         heroImage.src = project.hero;
         heroImage.alt = project.heroAlt[lang];
+        heroImage.className = project.heroImageClass || "aspect-[16/9] w-full object-cover";
+        heroImage.style.cssText = project.heroStyle || "";
 
         const concept = document.getElementById("project-concept");
         const conceptFormat = project.conceptFormat || {};
@@ -927,8 +942,8 @@
               ${halfBuffer
                 .map(
                   (item) => `
-                    <figure class="overflow-hidden rounded-[28px] border border-ink/10 bg-white/55">
-                      <img src="${item.image}" alt="${project.name[lang]}" class="gallery-half-image aspect-[5/6] w-full object-cover" loading="lazy" decoding="async" />
+                    <figure class="overflow-hidden rounded-[28px] border border-ink/10 bg-white/55 ${item.frameClass || ""}">
+                      <img src="${item.image}" alt="${project.name[lang]}" class="gallery-half-image ${item.aspectClass || "aspect-[5/6]"} w-full ${item.imageClass || "object-cover"}" loading="lazy" decoding="async" style="${item.imageStyle || ""}" />
                       <figcaption class="px-5 py-4 text-sm leading-relaxed text-ink/60">${item.caption[lang]}</figcaption>
                     </figure>
                   `
@@ -959,8 +974,8 @@
           if (item.layout === "wide") {
             flushHalfBuffer();
             galleryParts.push(`
-              <figure class="overflow-hidden rounded-[30px] border border-ink/10 bg-white/55">
-                <img src="${item.image}" alt="${project.name[lang]}" class="gallery-wide-image w-full object-cover" loading="lazy" decoding="async" style="max-height: 78vh;" />
+              <figure class="overflow-hidden rounded-[30px] border border-ink/10 bg-white/55 ${item.frameClass || ""}">
+                <img src="${item.image}" alt="${project.name[lang]}" class="gallery-wide-image w-full ${item.imageClass || "object-cover"}" loading="lazy" decoding="async" style="${item.imageStyle || "max-height: 78vh;"}" />
                 <figcaption class="px-6 py-4 text-sm leading-relaxed text-ink/60">${item.caption[lang]}</figcaption>
               </figure>
             `);
@@ -1045,6 +1060,36 @@
       document.getElementById("year").textContent = String(new Date().getFullYear());
       applyLanguage(currentLang);
       langToggle?.addEventListener("click", () => applyLanguage(currentLang === "en" ? "zh" : "en"));
+    </script>
+    <script>
+      (function () {
+        if (!window.SeoUtils) return;
+        var U = window.SeoUtils;
+        var key = window.currentProjectKey || (new URLSearchParams(location.search).get("project")) || "vistar-office";
+        var allProjects = window.projects || {};
+        var P = allProjects[key] || allProjects["vistar-office"];
+        var lang = window.currentLang || "en";
+        U.injectSitewide();
+        U.injectBreadcrumb([
+          { name: "Home", url: "index.html" },
+          { name: "Projects", url: "projects.html" },
+          { name: (P && P.name && (P.name[lang] || P.name.en)) || "Project" },
+        ]);
+        if (P) {
+          U.injectProjectService({
+            id: key,
+            name: P.name.en,
+            nameZh: P.name.zh,
+            category: (P.type && P.type.en || "").startsWith("RESIDENTIAL") ? "residential" : "commercial",
+            city: P.city && P.city.en,
+            description: P.summary && P.summary.en,
+            descriptionEn: P.summary && P.summary.zh,
+            image: P.hero,
+            meta: P.meta && P.meta.en,
+            price: "0",
+          });
+        }
+      })();
     </script>
   </body>
 </html>
